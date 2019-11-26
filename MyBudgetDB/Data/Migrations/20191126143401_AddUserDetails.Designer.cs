@@ -3,15 +3,18 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
+using Microsoft.EntityFrameworkCore.Storage;
+using Microsoft.EntityFrameworkCore.Storage.Internal;
 using MyBudgetDB.Data;
 using System;
 
 namespace MyBudgetDB.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20191126143401_AddUserDetails")]
+    partial class AddUserDetails
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -167,6 +170,8 @@ namespace MyBudgetDB.Data.Migrations
 
                     b.Property<string>("FirstName");
 
+                    b.Property<int>("IdUser");
+
                     b.Property<string>("LastName");
 
                     b.Property<bool>("LockoutEnabled");
@@ -193,6 +198,8 @@ namespace MyBudgetDB.Data.Migrations
                         .HasMaxLength(256);
 
                     b.HasKey("Id");
+
+                    b.HasAlternateKey("IdUser");
 
                     b.HasIndex("NormalizedEmail")
                         .HasName("EmailIndex");

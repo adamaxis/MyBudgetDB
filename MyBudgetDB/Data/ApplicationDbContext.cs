@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using MyBudgetDB.Entities.Budget;
 using MyBudgetDB.Models;
 
 namespace MyBudgetDB.Data
@@ -15,6 +16,8 @@ namespace MyBudgetDB.Data
         {
         }
 
+        //public DbSet<Expense> Expenses { get; set; }
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
@@ -22,5 +25,7 @@ namespace MyBudgetDB.Data
             // For example, you can rename the ASP.NET Identity table names and more.
             // Add your customizations after calling base.OnModelCreating(builder);
         }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder options) => options.UseSqlServer(@"Server=tcp:mybudgetdb.database.windows.net,1433;Initial Catalog=budget;Persist Security Info=False;User ID=ThreeMusketeers;Password=Musketeers19!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
     }
 }

@@ -3,15 +3,18 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
+using Microsoft.EntityFrameworkCore.Storage;
+using Microsoft.EntityFrameworkCore.Storage.Internal;
 using MyBudgetDB.Data;
 using System;
 
 namespace MyBudgetDB.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20191126142112_AddExpenses")]
+    partial class AddExpenses
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -133,17 +136,13 @@ namespace MyBudgetDB.Data.Migrations
 
                     b.Property<double>("Amount");
 
-                    b.Property<string>("ApplicationUserId");
-
                     b.Property<DateTime>("DateAdded");
 
                     b.Property<string>("Name");
 
                     b.HasKey("IdExpense");
 
-                    b.HasIndex("ApplicationUserId");
-
-                    b.ToTable("Expense");
+                    b.ToTable("Expenses");
                 });
 
             modelBuilder.Entity("MyBudgetDB.Models.ApplicationUser", b =>
@@ -153,21 +152,13 @@ namespace MyBudgetDB.Data.Migrations
 
                     b.Property<int>("AccessFailedCount");
 
-                    b.Property<double>("Amount");
-
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken();
-
-                    b.Property<DateTime>("DateAdded");
 
                     b.Property<string>("Email")
                         .HasMaxLength(256);
 
                     b.Property<bool>("EmailConfirmed");
-
-                    b.Property<string>("FirstName");
-
-                    b.Property<string>("LastName");
 
                     b.Property<bool>("LockoutEnabled");
 
@@ -248,13 +239,6 @@ namespace MyBudgetDB.Data.Migrations
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
-                });
-
-            modelBuilder.Entity("MyBudgetDB.Entities.Budget.Expense", b =>
-                {
-                    b.HasOne("MyBudgetDB.Models.ApplicationUser")
-                        .WithMany("Expenses")
-                        .HasForeignKey("ApplicationUserId");
                 });
 #pragma warning restore 612, 618
         }
