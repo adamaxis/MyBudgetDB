@@ -35,6 +35,7 @@ namespace MyBudgetDB
 
             // Add application services.
             services.AddTransient<IEmailSender, EmailSender>();
+            services.AddScoped<BudgetService>();
 
             services.AddMvc();
         }

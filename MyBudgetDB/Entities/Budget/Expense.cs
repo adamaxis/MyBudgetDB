@@ -12,6 +12,6 @@ namespace MyBudgetDB.Entities.Budget
         public double Amount { get; set; }
 
         [DataType(DataType.Date)]
-        public DateTime DateAdded { get; set; }
+        public DateTime DateAdded { get; set; }  // DateTime ....
     }
 }
