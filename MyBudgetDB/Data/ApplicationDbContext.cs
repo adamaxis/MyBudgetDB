@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
-using MyBudgetDB.Entities.Budget;
 using MyBudgetDB.Models;
 
 namespace MyBudgetDB.Data
@@ -19,7 +15,7 @@ namespace MyBudgetDB.Data
             _DbInfo = DbInfo.Value ?? throw new ArgumentException(nameof(DbInfo));
         }
 
-        //public DbSet<Expense> Expenses { get; set; }
+        public DbSet<UserBudget> Budgets { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

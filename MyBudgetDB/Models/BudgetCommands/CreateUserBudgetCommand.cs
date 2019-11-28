@@ -3,42 +3,24 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using Microsoft.AspNetCore.Http;
-using MyBudgetDB.Entities.Budget;
+using MyBudgetDB.Data;
 
 namespace MyBudgetDB.Models.BudgetCommands
 {
-    public class CreateUserBudgetCommand
+    public class CreateUserBudgetCommand : EditUserBudgetBase
     {
-        //Edit user
-        [Required, StringLength(50)]
-        public string FirstName { get; set; }
+        //public IList<CreateExpenseCommand> Expenses { get; set; } = new List<CreateExpenseCommand>();
 
-        [Required, StringLength(50)]
-        public string LastName { get; set; }
-
-        [Required, StringLength(50)]
-        public string Email { get; set; }
-
-        
-        public string Date { get; set; }
-        
-        public double Amount { get; set; }
-
-        [DataType(DataType.Date)]
-        public DateTime DateAdded { get; set; }
-        //End user
-        
-        public IList<CreateExpenseCommand> Expenses { get; set; } = new List<CreateExpenseCommand>();
-
-        public ApplicationUser ToUserBudget()
+        public UserBudget ToUserBudget()
         {
-            return new ApplicationUser
+            return new UserBudget
             {
                 FirstName = FirstName,
                 LastName = LastName,
-                Amount = Amount,
-                DateAdded = DateAdded,
-                Email = Email,
+                InitAmount = InitAmount,
+                DateUsrAdded = DateUsrAdded,
+                DateOfBirth = DateOfBirth,
+                //Email = Email,
                 Expenses = Expenses?.Select(x => x.ToExpense()).ToList()
             };
         }
