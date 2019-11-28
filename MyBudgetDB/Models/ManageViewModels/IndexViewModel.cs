@@ -22,6 +22,8 @@ namespace MyBudgetDB.Models.ManageViewModels
         [DataType(DataType.Date)]
         public DateTime? DateOfBirth { get; set; }
 
+        public bool IsActive { get; set; }
+
         [DataType(DataType.Date)]
         public DateTime DateAdded { get; set; }
 

@@ -8,7 +8,7 @@ using MyBudgetDB.Models;
 
 namespace MyBudgetDB.Controllers
 {
-    public class BudgetController : Controller
+    public class HomeController : Controller
     {
         public IActionResult Index()
         {
