@@ -21,7 +21,7 @@ namespace MyBudgetDB.Services
         
         public void CreateBudget(CreateUserBudgetCommand cmd)
         {
-            var budget = cmd.toUserBudget();
+            var budget = cmd.ToUserBudget();
             _context.Add(budget);
             _context.SaveChanges();
             //return budget.Id;

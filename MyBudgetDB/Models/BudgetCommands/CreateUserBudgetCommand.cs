@@ -30,7 +30,7 @@ namespace MyBudgetDB.Models.BudgetCommands
         
         public IList<CreateExpenseCommand> Expenses { get; set; } = new List<CreateExpenseCommand>();
 
-        public ApplicationUser toUserBudget()
+        public ApplicationUser ToUserBudget()
         {
             return new ApplicationUser
             {

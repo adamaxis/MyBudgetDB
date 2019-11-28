@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 using MyBudgetDB.Entities.Budget;
 using MyBudgetDB.Models;
 
@@ -11,9 +12,12 @@ namespace MyBudgetDB.Data
 {
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+        private readonly AppSecrets _DbInfo;
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options, IOptions<AppSecrets> DbInfo)
             : base(options)
         {
+            _DbInfo = DbInfo.Value ?? throw new ArgumentException(nameof(DbInfo));
+            Console.Write(_DbInfo);
         }
 
         //public DbSet<Expense> Expenses { get; set; }
@@ -26,6 +30,7 @@ namespace MyBudgetDB.Data
             // Add your customizations after calling base.OnModelCreating(builder);
         }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder options) => options.UseSqlServer(@"Server=tcp:mybudgetdb.database.windows.net,1433;Initial Catalog=budget;Persist Security Info=False;User ID=ThreeMusketeers;Password=Musketeers19!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
+        protected override void OnConfiguring(DbContextOptionsBuilder options) => 
+            options.UseSqlServer($"{_DbInfo.Database};User ID={_DbInfo.User};Password={_DbInfo.Password};{_DbInfo.Options};");
     }
 }
