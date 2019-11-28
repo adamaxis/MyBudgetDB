@@ -17,7 +17,6 @@ namespace MyBudgetDB.Data
             : base(options)
         {
             _DbInfo = DbInfo.Value ?? throw new ArgumentException(nameof(DbInfo));
-            Console.Write(_DbInfo);
         }
 
         //public DbSet<Expense> Expenses { get; set; }
