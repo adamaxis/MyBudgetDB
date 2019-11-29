@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using MyBudgetDB.Authorization;
 using MyBudgetDB.Data;
 using MyBudgetDB.Extensions;
 using MyBudgetDB.Models;
@@ -226,6 +227,7 @@ namespace MyBudgetDB.Controllers
                 var result = await _userManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
+                    await AddClaims(model, user);
                     _logger.LogInformation("User created a new account with password.");
 
                     var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
@@ -243,13 +245,26 @@ namespace MyBudgetDB.Controllers
             return View(model);
         }
 
+        private async Task AddClaims(RegisterViewModel model, ApplicationUser user)
+        {
+            if (user.UserName == "valatorre@dmacc.edu" || user.UserName == "ddraper@dmacc.edu")
+            {
+                var isAdmin = new Claim(Claims.IsAdmin, "true", ClaimValueTypes.Boolean);
+                await _userManager.AddClaimAsync(user, isAdmin);
+            }
+
+            var isActive = new Claim(Claims.IsActive, "true", ClaimValueTypes.Boolean);
+            await _userManager.AddClaimAsync(user, isActive);
+
+        }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Logout()
         {
             await _signInManager.SignOutAsync();
             _logger.LogInformation("User logged out.");
-            return RedirectToAction(nameof(BudgetController.Index), "Home");
+            return RedirectToAction(nameof(HomeController.Index), "Home");
         }
 
         [HttpPost]
@@ -337,7 +352,7 @@ namespace MyBudgetDB.Controllers
         {
             if (userId == null || code == null)
             {
-                return RedirectToAction(nameof(BudgetController.Index), "Home");
+                return RedirectToAction(nameof(HomeController.Index), "Home");
             }
             var user = await _userManager.FindByIdAsync(userId);
             if (user == null)
@@ -457,7 +472,7 @@ namespace MyBudgetDB.Controllers
             }
             else
             {
-                return RedirectToAction(nameof(BudgetController.Index), "Home");
+                return RedirectToAction(nameof(HomeController.Index), "Home");
             }
         }
 

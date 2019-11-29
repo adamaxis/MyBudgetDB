@@ -57,18 +57,18 @@ namespace MyBudgetDB
             }
             else
             {
-                app.UseExceptionHandler("/Home/Error");
+                app.UseExceptionHandler("/Budget/Error");
             }
 
             app.UseStaticFiles();
 
             app.UseAuthentication();
-
+            app.UseCookiePolicy();
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Budget}/{action=Index}/{id?}");
+                    template: "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }
