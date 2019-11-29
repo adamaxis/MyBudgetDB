@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -10,7 +8,6 @@ using MyBudgetDB.Data;
 using MyBudgetDB.Models;
 using MyBudgetDB.Models.BudgetCommands;
 using MyBudgetDB.Services;
-using Newtonsoft.Json;
 
 namespace MyBudgetDB.Controllers
 {
@@ -90,6 +87,26 @@ namespace MyBudgetDB.Controllers
 
             var budgets = _service.GetBudgetsBrief(user.Id);
             return View(budgets);
+        }
+
+        [Authorize]
+        public async Task<IActionResult> View(int id)
+        {
+            var model = _service.GetBudgetDetail(id);
+
+            if (model == null)
+            {
+                return NotFound();
+            }
+
+            var budget = _service.GetBudget(id);
+
+            var user = await _userService.GetUserAsync(User);
+            if (user == null)
+            {
+                throw new ApplicationException($"Unable to load user with ID '{_userService.GetUserId(User)}'.");
+            }
+            return View(model);
         }
 
         public IActionResult Error()
