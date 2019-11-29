@@ -15,6 +15,13 @@ namespace MyBudgetDB.Data
             _DbInfo = DbInfo.Value ?? throw new ArgumentException(nameof(DbInfo));
         }
 
+        // Added for unit test
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+            : base(options)
+        {
+
+        }
+
         public DbSet<UserBudget> Budgets { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)

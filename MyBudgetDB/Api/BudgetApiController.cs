@@ -12,6 +12,7 @@ namespace MyBudgetDB.Api
 {
     [Produces("application/json")]
     [Route("api/BudgetApi")]
+    //[ValidateModel, HandleException, FeatureEnabled(IsEnabled = true)]
     public class BudgetApiController : Controller
     {
         public BudgetService _budgetService;
@@ -23,34 +24,35 @@ namespace MyBudgetDB.Api
             _log = log;
         }
 
-        // GET: api/BudgetApi
-        [HttpGet]
-        public IEnumerable<string> Get()
-        {
-            return new string[] { "value1", "value2" };
-        }
-
-        // GET: api/BudgetApi/5
-        [HttpGet("{id}", Name = "Get")]
-        public string Get(int id)
-        {
-            return "value";
-        }
-        
         // POST: api/BudgetApi
-        [HttpPost]
-        public IActionResult Post([FromBody]CreateBudgetCommand value)
-        {
-            //var id = 
-                _budgetService.CreateBudget(value);
+        //[HttpPost]
+        //public IActionResult Post([FromBody]CreateBudgetCommand value)
+        //{
+        //    var appUser = await _userService.GetUserAsync(User);
+        //    var id = _service.CreateBudget(value, appUser);
 
-            return Ok();
-        }
+        //    return Ok(new { id = id });
+        //}
         
         // DELETE: api/ApiWithActions/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
+        }
+
+        [HttpGet("{id}")]
+        public IActionResult Get(int id)
+        {
+            var detail = _budgetService.GetBudgetDetail(id);
+            return Ok(detail);
+
+        }
+
+        [HttpPost("{id}")]// EnsureRecipeExists, RequireIpAddress
+        public IActionResult Edit(int id, [FromBody] UpdateBudgetCommand command)
+        {
+            _budgetService.UpdateBudget(command);
+            return Ok();
         }
     }
 }
