@@ -19,6 +19,6 @@ namespace MyBudgetDB.Data
         public DateTime? DateOfBirth { get; set; }
 
         //[DataType(DataType.Date)]
-        public DateTime DateAdded { get; set; }
+        //public DateTime DateAdded { get; set; }
     }
 }
