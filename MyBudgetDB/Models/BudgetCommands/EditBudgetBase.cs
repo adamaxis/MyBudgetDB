@@ -7,10 +7,10 @@ namespace MyBudgetDB.Models.BudgetCommands
     public class EditBudgetBase
     {
 
-        public string Name;
+        public string Name { get; set; }
 
         [Range(0, double.MaxValue)]
-        public double Balance;
+        public double Balance { get; set; }
 
         [DataType(DataType.Date)]
         public DateTime CreationDate { get; set; }
