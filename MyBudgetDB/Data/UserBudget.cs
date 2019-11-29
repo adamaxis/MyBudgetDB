@@ -16,6 +16,8 @@ namespace MyBudgetDB.Data
         public DateTime CreationDate { get; set; }
 
         public ICollection<Expense> Expenses { get; set; }
+
+        public bool IsDeleted { get; set; }
     }
 }
 

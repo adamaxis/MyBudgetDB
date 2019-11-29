@@ -13,6 +13,5 @@ namespace MyBudgetDB.Models.BudgetCommands
 
         [DataType(DataType.Date)]
         public DateTime DateAdded { get; set; }
-
     }
 }

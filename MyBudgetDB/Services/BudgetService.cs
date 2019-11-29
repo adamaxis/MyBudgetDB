@@ -18,19 +18,18 @@ namespace MyBudgetDB.Services
         }
 
         // add delete field to db
-        //public bool DoesUsrBugetExist(int id)
-        //{
-        //    return _context.Budgets
-        //        .Where(r => !r.IsDeleted)
-        //        .Where(r => r.BudgetId == id)
-        //        .Any();
-        //}
+        public bool DoesBudgetExist(int id)
+        {
+            return _context.Budgets
+                .Where(r => !r.IsDeleted)
+                .Any(r => r.BudgetId == id);
+        }
 
         public UserBudgetDetails GetBudgetDetail(int id)
         {
             return _context.Budgets
                 .Where(x => x.BudgetId == id)
-                //.Where(x => !x.IsDeleted)
+                .Where(x => !x.IsDeleted)
                 .Select(x => new UserBudgetDetails
                 {
                     Id = x.BudgetId,
@@ -58,7 +57,7 @@ namespace MyBudgetDB.Services
         {
             return _context.Budgets
                 .Where(x => x.BudgetId == id)
-                //.Where(x => !x.IsDeleted)
+                .Where(x => !x.IsDeleted)
                 .Select(x => new UpdateBudgetCommand
                 {
                     InitAmount = x.InitAmount,
@@ -71,7 +70,7 @@ namespace MyBudgetDB.Services
         {
             var budget = _context.Budgets.Find(cmd.BudgetId);
             if (budget == null) { throw new Exception("Unable to find the budget list"); }
-            //if (budget.IsDeleted) { throw new Exception("Unable to update a deleted budget list"); }
+            if (budget.IsDeleted) { throw new Exception("Unable to update a deleted budget list"); }
 
             cmd.UpdateBudget(budget);
             _context.SaveChanges();
