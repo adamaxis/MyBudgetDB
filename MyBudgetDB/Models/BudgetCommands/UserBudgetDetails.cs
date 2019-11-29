@@ -10,7 +10,7 @@ namespace MyBudgetDB.Models.BudgetCommands
         public string LastName { get; set; }
         //public string Email { get; set; }
         public double InitAmount { get; set; }
-        public DateTime DateUsrAdded { get; set; }
+        public DateTime CreationDate { get; set; }
 
         public IEnumerable<Item> Expenses { get; set; }
 
@@ -18,7 +18,7 @@ namespace MyBudgetDB.Models.BudgetCommands
         {
             public string Name { get; set; }
             public double Amount { get; set; }
-            public DateTime DateAdded { get; set; }
+            public DateTime? DateAdded { get; set; }
         }
     }
 }
