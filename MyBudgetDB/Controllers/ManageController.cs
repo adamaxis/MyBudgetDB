@@ -10,6 +10,8 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using MyBudgetDB.Data;
+using MyBudgetDB.Extensions;
 using MyBudgetDB.Models;
 using MyBudgetDB.Models.ManageViewModels;
 using MyBudgetDB.Services;
@@ -62,7 +64,6 @@ namespace MyBudgetDB.Controllers
                 FirstName = user.FirstName,
                 LastName = user.LastName,
                 DateOfBirth = user.DateOfBirth,
-                DateAdded = user.DateAdded,
                 PhoneNumber = user.PhoneNumber,
                 IsEmailConfirmed = user.EmailConfirmed,
                 StatusMessage = StatusMessage
