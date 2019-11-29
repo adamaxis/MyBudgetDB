@@ -1,0 +1,77 @@
+﻿@model MyBudgetDB.Models.BudgetCommands.CreateBudgetCommand
+
+@{
+    ViewData["Title"] = "Create New Budget";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@ViewData["Title"]</h2>
+<hr />
+
+<form asp-controller="AuthorizedPeople" asp-action="Create" method="post" class="form-horizontal">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    @Html.Partial("_EditBudgetPartial")
+    <div class="form-group">
+        <table class="table table-striped" id="expenses">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Amount</th>
+                    <th>Date Added</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (int i = 0; i < Model.Expenses.Count; i++)
+                {
+                    var expenses = Model.Expenses[i];
+                    <tr>
+                        <td>
+                            <input asp-for="Expenses[i].Name" />
+                            <span asp-validation-for="Expenses[i].Name" class="text-danger"></span>
+                        </td>
+                        <td>
+                            <input asp-for="Expenses[i].Amount" />
+                            <span asp-validation-for="Expenses[i].Amount" class="text-danger"></span>
+                        </td>
+                        <td>
+                            <input asp-for="Expenses[i].DateAdded"  type="hidden" />
+                            <span asp-validation-for="Expenses[i].DateAdded" class=" text-danger" type="hidden"></span>
+                        </td>
+                        <td>
+                            <a href="#" class="remove">Remove</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="button" class="btn btn-success" value="Add Expense" id="addExpense">
+            <input type="submit" class="btn btn-primary" value="Create">
+        </div>
+    </div>
+</form>
+
+@section Scripts {
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+    <script>
+        var expenses = $('#expenses tbody');
+        $("#addExpense").click(function () {
+            var rowNo = expenses.find('tr').length;
+            var template =
+                '<tr>' +
+                '<td><input name="Expenses[' + rowNo + '].Name" id="Expenses_' + rowNo + '_Name" /></td>' +
+                '<td><input name="Expenses[' + rowNo + '].Amount" id="Expenses_' + rowNo + '_Amount" /></td>' +
+                '<td><input name="Expenses[' + rowNo + '].DateAdded" id="Expenses_' + rowNo + '_DateAdded" /></td>' +
+                '<td><a href="#" class="remove">Remove</a></td>' +
+                '</tr>';
+            expenses.append(template);
+        });
+        expenses.on('click', '.remove', function (e) {
+            $(this).closest('tr').remove();
+        });
+    </script>
+}

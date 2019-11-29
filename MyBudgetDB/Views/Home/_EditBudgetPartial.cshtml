@@ -1,0 +1,17 @@
+﻿@model MyBudgetDB.Models.BudgetCommands.EditBudgetBase
+
+<div class="form-group">
+    <label asp-for="Name" class="control-label"></label>
+    <input asp-for="Name" class="form-control" />
+    <span asp-validation-for="Name" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <label asp-for="Amount" class="control-label"></label>
+    <input asp-for="Amount" class="form-control" />
+    <span asp-validation-for="Amount" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <label asp-for="CreationDate" class="control-label"></label>
+    <input asp-for="CreationDate" class="form-control" />
+    <span asp-validation-for="CreationDate" class="text-danger"></span>
+</div>

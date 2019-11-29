@@ -7,6 +7,12 @@
 
 @if (SignInManager.IsSignedIn(User))
 {
+    <ul class="nav navbar-nav"> <!-- Menu items for registered users-->
+        <li><a asp-area="" asp-controller="Home" asp-action="CreateBudget">Create Budget</a></li>
+        <li><a asp-area="" asp-controller="Home" asp-action="ManageBudgets">Manage Budgets</a></li>
+        <li><a asp-area="" asp-controller="Home" asp-action="Index">Menu3</a></li>
+        <li><a asp-area="" asp-controller="Home" asp-action="Index">Menu3</a></li>
+    </ul>                       <!-- /Menu items -->
     <form asp-area="" asp-controller="Account" asp-action="Logout" method="post" id="logoutForm" class="navbar-right">
         <ul class="nav navbar-nav navbar-right">
             <li>

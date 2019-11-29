@@ -66,8 +66,6 @@ namespace MyBudgetDB.Controllers
                 FirstName = user.FirstName,
                 LastName = user.LastName,
                 DateOfBirth = user.DateOfBirth,
-                //DateAdded = user.DateAdded,
-                //Amount = user.Amount,
                 IsActive = (User.FindFirstValue(Claims.IsActive) != "true" ? false : true),
                 PhoneNumber = user.PhoneNumber,
                 IsEmailConfirmed = user.EmailConfirmed,
