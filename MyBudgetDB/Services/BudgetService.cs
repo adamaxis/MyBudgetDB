@@ -67,6 +67,21 @@ namespace MyBudgetDB.Services
                 .ToList();
         }
 
+        public double GetBalance(int id)
+        {
+            var budget = _context.Budgets
+                .SingleOrDefault(x => x.BudgetId == id);
+            var initAmt = (double)(budget.InitAmount);
+            var fnBalance = 0.0;
+
+            foreach (var expense in budget.Expenses)
+            {
+                fnBalance += expense.Amount;
+            }
+
+            return initAmt - fnBalance;
+        }
+
         public ICollection<UserBudgetBrief> GetBudgetsBrief(string id)
         {
             return _context.Budgets
@@ -76,7 +91,9 @@ namespace MyBudgetDB.Services
                     Id = x.BudgetId,
                     Name = x.Name,
                     CreationDate = x.CreationDate,
-                    Balance = x.Balance
+                    Balance = x.Balance,
+                    InitAmount = x.InitAmount,
+                    Expenses = x.Expenses
                 })
                 .ToList();
         }
