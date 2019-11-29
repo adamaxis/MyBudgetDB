@@ -28,29 +28,29 @@ namespace MyBudgetDB.Services
         //        .Any();
         //}
 
-        public UserBudgetDetails GetBudgetDetail(int id)
-        {
-            return _context.Budgets
-                .Where(x => x.BudgetId == id)
-                //.Where(x => !x.IsDeleted)
-                .Select(x => new UserBudgetDetails
-                {
-                    Id = x.BudgetId,
-                    FirstName = x.FirstName,
-                    LastName = x.LastName,
-                    DateUsrAdded = x.DateUsrAdded,
-                    InitAmount = x.InitAmount,
+        //public UserBudgetDetails GetBudgetDetail(int id)
+        //{
+        //    return _context.Budgets
+        //        .Where(x => x.BudgetId == id)
+        //        //.Where(x => !x.IsDeleted)
+        //        .Select(x => new UserBudgetDetails
+        //        {
+        //            Id = x.BudgetId,
+        //            FirstName = x.FirstName,
+        //            LastName = x.LastName,
+        //            DateUsrAdded = x.DateUsrAdded,
+        //            InitAmount = x.InitAmount,
                     
-                    Expenses = x.Expenses
-                        .Select(item => new UserBudgetDetails.Item
-                        {
-                            Name = item.Name,
-                            Amount = item.Amount,
-                            //DateAdded = item.DateAdded
-                        })
-                })
-                .SingleOrDefault();
-        }
+        //            Expenses = x.Expenses
+        //                .Select(item => new UserBudgetDetails.Item
+        //                {
+        //                    Name = item.Name,
+        //                    Amount = item.Amount,
+        //                    //DateAdded = item.DateAdded
+        //                })
+        //        })
+        //        .SingleOrDefault();
+        //}
 
         public UserBudget GetBudget(int id)
         {
@@ -58,34 +58,34 @@ namespace MyBudgetDB.Services
                 .SingleOrDefault(x => x.BudgetId == id);
         }
 
-        public UpdateUserBudgetCommand GetBudgetForUpdate(int id)
-        {
-            return _context.Budgets
-                .Where(x => x.BudgetId == id)
-                //.Where(x => !x.IsDeleted)
-                .Select(x => new UpdateUserBudgetCommand
-                {
-                    FirstName = x.FirstName,
-                    LastName = x.LastName,
-                    DateUsrAdded = x.DateUsrAdded,
-                    InitAmount = x.InitAmount,
-                    DateOfBirth = x.DateOfBirth
-                }) .SingleOrDefault();
-        }
+        //public UpdateUserBudgetCommand GetBudgetForUpdate(int id)
+        //{
+        //    return _context.Budgets
+        //        .Where(x => x.BudgetId == id)
+        //        //.Where(x => !x.IsDeleted)
+        //        .Select(x => new UpdateUserBudgetCommand
+        //        {
+        //            FirstName = x.FirstName,
+        //            LastName = x.LastName,
+        //            DateUsrAdded = x.DateUsrAdded,
+        //            InitAmount = x.InitAmount,
+        //            DateOfBirth = x.DateOfBirth
+        //        }) .SingleOrDefault();
+        //}
 
-        public void UpdateBudget(UpdateUserBudgetCommand cmd)
-        {
-            var budget = _context.Budgets.Find(cmd.Id);
-            if (budget == null) { throw new Exception("Unable to find the recipe"); }
-            //if (recipe.IsDeleted) { throw new Exception("Unable to update a deleted recipe"); }
+        //public void UpdateBudget(UpdateUserBudgetCommand cmd)
+        //{
+        //    var budget = _context.Budgets.Find(cmd.Id);
+        //    if (budget == null) { throw new Exception("Unable to find the recipe"); }
+        //    //if (recipe.IsDeleted) { throw new Exception("Unable to update a deleted recipe"); }
 
-            cmd.UpdateUserBudget(budget);
-            _context.SaveChanges();
-        }
+        //    cmd.UpdateUserBudget(budget);
+        //    _context.SaveChanges();
+        //}
 
-        public void CreateBudget(CreateUserBudgetCommand cmd)
+        public void CreateBudget(CreateBudgetCommand cmd)
         {
-            var budget = cmd.ToUserBudget();
+            var budget = cmd.ToBudget();
             _context.Add(budget);
             _context.SaveChanges();
             //return budget.Id;
