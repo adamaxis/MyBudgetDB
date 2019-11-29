@@ -24,9 +24,3 @@ namespace MyBudgetDB.Data
         public bool IsDeleted { get; set; }
     }
 }
-
-
-//public DateTime DateOfBirth { get; set; }
-//public string FirstName { get; set; }
-//public string LastName { get; set; }
-//public string Email { get; set; } // I think we don't need to add this one as is already in IdentityUser
