@@ -5,7 +5,7 @@ namespace MyBudgetDB.Models.BudgetCommands
 {
     public class EditExpenseBase
     {
-        [Required, StringLength(50)]
+        [Required, StringLength(100)]
         public string Name { get; set; }
 
         [Range(0, double.MaxValue)]
