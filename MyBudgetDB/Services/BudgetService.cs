@@ -17,6 +17,11 @@ namespace MyBudgetDB.Services
             _logger = factory.CreateLogger<BudgetService>();
         }
 
+        public BudgetService(ApplicationDbContext context)
+        {
+            _context = context;
+        }
+
         // add delete field to db
         public bool DoesBudgetExist(int id)
         {
@@ -76,12 +81,12 @@ namespace MyBudgetDB.Services
             _context.SaveChanges();
         }
 
-        public void CreateBudget(CreateBudgetCommand cmd)
+        public int CreateBudget(CreateBudgetCommand cmd, ApplicationUser createdBy)
         {
-            var budget = cmd.ToBudget();
+            var budget = cmd.ToBudget(createdBy);
             _context.Add(budget);
             _context.SaveChanges();
-            //return budget.Id;
+            return budget.BudgetId;
         }
     }
 }
