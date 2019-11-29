@@ -39,7 +39,7 @@ namespace MyBudgetDB.Api
         
         // POST: api/BudgetApi
         [HttpPost]
-        public IActionResult Post([FromBody]CreateUserBudgetCommand value)
+        public IActionResult Post([FromBody]CreateBudgetCommand value)
         {
             //var id = 
                 _budgetService.CreateBudget(value);

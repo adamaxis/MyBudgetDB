@@ -11,6 +11,8 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using MyBudgetDB.Authorization;
+using MyBudgetDB.Data;
+using MyBudgetDB.Extensions;
 using MyBudgetDB.Models;
 using MyBudgetDB.Models.AccountViewModels;
 using MyBudgetDB.Services;
