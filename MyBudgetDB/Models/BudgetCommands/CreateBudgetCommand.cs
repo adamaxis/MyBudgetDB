@@ -6,15 +6,17 @@ namespace MyBudgetDB.Models.BudgetCommands
 {
     public class CreateBudgetCommand : EditBudgetBase
     {
-        public IList<CreateExpenseCommand> _Expenses { get; set; } = new List<CreateExpenseCommand>();
+        public IList<CreateExpenseCommand> expenses { get; set; } = new List<CreateExpenseCommand>();
 
         public UserBudget ToBudget(ApplicationUser createdBy)
         {
             return new UserBudget
             {
-                InitAmount = Amount,
-                CreationDate = DateAdded,
-                Expenses = _Expenses?.Select(x => x.ToExpense()).ToList(),
+                InitAmount = InitAmount,
+                Name = Name,
+                CreationDate = CreationDate,
+                Balance = InitAmount, // this needs to be initialamount - each expense amount
+                Expenses = expenses?.Select(x => x.ToExpense()).ToList(),
                 UserId = createdBy.Id,
             };
         }

@@ -4,8 +4,14 @@ using System.ComponentModel.DataAnnotations;
 
 namespace MyBudgetDB.Models.BudgetCommands
 {
-    public class EditBudgetBase : EditExpenseBase
+    public class EditBudgetBase
     {
+
+        public string Name;
+
+        [Range(0, double.MaxValue)]
+        public double Balance;
+
         [DataType(DataType.Date)]
         public DateTime CreationDate { get; set; }
 

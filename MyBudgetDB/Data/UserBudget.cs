@@ -11,7 +11,11 @@ namespace MyBudgetDB.Data
 
         public string UserId { get; set; }
 
+        public string Name { get; set; }
+
         public double InitAmount { get; set; }
+
+        public double Balance { get; set; }
        
         public DateTime CreationDate { get; set; }
 

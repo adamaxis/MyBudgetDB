@@ -67,8 +67,8 @@ namespace MyBudgetDB.Controllers
                 if (ModelState.IsValid)
                 {
                     var id = _service.CreateBudget(command, user);
-                    return RedirectToAction(nameof(View), new { id = id });
-                }
+                    return RedirectToAction(nameof(ViewBudgets));
+                }//, new { id = id }
             }
             catch (Exception)
             {
@@ -79,11 +79,16 @@ namespace MyBudgetDB.Controllers
         }
 
         [Authorize]
-        public IActionResult ManageBudgets()
+        public async Task<IActionResult> ViewBudgets()
         {
-            ViewData["Message"] = "Manage Budgets";
+            var user = await _userService.GetUserAsync(User);
+            if (user == null)
+            {
+                throw new ApplicationException($"Unable to load user with ID '{_userService.GetUserId(User)}'.");
+            }
 
-            return View();
+            var budgets = _service.GetBudgetsBrief(user.Id);
+            return View(budgets);
         }
 
         public IActionResult Error()

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Extensions.Logging;
 using MyBudgetDB.Data;
@@ -56,6 +57,28 @@ namespace MyBudgetDB.Services
         {
             return _context.Budgets
                 .SingleOrDefault(x => x.BudgetId == id);
+        }
+
+        public ICollection<UserBudget> GetBudgets(string id)
+        {
+            return _context.Budgets
+                .Where(x => !x.IsDeleted)
+                .Where(x => x.UserId == id)
+                .ToList();
+        }
+
+        public ICollection<UserBudgetBrief> GetBudgetsBrief(string id)
+        {
+            return _context.Budgets
+                .Where(r => !r.IsDeleted)
+                .Select(x => new UserBudgetBrief
+                {
+                    Id = x.BudgetId,
+                    Name = x.Name,
+                    CreationDate = x.CreationDate,
+                    Balance = x.Balance
+                })
+                .ToList();
         }
 
         public UpdateBudgetCommand GetBudgetForUpdate(int id)
