@@ -1,0 +1,73 @@
+﻿@model MyBudgetDB.Models.BudgetCommands.UserBudgetDetails
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+@{
+    var initAmt = Model.InitAmount;
+    var total = 0.0;
+    var fnBalance = 0.0;
+
+    foreach (var item in Model.Expenses)
+    {
+        fnBalance += item.Amount;
+    }
+
+    total = initAmt - fnBalance;
+}
+
+<div class="table-responsive">
+    <table class="table table-striped recipe">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.FirstName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.LastName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.InitAmount)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Balance)
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>@Model.FirstName</td>
+                <td>@Model.LastName</td>
+                <td>@Model.InitAmount</td>
+                <td>@total</td>
+            </tr>
+    </table>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Expenses.ElementAt(0).Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Expenses.ElementAt(0).Amount)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Expenses.ElementAt(0).DateAdded)
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                @foreach (var item in Model.Expenses)
+                {
+                    <td>@item.Name</td>
+                    <td>@item.Amount</td>
+                    <td>@item.DateAdded</td>
+                }
+            </tr>
+        </tbody>
+    </table>
+</div>
+<a asp-action="Create" class="btn btn-success">Create New Person</a>
