@@ -22,10 +22,13 @@ namespace MyBudgetDB
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.Configure<AppSecrets>(Configuration.GetSection("MyBudgetDB"));
+            var config = new AppSecrets();
+            Configuration.Bind("MyBudgetDB", config);
+            services.AddSingleton(config);
 
             services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+                options.UseSqlServer(
+                    $"{config.Database};User ID={config.User};Password={config.Password};{config.Options};"));
 
             services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()
