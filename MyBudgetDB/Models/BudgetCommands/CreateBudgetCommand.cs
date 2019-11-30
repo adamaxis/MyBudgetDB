@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using MyBudgetDB.Data;
 
@@ -12,12 +13,13 @@ namespace MyBudgetDB.Models.BudgetCommands
         {
             return new UserBudget
             {
-                InitAmount = InitAmount,
+                Amount = Amount,
                 Name = Name,
-                CreationDate = CreationDate,
-                Balance = InitAmount,
-                Expenses = Expenses?.Select(x => x.ToExpense()).ToList(),
+                Owner = createdBy.Email,
                 UserId = createdBy.Id,
+                CreationDate = DateTime.Now,
+                Balance = Amount - Expenses.Sum(x => x.Amount),
+                Expenses = Expenses?.Select(x => x.ToExpense()).ToList()
             };
         }
     }

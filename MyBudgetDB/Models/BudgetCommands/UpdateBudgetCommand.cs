@@ -17,7 +17,7 @@ namespace MyBudgetDB.Models.BudgetCommands
 
         public void UpdateBudget(UserBudget budget)
         {
-            budget.InitAmount = InitAmount;
+            budget.Amount = Amount;
             budget.CreationDate = DateTime.Today;
 
             

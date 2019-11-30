@@ -17,7 +17,7 @@
                     @Html.DisplayNameFor(model => model.ElementAt(0).Name)
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.ElementAt(0).InitAmount)
+                    @Html.DisplayNameFor(model => model.ElementAt(0).Amount)
                 </th>
                 <th>
                         @Html.DisplayNameFor(model => model.ElementAt(0).Balance)
@@ -32,38 +32,26 @@
         <tbody>
             @foreach (var item in Model)
             {
-                <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Id)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Name)
-                    </td>
-                    <th>
-                        @Html.DisplayNameFor(model => item.InitAmount)
-                    </th>
-                    @{
-                        var initAmt = item.InitAmount;
-                        var total = 0.0;
-                        var fnBalance = 0.0;
-
-                        foreach (var element in item.Expenses)
-                        {
-                            fnBalance += element.Amount;
-                        }
-
-                        total = initAmt - fnBalance;
-                    }
-                    <td>
-                            @total
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.CreationDate)
-                    </td>
-                    <td>
-                        <a asp-action="View" asp-route-id="@item.Id" class="btn">View</a>
-                    </td>
-                </tr>
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <th>
+                    @Html.DisplayNameFor(model => item.Amount)
+                </th>
+                <th>
+                    @Html.DisplayFor(model => item.Balance)
+                </th>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CreationDate)
+                </td>
+                <td>
+                    <a asp-action="ViewBudget" asp-route-id="@item.Id" class="btn">View</a>
+                </td>
+            </tr>
             }
         </tbody>
     </table>

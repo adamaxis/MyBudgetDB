@@ -40,7 +40,9 @@ namespace MyBudgetDB.Services
                 {
                     Id = x.BudgetId,
                     CreationDate = x.CreationDate,
-                    InitAmount = x.InitAmount,
+                    Amount = x.Amount,
+                    Owner = x.Owner,
+                    Balance = x.Balance,
 
                     Expenses = x.Expenses
                         .Select(item => new UserBudgetDetails.Item
@@ -71,7 +73,7 @@ namespace MyBudgetDB.Services
         {
             var budget = _context.Budgets
                 .SingleOrDefault(x => x.BudgetId == id);
-            var initAmt = (double)(budget.InitAmount);
+            var initAmt = (double)(budget.Amount);
             var fnBalance = 0.0;
 
             foreach (var expense in budget.Expenses)
@@ -92,7 +94,7 @@ namespace MyBudgetDB.Services
                     Name = x.Name,
                     CreationDate = x.CreationDate,
                     Balance = x.Balance,
-                    InitAmount = x.InitAmount,
+                    Amount = x.Amount,
                     Expenses = x.Expenses
                 })
                 .ToList();
@@ -105,7 +107,7 @@ namespace MyBudgetDB.Services
                 .Where(x => !x.IsDeleted)
                 .Select(x => new UpdateBudgetCommand
                 {
-                    InitAmount = x.InitAmount,
+                    Amount = x.Amount,
                     CreationDate = x.CreationDate,
                     
                 }).SingleOrDefault();
@@ -128,5 +130,7 @@ namespace MyBudgetDB.Services
             _context.SaveChanges();
             return budget.BudgetId;
         }
+
+        
     }
 }

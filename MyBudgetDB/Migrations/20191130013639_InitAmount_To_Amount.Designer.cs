@@ -11,9 +11,10 @@ using System;
 namespace MyBudgetDB.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20191130013639_InitAmount_To_Amount")]
+    partial class InitAmount_To_Amount
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -225,8 +226,6 @@ namespace MyBudgetDB.Migrations
                     b.Property<bool>("IsDeleted");
 
                     b.Property<string>("Name");
-
-                    b.Property<string>("Owner");
 
                     b.Property<string>("UserId");
 

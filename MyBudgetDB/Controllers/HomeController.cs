@@ -90,7 +90,27 @@ namespace MyBudgetDB.Controllers
         }
 
         [Authorize]
-        public async Task<IActionResult> View(int id)
+        public async Task<IActionResult> ViewBudget(int id)
+        {
+            var model = _service.GetBudgetDetail(id);
+
+            if (model == null)
+            {
+                return NotFound();
+            }
+
+            var budget = _service.GetBudget(id);
+
+            var user = await _userService.GetUserAsync(User);
+            if (user == null)
+            {
+                throw new ApplicationException($"Unable to load user with ID '{_userService.GetUserId(User)}'.");
+            }
+            return View(model);
+        }
+
+        [Authorize]
+        public async Task<IActionResult> EditBudget(int id)
         {
             var model = _service.GetBudgetDetail(id);
 

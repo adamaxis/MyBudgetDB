@@ -9,7 +9,7 @@ namespace MyBudgetDB.Models.BudgetCommands
         public int Id { get; set; }
         public string Name { get; set; }
         public DateTime CreationDate { get; set; }
-        public double InitAmount { get; set; } // not getting initial amount
+        public double Amount { get; set; } // not getting initial amount
         public double Balance { get; set; }
         public ICollection<Expense> Expenses { get; set; } 
 

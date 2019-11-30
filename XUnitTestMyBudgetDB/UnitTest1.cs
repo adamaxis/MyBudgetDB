@@ -41,7 +41,7 @@ namespace XUnitTestMyBudgetDB
                     var service = new BudgetService(context);
                     var cmd = new CreateBudgetCommand
                     {
-                        InitAmount = amount,
+                        Amount = amount,
                     };
                     var user = new ApplicationUser
                     {
@@ -57,7 +57,7 @@ namespace XUnitTestMyBudgetDB
                     Assert.Equal(1, await context.Budgets.CountAsync());
 
                     var budget = await context.Budgets.SingleAsync();
-                    Assert.Equal(amount, budget.InitAmount);
+                    Assert.Equal(amount, budget.Amount);
                 }
             }
             finally

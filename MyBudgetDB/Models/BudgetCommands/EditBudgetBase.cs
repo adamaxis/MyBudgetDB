@@ -18,7 +18,7 @@ namespace MyBudgetDB.Models.BudgetCommands
         //public IList<CreateExpenseCommand> Expenses { get; set; } = new List<CreateExpenseCommand>();
 
         [Range(0, double.MaxValue)]
-        public double InitAmount { get; set; }
+        public double Amount { get; set; }
 
         //public bool IsDeleted { get; set; }
     }

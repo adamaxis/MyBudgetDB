@@ -4,32 +4,16 @@
     ViewBag.Title = "title";
     Layout = "_Layout";
 }
-
-@{
-    var initAmt = Model.InitAmount;
-    var total = 0.0;
-    var fnBalance = 0.0;
-
-    foreach (var item in Model.Expenses)
-    {
-        fnBalance += item.Amount;
-    }
-
-    total = initAmt - fnBalance;
-}
-
+<h3>Budget Info</h3>
 <div class="table-responsive">
     <table class="table table-striped recipe">
         <thead>
             <tr>
                 <th>
-                    @Html.DisplayNameFor(model => model.FirstName)
+                    @Html.DisplayNameFor(model => model.Owner)
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.LastName)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.InitAmount)
+                    @Html.DisplayNameFor(model => model.Amount)
                 </th>
                 <th>
                     @Html.DisplayNameFor(model => model.Balance)
@@ -38,12 +22,13 @@
         </thead>
         <tbody>
             <tr>
-                <td>@Model.FirstName</td>
-                <td>@Model.LastName</td>
-                <td>@Model.InitAmount</td>
-                <td>@total</td>
+                <td>@Html.DisplayFor(model => model.Owner)</td>
+                <td>@Html.DisplayFor(model => model.Amount)</td>
+                <td>@Html.DisplayFor(model => model.Balance)</td>
             </tr>
     </table>
+    <hr />
+    <h3>Expenses</h3>
     <table class="table table-striped">
         <thead>
             <tr>
@@ -59,15 +44,15 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                @foreach (var item in Model.Expenses)
-                {
-                    <td>@item.Name</td>
-                    <td>@item.Amount</td>
-                    <td>@item.DateAdded</td>
-                }
-            </tr>
+            @foreach (var item in Model.Expenses)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(model => item.Name)</td>
+                    <td>@Html.DisplayFor(model => item.Amount)</td>
+                    <td>@Html.DisplayFor(model => item.DateAdded)</td>
+                </tr>
+            }
         </tbody>
     </table>
 </div>
-<a asp-action="Create" class="btn btn-success">Create New Person</a>
+<a asp-action="EditBudget" asp-route-id="@Model.Id" class="btn btn-success">Edit</a>
