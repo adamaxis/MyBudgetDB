@@ -23,7 +23,6 @@ namespace MyBudgetDB.Services
             _context = context;
         }
 
-        // add delete field to db
         public bool DoesBudgetExist(int id)
         {
             return _context.Budgets
@@ -131,6 +130,13 @@ namespace MyBudgetDB.Services
             return budget.BudgetId;
         }
 
-        
+        public void DeleteBudget(int budgetId)
+        {
+            var budget = _context.Budgets.Find(budgetId);
+            if (budget.IsDeleted) { throw new Exception("Unable to delete a deleted budget");}
+
+            budget.IsDeleted = true;
+            _context.SaveChanges();
+        }
     }
 }
