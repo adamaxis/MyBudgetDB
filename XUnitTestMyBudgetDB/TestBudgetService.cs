@@ -49,5 +49,72 @@ namespace XUnitTestMyBudgetDB
                 Assert.Equal(budgetName, budget.Name);
             }
         }
+
+        [Fact]
+        public void GetBudgetDetails_CanLoadFromContext()
+        {
+            var connection = new SqliteConnection("DataSource=:memory:");
+            connection.Open();
+            var options = new DbContextOptionsBuilder<ApplicationDbContext>()
+                .UseSqlite(connection)
+                .Options;
+
+            // Insert seed data into the database using one instance of the context
+            using (var context = new ApplicationDbContext(options))
+            {
+                context.Database.EnsureCreated();
+                context.Budgets.AddRange(
+                    new UserBudget { BudgetId = 1, Name = "General_house" },
+                    new UserBudget { BudgetId = 2, Name = "Traveling" },
+                    new UserBudget { BudgetId = 3, Name = "Camilla" });
+                context.SaveChanges();
+            }
+
+            // Use a separate instance of the context to verify correct data was saved to database
+            using (var context = new ApplicationDbContext(options))
+            {
+                var service = new  BudgetService(context);
+
+                var budget = service.GetBudgetDetail(2);
+
+                Assert.NotNull(budget);
+                Assert.Equal(2, budget.Id);
+                Assert.Equal("Traveling", budget.Name);
+            }
+        }
+
+        [Fact]
+        public void GetBudgetDetails_DoesNotLoadDeletedBudget()
+        {
+            const string budgetName = "Test Budget";
+            const int budgetId = 2;
+
+            var connection = new SqliteConnection("DataSource=:memory:");
+            connection.Open();
+            var options = new DbContextOptionsBuilder<ApplicationDbContext>()
+                .UseSqlite(connection)
+                .Options;
+
+            // Insert seed data into the database using one instance of the context
+            using (var context = new ApplicationDbContext(options))
+            {
+                context.Database.EnsureCreated();
+                context.Budgets.Add(new UserBudget { BudgetId  = 1, Name = "Budget1" });
+                context.Budgets.Add(new UserBudget { BudgetId = 2, Name = budgetName, IsDeleted = true });
+                context.Budgets.Add(new UserBudget { BudgetId = 3, Name = "Budget3" });
+                context.SaveChanges();
+            }
+
+            // Use a separate instance of the context to verify correct data was saved to database
+            using (var context = new ApplicationDbContext(options))
+            {
+                var service = new BudgetService(context);
+
+                var budget = service.GetBudgetDetail(budgetId);
+
+                Assert.Null(budget);
+            }
+        }
+
     }
 }
