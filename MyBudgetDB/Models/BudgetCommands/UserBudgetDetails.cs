@@ -8,6 +8,7 @@ namespace MyBudgetDB.Models.BudgetCommands
     {
         public int Id { get; set; }
         public string Owner { get; set; }
+        public string Name { get; set; }
         [Display(Name = "Budget Amount"), DisplayFormat(DataFormatString = "{0:C}")]
         public double Amount { get; set; }
         [Display(Name = "Current Balance"), DisplayFormat(DataFormatString = "{0:C}")]
