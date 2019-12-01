@@ -14,6 +14,7 @@ namespace MyBudgetDB.Models.BudgetCommands
 
         public int BudgetId { get; set; }
         public string UserId { get; set; }
+        public string Owner { get; set; }
 
         public void UpdateBudget(UserBudget budget)
         {
