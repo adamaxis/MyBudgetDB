@@ -112,13 +112,12 @@ namespace MyBudgetDB.Controllers
         [Authorize]
         public async Task<IActionResult> EditBudget(int id)
         {
-            var model = _service.GetBudgetDetail(id);
+            var model = _service.GetBudgetForUpdate(id);
 
             if (model == null)
             {
                 return NotFound();
             }
-
             var budget = _service.GetBudget(id);
 
             var user = await _userService.GetUserAsync(User);
@@ -127,6 +126,32 @@ namespace MyBudgetDB.Controllers
                 throw new ApplicationException($"Unable to load user with ID '{_userService.GetUserId(User)}'.");
             }
             return View(model);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> EditBudget(UpdateBudgetCommand command)
+        {
+            try
+            {
+                var person = _service.GetBudget(command.BudgetId);
+                /*var authResult = await _authService.AuthorizeAsync(User, person, "CanEditPerson");
+                if (!authResult.Succeeded)
+                {
+                    return new ForbidResult();
+                }*/
+
+                if (ModelState.IsValid)
+                {
+                    _service.UpdateBudget(command);
+                    return RedirectToAction(nameof(ViewBudget), new { id = command.BudgetId });
+                }
+            }
+            catch (Exception)
+            {
+                ModelState.AddModelError(string.Empty, "An error occured while trying to connect to the database.");
+            }
+
+            return View(command);
         }
 
         public IActionResult Error()

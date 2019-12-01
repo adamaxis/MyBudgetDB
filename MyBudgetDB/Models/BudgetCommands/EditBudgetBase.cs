@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MyBudgetDB.Data;
+using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace MyBudgetDB.Models.BudgetCommands
@@ -14,7 +16,7 @@ namespace MyBudgetDB.Models.BudgetCommands
         [DataType(DataType.Date)]
         public DateTime CreationDate { get; set; }
 
-        //public IList<CreateExpenseCommand> Expenses { get; set; } = new List<CreateExpenseCommand>();
+        //public ICollection<Expense> Expenses { get; set; };
 
         [Range(0, double.MaxValue)]
         public double Amount { get; set; }

@@ -106,11 +106,22 @@ namespace MyBudgetDB.Services
                 .Where(x => !x.IsDeleted)
                 .Select(x => new UpdateBudgetCommand
                 {
+                    BudgetId = x.BudgetId,
+                    Balance = x.Amount - x.Expenses.Sum(y => y.Amount),
+                    Expenses = x.Expenses
+                        .Select(item => new Expense
+                        {
+                            Name = item.Name,
+                            Amount = item.Amount,
+                            DateAdded = item.DateAdded
+                        }).DefaultIfEmpty(new Expense()).ToList(),
+                    Name = x.Name,
+                    UserId = x.UserId,
                     Amount = x.Amount,
                     CreationDate = x.CreationDate,
                     Owner = x.Owner
-                    
-                }).SingleOrDefault();
+
+                }).DefaultIfEmpty(new UpdateBudgetCommand()).SingleOrDefault();
         }
 
         public void UpdateBudget(UpdateBudgetCommand cmd)
@@ -120,6 +131,7 @@ namespace MyBudgetDB.Services
             if (budget.IsDeleted) { throw new Exception("Unable to update a deleted budget list"); }
 
             cmd.UpdateBudget(budget);
+            _context.Update(budget);
             _context.SaveChanges();
         }
 
