@@ -57,6 +57,7 @@ namespace MyBudgetDB.Services
         public UserBudget GetBudget(int id)
         {
             return _context.Budgets
+                .Where(x => x.BudgetId == id)
                 .SingleOrDefault(x => x.BudgetId == id);
         }
 
@@ -106,21 +107,20 @@ namespace MyBudgetDB.Services
                 .Where(x => !x.IsDeleted)
                 .Select(x => new UpdateBudgetCommand
                 {
-                    BudgetId = x.BudgetId,
-                    Balance = x.Amount - x.Expenses.Sum(y => y.Amount),
-                    Expenses = x.Expenses
-                        .Select(item => new Expense
-                        {
-                            Name = item.Name,
-                            Amount = item.Amount,
-                            DateAdded = item.DateAdded
-                        }).DefaultIfEmpty(new Expense()).ToList(),
                     Name = x.Name,
-                    UserId = x.UserId,
+                    Owner = x.Owner,
                     Amount = x.Amount,
+                    //Balance = x.Amount - x.Expenses.Sum(y => y.Amount),
                     CreationDate = x.CreationDate,
-                    Owner = x.Owner
-
+                    //BudgetId = x.BudgetId,
+                    //UserId = x.UserId,
+                    //Expenses = x.Expenses
+                    //    .Select(item => new Expense
+                    //    {
+                    //        Name = item.Name,
+                    //        Amount = item.Amount,
+                    //        DateAdded = item.DateAdded
+                    //    }).DefaultIfEmpty(new Expense()).ToList(),
                 }).DefaultIfEmpty(new UpdateBudgetCommand()).SingleOrDefault();
         }
 

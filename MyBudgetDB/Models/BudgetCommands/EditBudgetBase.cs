@@ -10,17 +10,16 @@ namespace MyBudgetDB.Models.BudgetCommands
         [StringLength(100)]
         public string Name { get; set; }
 
+        [StringLength(35)]
+        public string Owner { get; set; }
+
         [Range(0, double.MaxValue)]
         public double Balance { get; set; }
 
         [DataType(DataType.Date)]
         public DateTime CreationDate { get; set; }
 
-        //public ICollection<Expense> Expenses { get; set; };
-
         [Range(0, double.MaxValue)]
         public double Amount { get; set; }
-
-        //public bool IsDeleted { get; set; }
     }
 }
