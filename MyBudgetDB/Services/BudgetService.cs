@@ -108,6 +108,7 @@ namespace MyBudgetDB.Services
                 {
                     Amount = x.Amount,
                     CreationDate = x.CreationDate,
+                    Owner = x.Owner
                     
                 }).SingleOrDefault();
         }
