@@ -11,9 +11,10 @@ using System;
 namespace MyBudgetDB.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20191202034833_Added_Field")]
+    partial class Added_Field
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -208,7 +209,7 @@ namespace MyBudgetDB.Migrations
 
                     b.HasIndex("UserBudgetBudgetId");
 
-                    b.ToTable("Expenses");
+                    b.ToTable("Expense");
                 });
 
             modelBuilder.Entity("MyBudgetDB.Data.UserBudget", b =>
@@ -286,8 +287,7 @@ namespace MyBudgetDB.Migrations
                 {
                     b.HasOne("MyBudgetDB.Data.UserBudget")
                         .WithMany("Expenses")
-                        .HasForeignKey("UserBudgetBudgetId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("UserBudgetBudgetId");
                 });
 #pragma warning restore 612, 618
         }

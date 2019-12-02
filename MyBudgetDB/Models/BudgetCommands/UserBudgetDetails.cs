@@ -15,6 +15,7 @@ namespace MyBudgetDB.Models.BudgetCommands
         public double Balance { get; set; }
         public DateTime CreationDate { get; set; }
         public bool IsDeleted { get; set; }
+        public DateTime LastModified { get; set; }
         public IEnumerable<Item> Expenses { get; set; }
 
         public class Item

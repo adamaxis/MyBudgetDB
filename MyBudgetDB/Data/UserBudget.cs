@@ -21,6 +21,8 @@ namespace MyBudgetDB.Data
        
         public DateTime CreationDate { get; set; }
 
+        public DateTime LastModified { get; set; }
+
         public ICollection<Expense> Expenses { get; set; }
 
         public bool IsDeleted { get; set; }
