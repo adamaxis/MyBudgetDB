@@ -145,7 +145,8 @@ namespace MyBudgetDB.Services
 
             if (existingBudget == null)
             {
-                _context.Add(budget); 
+                _context.Add(budget);
+                _context.SaveChanges();
             }
             else
             {
@@ -164,6 +165,7 @@ namespace MyBudgetDB.Services
                         _context.Entry(existingExpense).CurrentValues.SetValues(expense);
                     }
                 }
+                _context.SaveChanges();
             }
         }
 
