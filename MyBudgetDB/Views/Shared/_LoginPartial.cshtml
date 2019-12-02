@@ -8,6 +8,15 @@
 @if (SignInManager.IsSignedIn(User))
 {
     <ul class="nav navbar-nav"> <!-- Menu items for registered users-->
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                MyBudget
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" asp-area="" asp-controller="FamPerson" asp-action="Index">Assignment 12.2</a>
+                            
+            </div>
+        </li>
         <li><a asp-area="" asp-controller="Home" asp-action="CreateBudget">Create Budget</a></li>
         <li><a asp-area="" asp-controller="Home" asp-action="ViewBudgets">Manage Budgets</a></li>
         <li><a asp-area="" asp-controller="Home" asp-action="Index">Menu3</a></li>
