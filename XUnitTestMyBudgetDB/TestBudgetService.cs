@@ -278,6 +278,36 @@ namespace XUnitTestMyBudgetDB
         }
         
         [Fact]
+        public void UpdateBudget_CanLoadUpdateBudget()
+        {
+            var connection = new SqliteConnection("DataSource=:memory:");
+            connection.Open();
+            var options = new DbContextOptionsBuilder<ApplicationDbContext>()
+                .UseSqlite(connection)
+                .Options;
+
+            // Insert seed data into the database using one instance of the context
+            using (var context = new ApplicationDbContext(options))
+            {
+                context.Database.EnsureCreated();
+                context.Budgets.AddRange(
+                    new UserBudget { BudgetId = 1, Owner = "Sofia" },
+                    new UserBudget { BudgetId = 2, Name = "Camilla" });
+                context.SaveChanges();
+            }
+
+            // Use a separate instance edit some data
+            using (var context = new ApplicationDbContext(options))
+            {
+                var service = new BudgetService(context);
+
+                UpdateBudgetCommand toUpdate = service.GetBudgetForUpdate(2);
+
+                Assert.NotNull(toUpdate);
+            }
+        }
+
+        [Fact]
         public void UpdateBudget_CanUpdate()
         {
             var connection = new SqliteConnection("DataSource=:memory:");
@@ -296,55 +326,24 @@ namespace XUnitTestMyBudgetDB
                 context.SaveChanges();
             }
 
-            // Use a separate instance of the context to verify correct data was saved to database
+            // Use a separate instance edit some data
             using (var context = new ApplicationDbContext(options))
             {
                 var service = new BudgetService(context);
 
-                var toUpdate = service.GetBudgetForUpdate(1);
+                UpdateBudgetCommand toUpdate = service.GetBudgetForUpdate(1);
+                toUpdate.BudgetId = 1;
                 toUpdate.Owner = "Bob";
-                toUpdate.BudgetId = 5;
                 toUpdate.Amount = 500;
                 service.UpdateBudget(toUpdate);
-                context.SaveChanges();
 
-                //Assert.Equal(1, budget.BudgetId);
-                //Assert.Equal("Sofia", budget.Owner);
+                var budget = service.GetBudget(1);
+
+                Assert.NotNull(budget);
+                Assert.Equal(500, budget.Amount);
+                Assert.NotEqual("Sofia", budget.Owner);
+                Assert.Equal("Bob", budget.Owner);
             }
         }
-
-        //[Fact]
-        //public void GetBudgetForUpdate_CanLoadUpdateBudgetCommand()
-        //{
-        //    var connection = new SqliteConnection("DataSource=:memory:");
-        //    connection.Open();
-        //    var options = new DbContextOptionsBuilder<ApplicationDbContext>()
-        //        .UseSqlite(connection)
-        //        .Options;
-
-        //    // Insert seed data into the database using one instance of the context
-        //    using (var context = new ApplicationDbContext(options))
-        //    {
-        //        context.Database.EnsureCreated();
-        //        context.Budgets.AddRange(
-        //            new UserBudget { BudgetId = 1, Owner = "Sofia" },
-        //            new UserBudget { BudgetId = 2, Name = "Camilla" });
-        //        context.SaveChanges();
-        //    }
-
-        //    // Use a separate instance of the context to verify correct data was saved to database
-        //    using (var context = new ApplicationDbContext(options))
-        //    {
-        //        var service = new BudgetService(context);
-
-        //        UpdateBudgetCommand budget = service.GetBudgetForUpdate(1);
-        //        //budget.BudgetId = 1;
-        //        //budget.Owner = "Bob";
-        //        //context.SaveChanges();
-
-        //        Assert.Equal(1, budget.BudgetId);
-        //        Assert.Equal("Sofia", budget.Owner);
-        //    }
-        //}
     }
 }
