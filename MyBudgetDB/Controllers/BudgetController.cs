@@ -56,8 +56,7 @@ namespace MyBudgetDB.Controllers
 
             return View(command);
         }
-
-        [Authorize]
+        
         public async Task<IActionResult> ViewBudgets()
         {
             var user = await _userService.GetUserAsync(User);
@@ -69,8 +68,7 @@ namespace MyBudgetDB.Controllers
             var budgets = _service.GetBudgetsBrief(user.Id);
             return View(budgets);
         }
-
-        [Authorize]
+        
         public async Task<IActionResult> ViewBudget(int id)
         {
             var model = _service.GetBudgetDetail(id);
@@ -89,8 +87,7 @@ namespace MyBudgetDB.Controllers
             }
             return View(model);
         }
-
-        [Authorize]
+        
         public async Task<IActionResult> EditBudget(int id)
         {
             // Add this for authorization
@@ -141,6 +138,7 @@ namespace MyBudgetDB.Controllers
             return View(command);
         }
 
+        [AllowAnonymous]
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
