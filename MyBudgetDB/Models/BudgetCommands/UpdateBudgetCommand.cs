@@ -18,6 +18,10 @@ namespace MyBudgetDB.Models.BudgetCommands
             budget.Balance = Balance;
             budget.CreationDate = CreationDate;
             budget.Amount = Amount;
+            budget.BudgetId = BudgetId;
+            budget.Expenses = Expenses;	
+            budget.UserId = UserId;
+            //budget.IsDeleted = IsDeleted;
             foreach (var expense in budget.Expenses)
             {
                 

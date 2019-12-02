@@ -106,16 +106,17 @@ namespace MyBudgetDB.Services
             return _context.Budgets
                 .Where(x => x.BudgetId == id)
                 .Where(x => !x.IsDeleted)
+                .Include(x => x.Expenses)
                 .Select(x => new UpdateBudgetCommand
                 {
                     Name = x.Name,
                     Owner = x.Owner,
                     Amount = x.Amount,
-                    //Balance = x.Amount - x.Expenses.Sum(y => y.Amount),
                     CreationDate = x.CreationDate,
-                    //BudgetId = x.BudgetId,
-                    //UserId = x.UserId,
-                    //Expenses = x.Expenses
+                    BudgetId = x.BudgetId,
+                    UserId = x.UserId,
+                    Expenses = x.Expenses.ToList(),
+                    Balance = x.Amount - x.Expenses.Sum(y => y.Amount),
                     //Expenses obj = x.Expenses.FirstOrDefault(o => o. == myValue);
                     //    .Select(item => new Expense
                     //    {
@@ -123,7 +124,7 @@ namespace MyBudgetDB.Services
                     //        Amount = item.Amount,
                     //        DateAdded = item.DateAdded
                     //    }).DefaultIfEmpty(new Expense()).ToList(),
-                }).DefaultIfEmpty(new UpdateBudgetCommand()).SingleOrDefault();
+                }).SingleOrDefault();
         }
 
         public void UpdateBudget(UpdateBudgetCommand cmd)
@@ -142,7 +143,6 @@ namespace MyBudgetDB.Services
             var existingBudget = _context.Budgets
                 .Include(b => b.Expenses)
                 .FirstOrDefault(b => b.BudgetId == budget.BudgetId);
-
             if (existingBudget == null)
             {
                 _context.Add(budget);
