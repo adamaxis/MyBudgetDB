@@ -12,6 +12,21 @@ namespace MyBudgetDB.Models.ManageViewModels
 
         public bool IsEmailConfirmed { get; set; }
 
+        [StringLength(32)]
+        public string FirstName { get; set; }
+        [StringLength(32)]
+        public string LastName { get; set; }
+        //public string Email { get; set; } // I think we don't need to add this one as is already in IdentityUser
+        public double Amount { get; set; }
+
+        [DataType(DataType.Date)]
+        public DateTime? DateOfBirth { get; set; }
+
+        public bool IsActive { get; set; }
+
+        [DataType(DataType.Date)]
+        public DateTime DateAdded { get; set; }
+
         [Required]
         [EmailAddress]
         public string Email { get; set; }

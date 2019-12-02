@@ -1,26 +1,16 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
-using MyBudgetDB.Entities.Budget;
+﻿using MyBudgetDB.Data;
 
 namespace MyBudgetDB.Models.BudgetCommands
 {
-    public class CreateExpenseCommand
+    public class CreateExpenseCommand : EditExpenseBase
     {
-        [Required, StringLength(50)]
-        public string Name { get; set; }
-        
-        public double Amount { get; set; }
-        
-        public DateTime DateAdded { get; set; }
-
-
         public Expense ToExpense()
         {
             return new Expense
             {
                 Name = Name,
                 Amount = Amount,
-                DateAdded = DateAdded // Fix
+                DateAdded = DateAdded
             };
         }
     }

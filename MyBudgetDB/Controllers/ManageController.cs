@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Text;
 using System.Text.Encodings.Web;
 using System.Threading.Tasks;
@@ -10,6 +11,9 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using MyBudgetDB.Authorization;
+using MyBudgetDB.Data;
+using MyBudgetDB.Extensions;
 using MyBudgetDB.Models;
 using MyBudgetDB.Models.ManageViewModels;
 using MyBudgetDB.Services;
@@ -59,6 +63,10 @@ namespace MyBudgetDB.Controllers
             {
                 Username = user.UserName,
                 Email = user.Email,
+                FirstName = user.FirstName,
+                LastName = user.LastName,
+                DateOfBirth = user.DateOfBirth,
+                IsActive = (User.FindFirstValue(Claims.IsActive) != "true" ? false : true),
                 PhoneNumber = user.PhoneNumber,
                 IsEmailConfirmed = user.EmailConfirmed,
                 StatusMessage = StatusMessage
@@ -100,6 +108,51 @@ namespace MyBudgetDB.Controllers
                 {
                     throw new ApplicationException($"Unexpected error occurred setting phone number for user with ID '{user.Id}'.");
                 }
+            }
+
+            // check FirstName + LastName
+            bool updateClaims = false;
+            if (model.FirstName != user.FirstName || model.LastName != user.LastName)
+            {
+                updateClaims = true;
+                // grab old claim and get rid of it
+                await _userManager.RemoveClaimAsync(user, new Claim("FullName", user.FirstName + " " + user.LastName));
+                user.FirstName = model.FirstName;
+                user.LastName = model.LastName;
+
+                // add FullName claim
+                var nameClaim = new Claim("FullName", model.FirstName + " " + model.LastName);
+                await _userManager.AddClaimAsync(user, nameClaim);
+            }
+
+            // check IsActive - there is probably a neater way to do this, but I was short on time
+            var activeClaim = User.FindFirst(Claims.IsActive);
+            var isActive = (activeClaim.Value != "true" ? false : true);
+            if (model.IsActive != isActive)
+            {
+                var newClaim = new Claim(Claims.IsActive, (model.IsActive == true ? "true" : "false"));
+                updateClaims = true;
+                await _userManager.ReplaceClaimAsync(user, activeClaim, newClaim);
+            }
+
+            // check dob
+            if (model.DateOfBirth != user.DateOfBirth)
+            {
+                user.DateOfBirth = model.DateOfBirth;
+            }
+
+            var nameResults = await _userManager.UpdateAsync(user);
+            if (!nameResults.Succeeded)
+            {
+                throw new ApplicationException($"Unexpected error occurred setting FirstName+LastName for user with ID '{user.Id}'.");
+            }
+
+
+            // claim changed, so do update
+            if (updateClaims == true)
+            {
+                // refresh claims
+                await _signInManager.RefreshSignInAsync(user);
             }
 
             StatusMessage = "Your profile has been updated";

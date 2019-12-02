@@ -10,6 +10,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using MyBudgetDB.Authorization;
+using MyBudgetDB.Data;
+using MyBudgetDB.Extensions;
 using MyBudgetDB.Models;
 using MyBudgetDB.Models.AccountViewModels;
 using MyBudgetDB.Services;
@@ -224,6 +227,7 @@ namespace MyBudgetDB.Controllers
                 var result = await _userManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
+                    await AddClaims(model, user);
                     _logger.LogInformation("User created a new account with password.");
 
                     var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
@@ -239,6 +243,19 @@ namespace MyBudgetDB.Controllers
 
             // If we got this far, something failed, redisplay form
             return View(model);
+        }
+
+        private async Task AddClaims(RegisterViewModel model, ApplicationUser user)
+        {
+            if (user.UserName == "valatorre@dmacc.edu" || user.UserName == "ddraper@dmacc.edu")
+            {
+                var isAdmin = new Claim(Claims.IsAdmin, "true", ClaimValueTypes.Boolean);
+                await _userManager.AddClaimAsync(user, isAdmin);
+            }
+
+            var isActive = new Claim(Claims.IsActive, "true", ClaimValueTypes.Boolean);
+            await _userManager.AddClaimAsync(user, isActive);
+
         }
 
         [HttpPost]
