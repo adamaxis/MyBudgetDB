@@ -25,6 +25,13 @@ namespace MyBudgetDB.Models.BudgetCommands
             public DateTime? DateAdded { get; set; }
         }
 
+        public double GetBalance()
+        {
+            if (Expenses == null) return 0.0;
+            double bal = Amount;
+            foreach (Item e in Expenses) bal -= e.Amount;
+            return bal;
+        }
 
     }
 }

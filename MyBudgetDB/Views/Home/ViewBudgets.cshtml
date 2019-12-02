@@ -20,7 +20,7 @@
                     @Html.DisplayNameFor(model => model.ElementAt(0).Amount)
                 </th>
                 <th>
-                        @Html.DisplayNameFor(model => model.ElementAt(0).Balance)
+                        Balance
                 </th>
                 <th>
                     @Html.DisplayNameFor(model => model.ElementAt(0).CreationDate)
@@ -40,10 +40,10 @@
                     @Html.DisplayFor(modelItem => item.Name)
                 </td>
                 <th>
-                    @Html.DisplayNameFor(model => item.Amount)
+                    $@Html.DisplayFor(model => item.Amount)
                 </th>
                 <th>
-                    @Html.DisplayFor(model => item.Balance)
+                    $@item.GetBalance()
                 </th>
                 <td>
                     @Html.DisplayFor(modelItem => item.CreationDate)
@@ -56,4 +56,4 @@
         </tbody>
     </table>
 </div>
-<a asp-action="Create" class="btn btn-success">Create New Person</a>
+<a asp-action="CreateBudget" class="btn btn-success">Create New Budget</a>

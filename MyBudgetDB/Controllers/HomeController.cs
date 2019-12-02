@@ -135,7 +135,7 @@ namespace MyBudgetDB.Controllers
             return View(model);
         }
 
-        [HttpPost]
+        [HttpPost, Authorize]
         public async Task<IActionResult> EditBudget(UpdateBudgetCommand command)
         {
             try
@@ -155,11 +155,25 @@ namespace MyBudgetDB.Controllers
             }
             catch (Exception)
             {
-                ModelState.AddModelError(string.Empty, $"{JsonConvert.SerializeObject(command)}");
+                //            throw new Exception($"{JsonConvert.SerializeObject(budget)}");
                 ModelState.AddModelError(string.Empty, "An error occured while trying to connect to the database.");
             }
 
             return View(command);
+        }
+
+        [Authorize]
+        public IActionResult DeleteBudget(int id)
+        {
+            try
+            {
+                _service.DeleteBudget(id);
+                return RedirectToAction(nameof(ViewBudgets));
+            }
+            catch (Exception)
+            {
+                return NotFound();
+            }
         }
 
         public IActionResult Error()

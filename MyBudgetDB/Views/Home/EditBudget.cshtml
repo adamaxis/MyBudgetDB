@@ -24,7 +24,7 @@
             </tr>
         </thead>
         <tbody id="ExpenseBody">
-            @for (int i = 0; i < Model.Expenses.Count(); i++)
+            @for (int i = 0; i < (Model.Expenses != null ? Model.Expenses.Count() : 0); i++)
             {
                 var expenses = Model.Expenses[i];
             <tr id="item">
@@ -85,7 +85,7 @@
         let listName = 'Expenses'; 
         let fieldsNames = ['Name', 'Category', 'Notes', 'Amount', 'DateAdded', 'remove']; //field names from Expense
         var rowIndex = expenses.find('tr').length;
-        //let rowIndex = document.querySelectorAll('.item').length;
+        if (document.getElementById('ExpenseTable_info').textContent.indexOf('0 to 0') > 0) rowIndex--;
         let row = document.createElement('tr');
         row.id = 'item';
         fieldsNames.forEach((fieldName) => {

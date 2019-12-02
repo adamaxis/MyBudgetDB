@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using MyBudgetDB.Data;
 using MyBudgetDB.Models.BudgetCommands;
+using Newtonsoft.Json;
 
 namespace MyBudgetDB.Services
 {
@@ -94,7 +95,6 @@ namespace MyBudgetDB.Services
                     Id = x.BudgetId,
                     Name = x.Name,
                     CreationDate = x.CreationDate,
-                    Balance = x.Balance,
                     Amount = x.Amount,
                     Expenses = x.Expenses
                 })
@@ -106,7 +106,6 @@ namespace MyBudgetDB.Services
             return _context.Budgets
                 .Where(x => x.BudgetId == id)
                 .Where(x => !x.IsDeleted)
-                .Include(x => x.Expenses)
                 .Select(x => new UpdateBudgetCommand
                 {
                     Name = x.Name,
@@ -116,14 +115,16 @@ namespace MyBudgetDB.Services
                     BudgetId = x.BudgetId,
                     UserId = x.UserId,
                     Expenses = x.Expenses.ToList(),
-                    Balance = x.Amount - x.Expenses.Sum(y => y.Amount),
-                    //Expenses obj = x.Expenses.FirstOrDefault(o => o. == myValue);
-                    //    .Select(item => new Expense
-                    //    {
-                    //        Name = item.Name,
-                    //        Amount = item.Amount,
-                    //        DateAdded = item.DateAdded
-                    //    }).DefaultIfEmpty(new Expense()).ToList(),
+                    /*Expenses = x.Expenses
+                        .Select(item => new Expense
+                        {
+                            UserId = item.UserId,
+                            IdExpense = item.IdExpense,
+                            Name = item.Name,
+                            Amount = item.Amount,
+                            DateAdded = item.DateAdded
+                        }).DefaultIfEmpty(new Expense()).ToList(),*/
+                    Balance = (x.Expenses.Any() ? x.Amount - x.Expenses.Sum(y => y.Amount) : 0)
                 }).SingleOrDefault();
         }
 
@@ -132,17 +133,18 @@ namespace MyBudgetDB.Services
             var budget = _context.Budgets.Find(cmd.BudgetId);
             if (budget == null) { throw new Exception("Unable to find the budget list"); }
             if (budget.IsDeleted) { throw new Exception("Unable to update a deleted budget list"); }
-            
+
+            _context.Entry(budget).State = EntityState.Detached;
             cmd.UpdateBudget(budget);
-            _context.Update(budget);
-            _context.SaveChanges();
+            InsertOrUpdateBudget(budget);
         }
 
         public void InsertOrUpdateBudget(UserBudget budget)
         {
             var existingBudget = _context.Budgets
+                .Where(b => b.BudgetId == budget.BudgetId)
                 .Include(b => b.Expenses)
-                .FirstOrDefault(b => b.BudgetId == budget.BudgetId);
+                .SingleOrDefault();
             if (existingBudget == null)
             {
                 _context.Add(budget); 
@@ -150,21 +152,36 @@ namespace MyBudgetDB.Services
             else
             {
                 _context.Entry(existingBudget).CurrentValues.SetValues(budget);
-                foreach (var expense in budget.Expenses)
+                // Delete children
+                foreach (var existingExpense in existingBudget.Expenses.ToList())
+                {
+                    if (budget.Expenses == null || !budget.Expenses.Any(c => c.IdExpense == existingExpense.IdExpense))
+                        _context.Expenses.Remove(existingExpense);
+                }
+                // Add/update
+                if(budget.Expenses != null) foreach (var expense in budget.Expenses)
                 {
                     var existingExpense = existingBudget.Expenses
-                        .FirstOrDefault(b => b.IdExpense == expense.IdExpense);
+                        .Where(b => b.IdExpense == expense.IdExpense)
+                        .SingleOrDefault();
 
-                    if (existingExpense == null)
-                    {
-                        existingBudget.Expenses.Add(expense);
-                    }
-                    else
+                    if (existingExpense != null)
                     {
                         _context.Entry(existingExpense).CurrentValues.SetValues(expense);
                     }
+                    else
+                    {
+                        // set id to 0 for DB autoassign
+                        expense.IdExpense = 0;
+                        existingBudget.Expenses.Add(expense);
+                        /* Design flaw in our DB
+                         * Workaround requires 1 save per write
+                         */
+                        _context.SaveChanges();
+                    }
                 }
             }
+            _context.SaveChanges();
         }
 
         public int CreateBudget(CreateBudgetCommand cmd, ApplicationUser createdBy)
@@ -178,9 +195,8 @@ namespace MyBudgetDB.Services
         public void DeleteBudget(int budgetId)
         {
             var budget = _context.Budgets.Find(budgetId);
-            if (budget.IsDeleted) { throw new Exception("Unable to delete a deleted budget");}
-
-            budget.IsDeleted = true;
+            if (budget == null) { throw new Exception("Budget doesn't exist");}
+            _context.Budgets.Remove(budget);
             _context.SaveChanges();
         }
     }
