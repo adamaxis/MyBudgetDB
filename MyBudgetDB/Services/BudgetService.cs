@@ -44,6 +44,7 @@ namespace MyBudgetDB.Services
                     Owner = x.Owner,
                     Name = x.Name,
                     Balance = x.Balance,
+                    LastModified = x.LastModified,
                     Expenses = x.Expenses
                         .Select(item => new UserBudgetDetails.Item
                         {
