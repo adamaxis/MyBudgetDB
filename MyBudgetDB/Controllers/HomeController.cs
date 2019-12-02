@@ -8,6 +8,7 @@ using MyBudgetDB.Data;
 using MyBudgetDB.Models;
 using MyBudgetDB.Models.BudgetCommands;
 using MyBudgetDB.Services;
+using Newtonsoft.Json;
 
 namespace MyBudgetDB.Controllers
 {
@@ -154,6 +155,7 @@ namespace MyBudgetDB.Controllers
             }
             catch (Exception)
             {
+                ModelState.AddModelError(string.Empty, $"{JsonConvert.SerializeObject(command)}");
                 ModelState.AddModelError(string.Empty, "An error occured while trying to connect to the database.");
             }
 
