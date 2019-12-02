@@ -9,7 +9,10 @@ using MyBudgetDB.Services;
 
 namespace MyBudgetDB.Api
 {
-    [Produces("application/json")]
+    //[Produces("application/json")]
+    //.{format?}
+    [FormatFilter]
+    [RequireHttpsAttribute]
     [Route("api/BudgetApi")]
     [ValidateModel, HandleException, FeatureEnabled(IsEnabled = true)]
     [ServiceFilter(typeof(HandleExceptionAttribute))]
