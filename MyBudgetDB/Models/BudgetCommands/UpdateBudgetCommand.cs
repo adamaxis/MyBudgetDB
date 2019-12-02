@@ -18,15 +18,19 @@ namespace MyBudgetDB.Models.BudgetCommands
             budget.Balance = Balance;
             budget.CreationDate = CreationDate;
             budget.Amount = Amount;
+            foreach (var expense in budget.Expenses)
+            {
+                
+            }
             //budget.UserId = UserId;
             //budget.BudgetId = BudgetId;
-            //budget.Expenses = Expenses;
-            foreach (var expense in Expenses)
-            {
-                expense.Amount = Amount;
-                expense.Name = Name;
-                expense.DateAdded = DateTime.Today;
-            }
+            //budget.Expenses = x.Expenses.FirstOrDefault(o => o. == myValue);
+            //foreach (var expense in budget.Expenses)
+            //{
+            //    expense.Amount = Amount;
+            //    expense.Name = Name;
+            //    expense.DateAdded = DateTime.Today;
+            //}
         }
     }
 }

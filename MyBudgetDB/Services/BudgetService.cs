@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using MyBudgetDB.Data;
 using MyBudgetDB.Models.BudgetCommands;
@@ -115,6 +116,7 @@ namespace MyBudgetDB.Services
                     //BudgetId = x.BudgetId,
                     //UserId = x.UserId,
                     //Expenses = x.Expenses
+                    //Expenses obj = x.Expenses.FirstOrDefault(o => o. == myValue);
                     //    .Select(item => new Expense
                     //    {
                     //        Name = item.Name,
@@ -129,10 +131,40 @@ namespace MyBudgetDB.Services
             var budget = _context.Budgets.Find(cmd.BudgetId);
             if (budget == null) { throw new Exception("Unable to find the budget list"); }
             if (budget.IsDeleted) { throw new Exception("Unable to update a deleted budget list"); }
-
+            
             cmd.UpdateBudget(budget);
             _context.Update(budget);
             _context.SaveChanges();
+        }
+
+        public void InsertOrUpdateBudget(UserBudget budget)
+        {
+            var existingBudget = _context.Budgets
+                .Include(b => b.Expenses)
+                .FirstOrDefault(b => b.BudgetId == budget.BudgetId);
+
+            if (existingBudget == null)
+            {
+                _context.Add(budget); 
+            }
+            else
+            {
+                _context.Entry(existingBudget).CurrentValues.SetValues(budget);
+                foreach (var expense in budget.Expenses)
+                {
+                    var existingExpense = existingBudget.Expenses
+                        .FirstOrDefault(b => b.IdExpense == expense.IdExpense);
+
+                    if (existingExpense == null)
+                    {
+                        existingBudget.Expenses.Add(expense);
+                    }
+                    else
+                    {
+                        _context.Entry(existingExpense).CurrentValues.SetValues(expense);
+                    }
+                }
+            }
         }
 
         public int CreateBudget(CreateBudgetCommand cmd, ApplicationUser createdBy)
