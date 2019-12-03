@@ -23,6 +23,8 @@ namespace MyBudgetDB
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors();
+
             var config = new AppSecrets();
             Configuration.Bind("MyBudgetDB", config);
             services.AddSingleton(config);
@@ -45,7 +47,6 @@ namespace MyBudgetDB
                     policyBuilder => policyBuilder
                         .AddRequirements(new CanViewBudgetRequirement()));
             });*/
-            //services.AddCors();
             services.AddHsts(options =>
             {
                 options.Preload = true;
@@ -87,13 +88,18 @@ namespace MyBudgetDB
             {
                 app.UseExceptionHandler("/Budget/Error");
                 app.UseHsts();
-                app.UseCors(builder =>
-                {
-                    builder.WithOrigins("https://dmacc.edu",
-                        "http://dmacc.edu",
-                        "https://localhost:44375",
-                        "https://localhost:5001");
-                });
+                app.UseCors(x => x
+                    .AllowAnyOrigin()
+                    .AllowAnyMethod()
+                    .AllowAnyHeader());
+
+                //app.UseCors(builder =>
+                //{
+                //    builder.WithOrigins("https://dmacc.edu",
+                //        "http://dmacc.edu",
+                //        "https://localhost:44375",
+                //        "https://localhost:5001");
+                //});
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
@@ -101,6 +107,71 @@ namespace MyBudgetDB
             app.UseCookiePolicy();
             app.UseMvc(routes =>
             {
+                routes.MapRoute(
+                    name: "budget",
+                    template: "budget/{id}",
+                    defaults: new { controller = "Budget", action = "ViewBudget" }
+                );
+                routes.MapRoute(
+                    name: "budget_id",
+                    template: "{id}/",
+                    defaults: new { controller = "Budget", action = "ViewBudget" }
+                );
+                routes.MapRoute(
+                    name: "view_all",
+                    template: "budgets/",
+                    defaults: new { controller = "Budget", action = "ViewBudgets" }
+                );
+                routes.MapRoute(
+                    name: "view_all_sin",
+                    template: "budget/",
+                    defaults: new { controller = "Budget", action = "ViewBudgets" }
+                );
+                routes.MapRoute(
+                    name: "view",
+                    template: "view/",
+                    defaults: new { controller = "Budget", action = "ViewBudgets" }
+                );
+                routes.MapRoute(
+                    name: "delete",
+                    template: "delete/{id}",
+                    defaults: new { controller = "Budget", action = "DeleteBudget" }
+                );
+                routes.MapRoute(
+                    name: "delete_remove",
+                    template: "remove/{id}",
+                    defaults: new { controller = "Budget", action = "DeleteBudget" }
+                );
+                routes.MapRoute(
+                    name: "create",
+                    template: "create/",
+                    defaults: new { controller = "Budget", action = "CreateBudget" }
+                );
+                routes.MapRoute(
+                    name: "new",
+                    template: "new/",
+                    defaults: new { controller = "Budget", action = "CreateBudget" }
+                );
+                routes.MapRoute(
+                    name: "edit",
+                    template: "edit/{id}",
+                    defaults: new { controller = "Budget", action = "EditBudget" }
+                );
+                routes.MapRoute(
+                    name: "edit_modify",
+                    template: "modify/{id}",
+                    defaults: new { controller = "Budget", action = "EditBudget" }
+                );
+                routes.MapRoute(
+                    name: "edit_change",
+                    template: "change/{id}",
+                    defaults: new { controller = "Budget", action = "EditBudget" }
+                );
+                routes.MapRoute(
+                    name: "edit_add",
+                    template: "add/{id}",
+                    defaults: new { controller = "Budget", action = "EditBudget" }
+                );
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
