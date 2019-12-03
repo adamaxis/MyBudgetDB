@@ -1,0 +1,91 @@
+2019-12-03 00:00:02.566 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/Home/CreateBudget  
+2019-12-03 00:00:02.570 -06:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2019-12-03 00:00:02.571 -06:00 [INF] Request finished in 4.4306ms 404 
+2019-12-03 00:00:04.760 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/  
+2019-12-03 00:00:04.760 -06:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2019-12-03 00:00:04.761 -06:00 [INF] Executing action method MyBudgetDB.Controllers.HomeController.Index (MyBudgetDB) with arguments (null) - ModelState is "Valid"
+2019-12-03 00:00:04.761 -06:00 [INF] Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2019-12-03 00:00:04.762 -06:00 [INF] Executed action MyBudgetDB.Controllers.HomeController.Index (MyBudgetDB) in 1.0652000000000001ms
+2019-12-03 00:00:04.762 -06:00 [INF] Request finished in 1.8523ms 200 text/html; charset=utf-8
+2019-12-03 00:00:05.475 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/Home/ViewBudgets  
+2019-12-03 00:00:05.476 -06:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2019-12-03 00:00:05.476 -06:00 [INF] Request finished in 0.6609ms 404 
+2019-12-03 00:00:07.291 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/  
+2019-12-03 00:00:07.291 -06:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2019-12-03 00:00:07.291 -06:00 [INF] Executing action method MyBudgetDB.Controllers.HomeController.Index (MyBudgetDB) with arguments (null) - ModelState is "Valid"
+2019-12-03 00:00:07.291 -06:00 [INF] Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2019-12-03 00:00:07.292 -06:00 [INF] Executed action MyBudgetDB.Controllers.HomeController.Index (MyBudgetDB) in 0.7005ms
+2019-12-03 00:00:07.292 -06:00 [INF] Request finished in 1.5243ms 200 text/html; charset=utf-8
+2019-12-03 00:01:38.531 -06:00 [INF] User profile is available. Using 'C:\Users\The Dude\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-12-03 00:01:38.981 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/  
+2019-12-03 00:01:38.981 -06:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:5364/  0
+2019-12-03 00:01:39.009 -06:00 [INF] Request finished in 36.2145ms 200 
+2019-12-03 00:01:39.123 -06:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2019-12-03 00:01:39.243 -06:00 [INF] Executing action method MyBudgetDB.Controllers.HomeController.Index (MyBudgetDB) with arguments (null) - ModelState is "Valid"
+2019-12-03 00:01:40.661 -06:00 [INF] Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2019-12-03 00:01:41.024 -06:00 [INF] Executed action MyBudgetDB.Controllers.HomeController.Index (MyBudgetDB) in 1786.7142000000001ms
+2019-12-03 00:01:41.026 -06:00 [INF] Request finished in 2054.1016ms 200 text/html; charset=utf-8
+2019-12-03 00:01:43.326 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/  
+2019-12-03 00:01:43.328 -06:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2019-12-03 00:01:43.328 -06:00 [INF] Executing action method MyBudgetDB.Controllers.HomeController.Index (MyBudgetDB) with arguments (null) - ModelState is "Valid"
+2019-12-03 00:01:43.329 -06:00 [INF] Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2019-12-03 00:01:43.330 -06:00 [INF] Executed action MyBudgetDB.Controllers.HomeController.Index (MyBudgetDB) in 1.7129ms
+2019-12-03 00:01:43.330 -06:00 [INF] Request finished in 4.1084ms 200 text/html; charset=utf-8
+2019-12-03 00:01:45.578 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/Budget/CreateBudget  
+2019-12-03 00:01:45.578 -06:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2019-12-03 00:01:45.594 -06:00 [INF] Authorization was successful.
+2019-12-03 00:01:45.596 -06:00 [INF] Executing action method MyBudgetDB.Controllers.BudgetController.CreateBudget (MyBudgetDB) with arguments (null) - ModelState is "Valid"
+2019-12-03 00:01:45.845 -06:00 [INF] Executing ViewResult, running view at path /Views/Budget/CreateBudget.cshtml.
+2019-12-03 00:01:46.169 -06:00 [INF] accessLog:{"RequestId":"8500e4ab-d6bd-438f-af90-fe1ee411d328","Request":"/Budget/CreateBudget","Response":"200"}
+2019-12-03 00:01:46.169 -06:00 [INF] Executed action MyBudgetDB.Controllers.BudgetController.CreateBudget (MyBudgetDB) in 586.8923ms
+2019-12-03 00:01:46.169 -06:00 [INF] Request finished in 591.8631ms 200 text/html; charset=utf-8
+2019-12-03 00:01:46.675 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/Budget/ViewBudgets  
+2019-12-03 00:01:46.675 -06:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2019-12-03 00:01:46.680 -06:00 [INF] Authorization was successful.
+2019-12-03 00:01:46.680 -06:00 [INF] Executing action method MyBudgetDB.Controllers.BudgetController.ViewBudgets (MyBudgetDB) with arguments (null) - ModelState is "Valid"
+2019-12-03 00:01:46.773 -06:00 [INF] Entity Framework Core 2.0.0-rtm-26452 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: SensitiveDataLoggingEnabled 
+2019-12-03 00:01:47.517 -06:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data, this mode should only be enabled during development.
+2019-12-03 00:01:47.615 -06:00 [INF] Executed DbCommand (95ms) [Parameters=[@__get_Item_0='349225b2-1a58-4006-8dd5-ffa2e2a1c916' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[ConcurrencyStamp], [e].[DateOfBirth], [e].[Email], [e].[EmailConfirmed], [e].[FirstName], [e].[LastName], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UserName]
+FROM [AspNetUsers] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+2019-12-03 00:01:47.738 -06:00 [INF] Executed DbCommand (72ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[BudgetId] AS [Id], [r].[Amount], [r].[Balance], [r].[CreationDate], [r].[IsDeleted], [r].[LastModified], [r].[Name], [r].[Owner], [r].[UserId]
+FROM [Budgets] AS [r]
+WHERE [r].[IsDeleted] = 0
+ORDER BY [Id]
+2019-12-03 00:01:47.878 -06:00 [INF] Executing ViewResult, running view at path /Views/Budget/ViewBudgets.cshtml.
+2019-12-03 00:01:47.892 -06:00 [INF] accessLog:{"RequestId":"ec82c8cc-6714-4bb5-aba0-fba047a16119","Request":"/Budget/ViewBudgets","Response":"200"}
+2019-12-03 00:01:47.892 -06:00 [INF] Executed action MyBudgetDB.Controllers.BudgetController.ViewBudgets (MyBudgetDB) in 1212.2979ms
+2019-12-03 00:01:47.892 -06:00 [INF] Request finished in 1217.62ms 200 text/html; charset=utf-8
+2019-12-03 00:01:50.010 -06:00 [INF] Request starting HTTP/1.1 POST http://localhost:44317/Account/Logout application/x-www-form-urlencoded 225
+2019-12-03 00:01:50.011 -06:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2019-12-03 00:01:50.014 -06:00 [INF] Authorization was successful.
+2019-12-03 00:01:50.036 -06:00 [INF] Executing action method MyBudgetDB.Controllers.AccountController.Logout (MyBudgetDB) with arguments (null) - ModelState is "Valid"
+2019-12-03 00:01:50.053 -06:00 [INF] AuthenticationScheme: Identity.Application signed out.
+2019-12-03 00:01:50.054 -06:00 [INF] AuthenticationScheme: Identity.External signed out.
+2019-12-03 00:01:50.054 -06:00 [INF] AuthenticationScheme: Identity.TwoFactorUserId signed out.
+2019-12-03 00:01:50.054 -06:00 [INF] User logged out.
+2019-12-03 00:01:50.055 -06:00 [INF] Executing RedirectResult, redirecting to /.
+2019-12-03 00:01:50.056 -06:00 [INF] Executed action MyBudgetDB.Controllers.AccountController.Logout (MyBudgetDB) in 42.0568ms
+2019-12-03 00:01:50.057 -06:00 [INF] Request finished in 46.2819ms 302 
+2019-12-03 00:01:50.061 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/  
+2019-12-03 00:01:50.062 -06:00 [INF] Executing action method MyBudgetDB.Controllers.HomeController.Index (MyBudgetDB) with arguments (null) - ModelState is "Valid"
+2019-12-03 00:01:50.062 -06:00 [INF] Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2019-12-03 00:01:50.064 -06:00 [INF] Executed action MyBudgetDB.Controllers.HomeController.Index (MyBudgetDB) in 1.8928ms
+2019-12-03 00:01:50.064 -06:00 [INF] Request finished in 2.4055ms 200 text/html; charset=utf-8
+2019-12-03 00:01:51.511 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/Home/Contact  
+2019-12-03 00:01:51.512 -06:00 [INF] Executing action method MyBudgetDB.Controllers.HomeController.Contact (MyBudgetDB) with arguments (null) - ModelState is "Valid"
+2019-12-03 00:01:51.593 -06:00 [INF] Executing ViewResult, running view at path /Views/Home/Contact.cshtml.
+2019-12-03 00:01:51.595 -06:00 [INF] Executed action MyBudgetDB.Controllers.HomeController.Contact (MyBudgetDB) in 82.8675ms
+2019-12-03 00:01:51.595 -06:00 [INF] Request finished in 84.6232ms 200 text/html; charset=utf-8
+2019-12-03 00:01:52.412 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/Home/About  
+2019-12-03 00:01:52.414 -06:00 [INF] Executing action method MyBudgetDB.Controllers.HomeController.About (MyBudgetDB) with arguments (null) - ModelState is "Valid"
+2019-12-03 00:01:52.494 -06:00 [INF] Executing ViewResult, running view at path /Views/Home/About.cshtml.
+2019-12-03 00:01:52.497 -06:00 [INF] Executed action MyBudgetDB.Controllers.HomeController.About (MyBudgetDB) in 82.9501ms
+2019-12-03 00:01:52.497 -06:00 [INF] Request finished in 84.8986ms 200 text/html; charset=utf-8
+2019-12-03 00:01:52.939 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/  
+2019-12-03 00:01:52.940 -06:00 [INF] Executing action method MyBudgetDB.Controllers.HomeController.Index (MyBudgetDB) with arguments (null) - ModelState is "Valid"
+2019-12-03 00:01:52.940 -06:00 [INF] Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2019-12-03 00:01:52.940 -06:00 [INF] Executed action MyBudgetDB.Controllers.HomeController.Index (MyBudgetDB) in 0.8163ms
+2019-12-03 00:01:52.941 -06:00 [INF] Request finished in 1.5525ms 200 text/html; charset=utf-8

@@ -49,12 +49,7 @@ namespace MyBudgetDB.Controllers
 
             return View();
         }
-
-        [Authorize]
-        public IActionResult CreateBudget()
-        {
-            return View(new CreateBudgetCommand());
-        }
+        /*
 
         [Authorize, HttpPost]
         public async Task<IActionResult> CreateBudget(CreateBudgetCommand command)
@@ -145,11 +140,11 @@ namespace MyBudgetDB.Controllers
             try
             {
                 var person = _service.GetBudget(command.BudgetId);
-                /*var authResult = await _authService.AuthorizeAsync(User, person, "CanEditPerson");
+                //var authResult = await _authService.AuthorizeAsync(User, person, "CanEditPerson");
                 if (!authResult.Succeeded)
                 {
                     return new ForbidResult();
-                }*/
+                }//
 
                 if (ModelState.IsValid)
                 {
@@ -180,6 +175,7 @@ namespace MyBudgetDB.Controllers
             }
         }
 
+*/
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });

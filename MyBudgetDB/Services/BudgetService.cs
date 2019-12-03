@@ -5,24 +5,37 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using MyBudgetDB.Data;
 using MyBudgetDB.Models.BudgetCommands;
+using MyBudgetDB.Models.FilterModels;
+using Newtonsoft.Json;
 
 namespace MyBudgetDB.Services
 {
     public class BudgetService
     {
         readonly ApplicationDbContext _context;
-        readonly ILogger _logger;
+        readonly ILogger _log;
 
         public BudgetService(ApplicationDbContext context, ILoggerFactory factory)
         {
             _context = context;
-            _logger = factory.CreateLogger<BudgetService>();
+            _log = factory.CreateLogger<BudgetService>();
         }
 
         public BudgetService(ApplicationDbContext context)
         {
             _context = context;
         }
+
+        public void CreateAccessLog(LogRequestModel log)
+        {
+            _log.LogInformation($"accessLog:{JsonConvert.SerializeObject(log)}");
+        }
+
+        public void CreateErrorLog(LogErrorModel log)
+        {
+            _log.LogError($"errorLog:{JsonConvert.SerializeObject(log)}");
+        }
+
 
         public bool DoesBudgetExist(int id)
         {

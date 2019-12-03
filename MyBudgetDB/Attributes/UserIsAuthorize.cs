@@ -10,7 +10,6 @@ namespace MyBudgetDB.Attributes
     public class UserIsAuthorize : IActionFilter
     {
         private readonly DbContext _demoContext;
-        private readonly UserManager<ApplicationUser> _userManager;
         private readonly UserService _userService;
         private bool userHasUserName;
 

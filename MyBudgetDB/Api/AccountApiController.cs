@@ -20,7 +20,6 @@ namespace MyBudgetDB.Api
         private readonly BudgetService _budgetService;
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly SignInManager<ApplicationUser> _signInManager;
-        private readonly AppSecrets _appSettings;
         private readonly ILogger _log;
 
         public AccountApiController(
