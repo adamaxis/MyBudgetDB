@@ -1,22 +1,24 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.EntityFrameworkCore;
 using MyBudgetDB.Data;
-using MyBudgetDB.Services;
 
 namespace MyBudgetDB.Attributes
 {
     public class ValidateUserFilter : IActionFilter
     {
         private readonly DbContext _demoContext;
+        private readonly UserManager<ApplicationUser> _userManager;
+        private readonly SignInManager<ApplicationUser> _signInManager;
 
-        private readonly UserService _userService;
-        private bool userHasUserName;
-
-        public ValidateUserFilter(ApplicationDbContext _context, UserService userService)
+        public ValidateUserFilter(ApplicationDbContext _context,
+            UserManager<ApplicationUser> userManager,
+            SignInManager<ApplicationUser> signInManager)
         {
             _demoContext = _context;
-            _userService = userService;
+            _userManager = userManager;
+            _signInManager = signInManager;
         }
 
         public void OnActionExecuted(ActionExecutedContext context)
@@ -26,27 +28,11 @@ namespace MyBudgetDB.Attributes
 
         public void OnActionExecuting(ActionExecutingContext context)
         {
-            // Get the userId from the argument added in the url
-            var id = (string)context.ActionArguments["userId"];
-            // Get the userName from the argument added in the url
-            var userName = context.ActionArguments["userName"];
-            // Get all users from the database
-            var users = _userService.GetUsers();
-
-            // Loop all users to find url user in database
-            foreach (var user in users)
+            var user = context.HttpContext.User;
+            //var user = _userManager.GetUserAsync(_user);
+            if (user == null)
             {
-                if (user.UserName.Equals(userName))
-                {
-                    // if user was found set value to true
-                    userHasUserName = true;
-                }
-            }
-
-            // If the userName or id typed in the url are not found set result to not found
-            if (!_userService.DoesUserExist(id) || !userHasUserName)
-            {
-                context.Result = new NotFoundResult();
+                context.Result = new UnauthorizedResult();
             }
         }
     }

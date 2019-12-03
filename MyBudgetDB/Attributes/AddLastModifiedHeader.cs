@@ -18,6 +18,8 @@ namespace MyBudgetDB.Attributes
                 {
                     context.Result = new StatusCodeResult(304);
                 }
+
+                context.HttpContext.Response.GetTypedHeaders().LastModified = detail.LastModified;
             }
         }
     }

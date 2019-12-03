@@ -1,19 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 using MyBudgetDB.Authorization;
 using MyBudgetDB.Data;
 using MyBudgetDB.Extensions;
-using MyBudgetDB.Models;
 using MyBudgetDB.Models.AccountViewModels;
 using MyBudgetDB.Services;
 
@@ -247,7 +242,7 @@ namespace MyBudgetDB.Controllers
 
         private async Task AddClaims(RegisterViewModel model, ApplicationUser user)
         {
-            if (user.UserName == "valatorre@dmacc.edu" || user.UserName == "ddraper@dmacc.edu")
+            if (user.UserName == "valatorre@dmacc.edu" || user.UserName == "ddraper@dmacc.edu" || user.UserName == "lrussell@dmacc.edu")
             {
                 var isAdmin = new Claim(Claims.IsAdmin, "true", ClaimValueTypes.Boolean);
                 await _userManager.AddClaimAsync(user, isAdmin);
