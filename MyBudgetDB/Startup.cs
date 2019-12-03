@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Hosting;
@@ -6,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Formatters;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Net.Http.Headers;
+using MyBudgetDB.Authorization;
 using MyBudgetDB.Data;
 using MyBudgetDB.Services;
 
@@ -40,13 +42,17 @@ namespace MyBudgetDB
             // Add application services.
             services.AddTransient<IEmailSender, EmailSender>();
             services.AddScoped<BudgetService>();
+            //services.AddScoped<IAuthorizationService>();
 
 
-            /*services.AddAuthorization(options => {
-                options.AddPolicy("CanEditPerson",
+            services.AddAuthorization(options => {
+                options.AddPolicy("CanViewBudget",
                     policyBuilder => policyBuilder
-                        .AddRequirements(new CanViewBudgetRequirement()));
-            });*/
+                        .AddRequirements(new IsBudgetOwnerRequirement()));
+            });
+
+            services.AddScoped<IAuthorizationHandler, IsBudgetOwnerHandler>();
+
             services.AddHsts(options =>
             {
                 options.Preload = true;
@@ -108,29 +114,9 @@ namespace MyBudgetDB
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
-                    name: "budget",
-                    template: "budget/{id}",
-                    defaults: new { controller = "Budget", action = "ViewBudget" }
-                );
-                routes.MapRoute(
                     name: "budget_id",
                     template: "{id}/",
                     defaults: new { controller = "Budget", action = "ViewBudget" }
-                );
-                routes.MapRoute(
-                    name: "view_all",
-                    template: "budgets/",
-                    defaults: new { controller = "Budget", action = "ViewBudgets" }
-                );
-                routes.MapRoute(
-                    name: "view_all_sin",
-                    template: "budget/",
-                    defaults: new { controller = "Budget", action = "ViewBudgets" }
-                );
-                routes.MapRoute(
-                    name: "view",
-                    template: "view/",
-                    defaults: new { controller = "Budget", action = "ViewBudgets" }
                 );
                 routes.MapRoute(
                     name: "delete",
@@ -141,16 +127,6 @@ namespace MyBudgetDB
                     name: "delete_remove",
                     template: "remove/{id}",
                     defaults: new { controller = "Budget", action = "DeleteBudget" }
-                );
-                routes.MapRoute(
-                    name: "create",
-                    template: "create/",
-                    defaults: new { controller = "Budget", action = "CreateBudget" }
-                );
-                routes.MapRoute(
-                    name: "new",
-                    template: "new/",
-                    defaults: new { controller = "Budget", action = "CreateBudget" }
                 );
                 routes.MapRoute(
                     name: "edit",

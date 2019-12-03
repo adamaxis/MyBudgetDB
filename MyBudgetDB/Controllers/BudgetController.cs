@@ -15,6 +15,8 @@ using MyBudgetDB.Services;
 namespace MyBudgetDB.Controllers
 {
     [Authorize, LogRequestAsync(IsEnabled = true)]
+    [RequireHttps,
+     HandleException]
     public class BudgetController : Controller
     {
         public BudgetService _service;
@@ -40,15 +42,15 @@ namespace MyBudgetDB.Controllers
             return View(new CreateBudgetCommand());
         }
 
-        [HttpPost]
+        [HttpPost, ValidateModel]
         public async Task<IActionResult> CreateBudget(CreateBudgetCommand command)
         {
-            var user = await _userService.GetUserAsync(User);
-            if (user == null)
-            {
-                _log.LogWarning($"Unable to load user with ID '{_userService.GetUserId(User)}'. Info:{command}");
-                return Forbid();
-            }
+                var user = await _userService.GetUserAsync(User);
+                if (user == null)
+                {
+                    _log.LogWarning($"Unable to load user with ID '{_userService.GetUserId(User)}'. Info:{command}");
+                    return Forbid();
+                }
             if (ModelState.IsValid)
             {
                 var id = _service.CreateBudget(command, user);
@@ -57,7 +59,7 @@ namespace MyBudgetDB.Controllers
 
             return View(command);
         }
-
+        
         public async Task<IActionResult> ViewBudgets()
         {
             var user = await _userService.GetUserAsync(User);
@@ -88,7 +90,11 @@ namespace MyBudgetDB.Controllers
                 return NotFound();
             }
 
+            // Add this for authorization
             var budget = _service.GetBudget(id);
+            var authResult = await _authService.AuthorizeAsync(User, budget,"CanViewBudget");
+            model.CanEditBudget = authResult.Succeeded;
+
             return View(model);
         }
 
@@ -100,14 +106,16 @@ namespace MyBudgetDB.Controllers
                 _log.LogInformation($"Unable to load user with ID '{_userService.GetUserId(User)}'.");
                 return Forbid();
             }
-            // Add this for authorization
-            //var budget = _service.GetBudget(id);
-            //var authResult = await _authService.AuthorizeAsync(User, budget, "CanManageBudget");
 
-            //if (!authResult.Succeeded)
-            //{
-            //    return new ForbidResult();
-            //}
+            // Add this for authorization
+            var budget = _service.GetBudget(id);
+            var authResult = await _authService.AuthorizeAsync(User, budget, "CanViewBudget");
+
+
+            if (!authResult.Succeeded)
+            {
+                return new ForbidResult();
+            }
 
             var model = _service.GetBudgetForUpdate(id);
             if (model == null)
