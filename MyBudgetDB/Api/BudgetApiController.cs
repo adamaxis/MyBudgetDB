@@ -12,21 +12,21 @@ namespace MyBudgetDB.Api
 {
     [RequireHttps]
     [Route("api/BudgetApi"), FormatFilter]
-    [ValidateModel, 
-     FeatureEnabled(IsEnabled = true), 
-     HandleException,
-     ValidateUser]
+    [FeatureEnabled(IsEnabled = true), 
+     HandleException]
     [Authorize]
     public class BudgetApiController : Controller
     {
         private readonly BudgetService _budgetService;
         private readonly UserManager<ApplicationUser> _userManager;
+        private readonly IAuthorizationService _authService;
         private readonly ILogger _log;
 
         //public BudgetApiController() { }
         public BudgetApiController(
             BudgetService service, 
-            ILogger<BudgetApiController> log, 
+            ILogger<BudgetApiController> log,
+            IAuthorizationService authService,
             UserManager<ApplicationUser> userManager)
         {
             _budgetService = service;
@@ -35,7 +35,7 @@ namespace MyBudgetDB.Api
         }
 
         [ResponseCache(NoStore = true)]
-        [HttpGet("{format}"), EnsureBudgetExist]
+        [HttpGet("GetBudgets/{format}")]
         public async Task<IActionResult> GetBudgets()
         {
             var user = await _userManager.GetUserAsync(User);
@@ -48,7 +48,7 @@ namespace MyBudgetDB.Api
         }
 
         [HttpGet("GetBy/{id}"), EnsureBudgetExist]
-        public async Task<IActionResult> GetById(int id)
+        public IActionResult GetById(int id)
         {
             var budget = _budgetService.GetBudget(id);
             return Ok(budget);
@@ -71,10 +71,19 @@ namespace MyBudgetDB.Api
             return Ok(new { message = "Your budget id: " + id });
         }
 
-        [ValidateUser, EnsureBudgetExist, AddLastModifiedHeader]
-        [HttpPost("edit")]
-        public IActionResult Edit([FromBody] UpdateBudgetCommand cmd)
+        [EnsureBudgetExist, AddLastModifiedHeader, ValidateModel]
+        [HttpPost("edit/{id}")] //need the id parameter to check EnsureBudgetExistAttribute
+        public IActionResult Edit(int id, [FromBody] UpdateBudgetCommand cmd)
         {
+            // this fires an error onExecuted in EnsureBudget Exist Object reference not set to an instance of an object."
+            //var budget = _budgetService.GetBudget(id);
+            //var authResult = await _authService.AuthorizeAsync(User, budget, "CanEditPerson");
+
+            //if (!authResult.Succeeded)
+            //{
+            //    return new ForbidResult();
+            //}
+
             _budgetService.UpdateBudget(cmd);
             var newBudget = _budgetService.GetBudget(cmd.BudgetId);
             return Ok(newBudget);

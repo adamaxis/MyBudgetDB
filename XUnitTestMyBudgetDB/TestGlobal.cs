@@ -1,4 +1,8 @@
 ﻿using System.IO;
+using System.Net.Http;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.TestHost;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Options;
 using MyBudgetDB;
@@ -19,5 +23,20 @@ namespace XUnitTestMyBudgetDB
 
             _configSecrets = Options.Create(configuration.GetSection("MyBudgetDB").Get<AppSecrets>());
         }
+
+        //[Fact]
+        //public async Task StatusMiddleware()
+        //{
+        //    var hostBuilder = new WebHostBuilder()
+        //        .UseStartup<Startup>();
+
+        //    using (var server = new TestServer(hostBuilder))
+        //    {
+        //        HttpClient client = server.CreateClient();
+        //        var response = await client.GetAsync("Index");
+        //        response.EnsureSuccessStatusCode();
+        //    }
+            
+        //}
     }
 }
