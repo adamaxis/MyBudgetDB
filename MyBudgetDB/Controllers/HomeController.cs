@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using MyBudgetDB.Data;
 using MyBudgetDB.Models;
 using MyBudgetDB.Models.BudgetCommands;
@@ -17,15 +18,18 @@ namespace MyBudgetDB.Controllers
         public BudgetService _service;
         private readonly UserManager<ApplicationUser> _userService;
         private readonly IAuthorizationService _authService;
+        private readonly ILogger _log;
 
         public HomeController(
             BudgetService service,
             UserManager<ApplicationUser> userService,
-            IAuthorizationService authService)
+            IAuthorizationService authService,
+            ILogger<HomeController> log)
         {
             _service = service;
             _userService = userService;
             _authService = authService;
+            _log = log;
         }
 
         public IActionResult Index()
@@ -59,7 +63,8 @@ namespace MyBudgetDB.Controllers
             var user = await _userService.GetUserAsync(User);
             if (user == null)
             {
-                throw new ApplicationException($"Unable to load user with ID '{_userService.GetUserId(User)}'.");
+                _log.LogWarning($"an anonymous user attempted to create budget {command}, but that person wasn't found.");
+                return NotFound();
             }
             try
             {

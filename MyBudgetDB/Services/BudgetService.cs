@@ -116,15 +116,6 @@ namespace MyBudgetDB.Services
                     BudgetId = x.BudgetId,
                     UserId = x.UserId,
                     Expenses = x.Expenses.ToList(),
-                    /*Expenses = x.Expenses
-                        .Select(item => new Expense
-                        {
-                            UserId = item.UserId,
-                            IdExpense = item.IdExpense,
-                            Name = item.Name,
-                            Amount = item.Amount,
-                            DateAdded = item.DateAdded
-                        }).DefaultIfEmpty(new Expense()).ToList(),*/
                     Balance = (x.Expenses.Any() ? x.Amount - x.Expenses.Sum(y => y.Amount) : 0)
                 }).SingleOrDefault();
         }
