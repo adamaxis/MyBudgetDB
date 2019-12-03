@@ -10,17 +10,15 @@ namespace MyBudgetDB.Models.BudgetCommands
         public string Name { get; set; }
         public DateTime CreationDate { get; set; }
         public double Amount { get; set; } // not getting initial amount
-        public double Balance { get; set; }
-        public ICollection<Expense> Expenses { get; set; } 
+        public ICollection<Expense> Expenses { get; set; }
 
-        //public double Balance
-        //{
-        //    get
-        //    {
-        //        double fnBalance = Expenses.Sum(expense => expense.Amount);
+        public double GetBalance()
+        {
+            if (Expenses.Count == 0) return 0.0;
+            double bal = Amount;
+            foreach (Expense e in Expenses) bal -= e.Amount;
+            return bal;
+        }
 
-        //        return InitAmount - fnBalance;
-        //    }
-        //}
     }
 }

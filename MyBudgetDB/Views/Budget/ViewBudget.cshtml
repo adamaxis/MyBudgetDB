@@ -24,7 +24,7 @@
             <tr>
                 <td>@Html.DisplayFor(model => model.Owner)</td>
                 <td>@Html.DisplayFor(model => model.Amount)</td>
-                <td>$@Model.GetBalance()</td>
+                <td>@Html.DisplayFor(model => model.Balance)</td>
             </tr>
     </table>
     <hr />
@@ -56,4 +56,3 @@
     </table>
 </div>
 <a asp-action="EditBudget" asp-route-id="@Model.Id" class="btn btn-success">Edit</a>
-<a asp-action="DeleteBudget" asp-route-id="@Model.Id" class="btn btn-danger">Delete</a>

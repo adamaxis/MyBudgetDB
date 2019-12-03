@@ -11,9 +11,10 @@ using System;
 namespace MyBudgetDB.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20191202092436_Simple Navigation DbContext3")]
+    partial class SimpleNavigationDbContext3
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -208,7 +209,7 @@ namespace MyBudgetDB.Migrations
 
                     b.HasIndex("UserBudgetBudgetId");
 
-                    b.ToTable("Expenses");
+                    b.ToTable("Expense");
                 });
 
             modelBuilder.Entity("MyBudgetDB.Data.UserBudget", b =>
@@ -223,8 +224,6 @@ namespace MyBudgetDB.Migrations
                     b.Property<DateTime>("CreationDate");
 
                     b.Property<bool>("IsDeleted");
-
-                    b.Property<DateTime>("LastModified");
 
                     b.Property<string>("Name");
 

@@ -11,9 +11,10 @@ using System;
 namespace MyBudgetDB.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20191202083531_Simple Navigation DbContext2")]
+    partial class SimpleNavigationDbContext2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -223,8 +224,6 @@ namespace MyBudgetDB.Migrations
                     b.Property<DateTime>("CreationDate");
 
                     b.Property<bool>("IsDeleted");
-
-                    b.Property<DateTime>("LastModified");
 
                     b.Property<string>("Name");
 

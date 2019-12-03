@@ -8,17 +8,17 @@ using MyBudgetDB.Data;
 using MyBudgetDB.Models;
 using MyBudgetDB.Models.BudgetCommands;
 using MyBudgetDB.Services;
-using Newtonsoft.Json;
 
 namespace MyBudgetDB.Controllers
 {
-    public class HomeController : Controller
+    [Authorize]
+    public class BudgetController : Controller
     {
         public BudgetService _service;
         private readonly UserManager<ApplicationUser> _userService;
         private readonly IAuthorizationService _authService;
 
-        public HomeController(
+        public BudgetController(
             BudgetService service,
             UserManager<ApplicationUser> userService,
             IAuthorizationService authService)
@@ -28,26 +28,6 @@ namespace MyBudgetDB.Controllers
             _authService = authService;
         }
 
-        public IActionResult Index()
-        {
-            return View();
-        }
-
-        public IActionResult About()
-        {
-            ViewData["Message"] = "Your application description page.";
-
-            return View();
-        }
-
-        public IActionResult Contact()
-        {
-            ViewData["Message"] = "Your contact page.";
-
-            return View();
-        }
-
-        [Authorize]
         public IActionResult CreateBudget()
         {
             return View(new CreateBudgetCommand());
@@ -76,8 +56,7 @@ namespace MyBudgetDB.Controllers
 
             return View(command);
         }
-
-        [Authorize]
+        
         public async Task<IActionResult> ViewBudgets()
         {
             var user = await _userService.GetUserAsync(User);
@@ -89,8 +68,7 @@ namespace MyBudgetDB.Controllers
             var budgets = _service.GetBudgetsBrief(user.Id);
             return View(budgets);
         }
-
-        [Authorize]
+        
         public async Task<IActionResult> ViewBudget(int id)
         {
             var model = _service.GetBudgetDetail(id);
@@ -109,8 +87,7 @@ namespace MyBudgetDB.Controllers
             }
             return View(model);
         }
-
-        [Authorize]
+        
         public async Task<IActionResult> EditBudget(int id)
         {
             // Add this for authorization
@@ -135,7 +112,7 @@ namespace MyBudgetDB.Controllers
             return View(model);
         }
 
-        [HttpPost, Authorize]
+        [HttpPost]
         public async Task<IActionResult> EditBudget(UpdateBudgetCommand command)
         {
             try
@@ -155,27 +132,13 @@ namespace MyBudgetDB.Controllers
             }
             catch (Exception)
             {
-                //            throw new Exception($"{JsonConvert.SerializeObject(budget)}");
                 ModelState.AddModelError(string.Empty, "An error occured while trying to connect to the database.");
             }
 
             return View(command);
         }
 
-        [Authorize]
-        public IActionResult DeleteBudget(int id)
-        {
-            try
-            {
-                _service.DeleteBudget(id);
-                return RedirectToAction(nameof(ViewBudgets));
-            }
-            catch (Exception)
-            {
-                return NotFound();
-            }
-        }
-
+        [AllowAnonymous]
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });

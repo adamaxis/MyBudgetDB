@@ -11,10 +11,21 @@ namespace MyBudgetDB.Data
 
         }
 
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            // temporary
+            optionsBuilder.EnableSensitiveDataLogging();
+        }
+
         public DbSet<UserBudget> Budgets { get; set; }
+        public DbSet<Expense> Expenses { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
+            builder.Entity<UserBudget>()
+            .HasMany(c => c.Expenses)
+            .WithOne()
+            .OnDelete(DeleteBehavior.Cascade);
             base.OnModelCreating(builder);
             // Customize the ASP.NET Identity model and override the defaults if needed.
             // For example, you can rename the ASP.NET Identity table names and more.

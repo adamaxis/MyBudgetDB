@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc.ViewFeatures.Internal;
 using Microsoft.AspNetCore.Server.Kestrel.Internal.System.Collections.Sequences;
@@ -307,8 +308,47 @@ namespace XUnitTestMyBudgetDB
             }
         }
 
+        //[Fact]
+        //public void UpdateBudget_CanUpdate()
+        //{
+        //    var connection = new SqliteConnection("DataSource=:memory:");
+        //    connection.Open();
+        //    var options = new DbContextOptionsBuilder<ApplicationDbContext>()
+        //        .UseSqlite(connection)
+        //        .Options;
+
+        //    // Insert seed data into the database using one instance of the context
+        //    using (var context = new ApplicationDbContext(options))
+        //    {
+        //        context.Database.EnsureCreated();
+        //        context.Budgets.AddRange(
+        //            new UserBudget { BudgetId = 1, Owner = "Sofia" },
+        //            new UserBudget { BudgetId = 2, Name = "Camilla" });
+        //        context.SaveChanges();
+        //    }
+
+        //    // Use a separate instance edit some data
+        //    using (var context = new ApplicationDbContext(options))
+        //    {
+        //        var service = new BudgetService(context);
+
+        //        UpdateBudgetCommand toUpdate = service.GetBudgetForUpdate(1);
+        //        toUpdate.BudgetId = 1;
+        //        toUpdate.Owner = "Bob";
+        //        toUpdate.Amount = 500;
+        //        service.UpdateBudget(toUpdate);
+
+        //        var budget = service.GetBudget(1);
+
+        //        Assert.NotNull(budget);
+        //        Assert.Equal(500, budget.Amount);
+        //        Assert.NotEqual("Sofia", budget.Owner);
+        //        Assert.Equal("Bob", budget.Owner);
+        //    }
+        //}
+
         [Fact]
-        public void UpdateBudget_CanUpdate()
+        public void InserUpdate_CanUpdate()
         {
             var connection = new SqliteConnection("DataSource=:memory:");
             connection.Open();
@@ -320,9 +360,14 @@ namespace XUnitTestMyBudgetDB
             using (var context = new ApplicationDbContext(options))
             {
                 context.Database.EnsureCreated();
+                Expense exp1 = new Expense();
+                exp1.Amount = 300;
+                exp1.Name = "hotel";
+                List<Expense> explist = new List<Expense>();
+                explist.Add(exp1);
                 context.Budgets.AddRange(
                     new UserBudget { BudgetId = 1, Owner = "Sofia" },
-                    new UserBudget { BudgetId = 2, Name = "Camilla" });
+                    new UserBudget { BudgetId = 2, Name = "Camilla", Expenses = explist});
                 context.SaveChanges();
             }
 
@@ -331,16 +376,29 @@ namespace XUnitTestMyBudgetDB
             {
                 var service = new BudgetService(context);
 
-                UpdateBudgetCommand toUpdate = service.GetBudgetForUpdate(1);
-                toUpdate.BudgetId = 1;
-                toUpdate.Owner = "Bob";
-                toUpdate.Amount = 500;
-                service.UpdateBudget(toUpdate);
+                Expense exp1 = new Expense();
+                exp1.Amount = 2;
+                exp1.Name = "milk";
+                //Expense exp2 = new Expense();
+                //exp1.Amount = 400;
+                //exp1.Name = "Hotel";
+                List<Expense> explist = new List<Expense>();
+                explist.Add(exp1);
+                //explist.Add(exp2);
+                var user1 = new UserBudget
+                {
+                    BudgetId = 1, Owner = "Bob", Expenses = explist
+                        
+                };
+
+                service.InsertOrUpdateBudget(user1);
 
                 var budget = service.GetBudget(1);
+                var expenses = budget.Expenses.ToArray();
 
                 Assert.NotNull(budget);
-                Assert.Equal(500, budget.Amount);
+                Assert.NotNull(budget.Expenses);
+                Assert.Equal("milk", expenses[0].Name);
                 Assert.NotEqual("Sofia", budget.Owner);
                 Assert.Equal("Bob", budget.Owner);
             }

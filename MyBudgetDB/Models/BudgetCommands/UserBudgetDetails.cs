@@ -15,6 +15,7 @@ namespace MyBudgetDB.Models.BudgetCommands
         public double Balance { get; set; }
         public DateTime CreationDate { get; set; }
         public bool IsDeleted { get; set; }
+        public DateTime LastModified { get; set; }
         public IEnumerable<Item> Expenses { get; set; }
 
         public class Item
@@ -25,6 +26,13 @@ namespace MyBudgetDB.Models.BudgetCommands
             public DateTime? DateAdded { get; set; }
         }
 
+        public double GetBalance()
+        {
+            if (Expenses == null) return 0.0;
+            double bal = Amount;
+            foreach (Item e in Expenses) bal -= e.Amount;
+            return bal;
+        }
 
     }
 }
