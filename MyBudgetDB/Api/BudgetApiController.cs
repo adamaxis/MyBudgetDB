@@ -1,68 +1,86 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using MyBudgetDB.Attributes;
 using MyBudgetDB.Data;
-using MyBudgetDB.Models;
 using MyBudgetDB.Models.BudgetCommands;
 using MyBudgetDB.Services;
 
 namespace MyBudgetDB.Api
 {
-    //[Produces("application/json")]
-    //.{format?}
-    [FormatFilter]
-    [RequireHttpsAttribute]
-    [Route("api/BudgetApi")]
-    [ValidateModel, HandleException, FeatureEnabled(IsEnabled = true)]
-    [ServiceFilter(typeof(HandleExceptionAttribute))]
+    [RequireHttps]
+    [Route("api/BudgetApi"), FormatFilter]
+    [ValidateModel, 
+     FeatureEnabled(IsEnabled = true), 
+     HandleException,
+     ValidateUser]
     [Authorize]
     public class BudgetApiController : Controller
     {
-        public BudgetService _budgetService;
-        public UserService _userService;
+        private readonly BudgetService _budgetService;
+        private readonly UserManager<ApplicationUser> _userManager;
         private readonly ILogger _log;
 
-        public BudgetApiController(BudgetService service, ILogger<BudgetApiController> log)
+        //public BudgetApiController() { }
+        public BudgetApiController(
+            BudgetService service, 
+            ILogger<BudgetApiController> log, 
+            UserManager<ApplicationUser> userManager)
         {
             _budgetService = service;
             _log = log;
+            _userManager = userManager;
         }
 
-        [HttpGet("{id}"), EnsureBudgetExist, AddLastModifiedHeader]
-        public IActionResult Get(int id)
+        [ResponseCache(NoStore = true)]
+        [HttpGet("{format}"), EnsureBudgetExist]
+        public async Task<IActionResult> GetBudgets()
         {
-            var detail = _budgetService.GetBudgetDetail(id);
-            return Ok(detail);
-
+            var user = await _userManager.GetUserAsync(User);
+            if (user == null)
+            {
+                return Unauthorized();
+            }
+            var budgets = _budgetService.GetBudgetsBrief(user.Id);
+            return Ok(budgets);
         }
 
-        [HttpPost("{id}/{userId}/{userName}"),ValidateModel, EnsureBudgetExist, ValidateUser]
-        public IActionResult Edit(int id, [FromBody] UpdateBudgetCommand command)
+        [HttpGet("GetBy/{id}"), EnsureBudgetExist]
+        public async Task<IActionResult> GetById(int id)
         {
-            _budgetService.UpdateBudget(command);
-            return Ok();
+            var budget = _budgetService.GetBudget(id);
+            return Ok(budget);
         }
 
-        // POST: api/BudgetApi
-        [HttpPost("create"), ValidateModel]
-        public IActionResult Create([FromBody]CreateBudgetCommand value, ApplicationUser createdBy)
+        [HttpGet("GetUser")]
+        public async Task<IActionResult> GetUserDetails()
         {
-            var id = _budgetService.CreateBudget(value, createdBy);
-
-            return Ok(new { id = id });
+            var user = await _userManager.GetUserAsync(User);
+            return Ok(user);
         }
 
-        [AllowAnonymous]
-        [HttpPost("register")]
-        public IActionResult Register([FromBody]CreateUser user)
+        [ValidateModel, AddLastModifiedHeader]
+        [HttpPost("create")]
+        public async Task<IActionResult> Create([FromBody] CreateBudgetCommand cmd)
         {
-            var id = _userService.CreateUser(user);
-            return Ok();
+            var user = await _userManager.GetUserAsync(User);
+            var id = _budgetService.CreateBudget(cmd, user);
+
+            return Ok(new { message = "Your budget id: " + id });
         }
 
-        // DELETE: api/ApiWithActions/5
-        [HttpDelete("delete /{id}"), ValidateModel, EnsureBudgetExist, AddLastModifiedHeader]
+        [ValidateUser, EnsureBudgetExist, AddLastModifiedHeader]
+        [HttpPost("edit")]
+        public IActionResult Edit([FromBody] UpdateBudgetCommand cmd)
+        {
+            _budgetService.UpdateBudget(cmd);
+            var newBudget = _budgetService.GetBudget(cmd.BudgetId);
+            return Ok(newBudget);
+        }
+
+        [HttpDelete("delete /{id}"), EnsureBudgetExist, AddLastModifiedHeader]
         public IActionResult Delete(int id)
         {
             _budgetService.DeleteBudget(id);

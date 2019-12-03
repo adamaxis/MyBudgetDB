@@ -2,8 +2,10 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc.Formatters;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Net.Http.Headers;
 using MyBudgetDB.Data;
 using MyBudgetDB.Services;
 
@@ -55,8 +57,20 @@ namespace MyBudgetDB
                 options.RespectBrowserAcceptHeader = true; // false by default
             });
 
-            services.AddMvc()
+            services.AddMvc(options =>
+                {
+                    options.OutputFormatters.Add(new XmlDataContractSerializerOutputFormatter());
+                    options.FormatterMappings.SetMediaTypeMappingForFormat
+                        ("xml", MediaTypeHeaderValue.Parse("application/xml"));
+                    options.FormatterMappings.SetMediaTypeMappingForFormat
+                        ("config", MediaTypeHeaderValue.Parse("application/xml"));
+                    options.FormatterMappings.SetMediaTypeMappingForFormat
+                        ("js", MediaTypeHeaderValue.Parse("application/json"));
+                })
                 .AddXmlSerializerFormatters();
+
+            services.AddMvcCore()
+                .AddFormatterMappings();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
