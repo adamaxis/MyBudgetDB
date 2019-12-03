@@ -1,5 +1,4 @@
-﻿using System;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -110,8 +109,7 @@ namespace MyBudgetDB.Controllers
             // Add this for authorization
             var budget = _service.GetBudget(id);
             var authResult = await _authService.AuthorizeAsync(User, budget, "CanViewBudget");
-
-
+            
             if (!authResult.Succeeded)
             {
                 return new ForbidResult();

@@ -84,20 +84,20 @@ namespace MyBudgetDB.Services
                 .ToList();
         }
 
-        public double GetBalance(int id)
-        {
-            var budget = _context.Budgets
-                .SingleOrDefault(x => x.BudgetId == id);
-            var initAmt = (double)(budget.Amount);
-            var fnBalance = 0.0;
+        //public double GetBalance(int id)
+        //{
+        //    var budget = _context.Budgets
+        //        .SingleOrDefault(x => x.BudgetId == id);
+        //    var initAmt = (double)(budget.Amount);
+        //    var fnBalance = 0.0;
 
-            foreach (var expense in budget.Expenses)
-            {
-                fnBalance += expense.Amount;
-            }
+        //    foreach (var expense in budget.Expenses)
+        //    {
+        //        fnBalance += expense.Amount;
+        //    }
 
-            return initAmt - fnBalance;
-        }
+        //    return initAmt - fnBalance;
+        //}
 
         public ICollection<UserBudgetBrief> GetBudgetsBrief(string id)
         {

@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
+using MyBudgetDB.Data;
 using MyBudgetDB.Services;
 
 namespace MyBudgetDB.Attributes
@@ -18,8 +19,9 @@ namespace MyBudgetDB.Attributes
 
             public void OnActionExecuting(ActionExecutingContext context)
             {
-                var recipeId = (int)context.ActionArguments["id"];
-                if (!_service.DoesBudgetExist(recipeId))
+                //var budgetId = (int)context.ActionArguments["BudgetId"];
+                var budgetId = (int)context.ActionArguments["id"];
+                if (!_service.DoesBudgetExist(budgetId))
                 {
                     context.Result = new NotFoundResult();
                 }
