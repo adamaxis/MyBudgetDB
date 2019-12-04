@@ -23,7 +23,6 @@ namespace XUnitTestMyBudgetDB
 
             const string budgetName = "General budget";
             const double amount = 1000.0;
-
             // Run the test against one instance of the context
             using (var context = new ApplicationDbContext(options))
             {
@@ -47,8 +46,10 @@ namespace XUnitTestMyBudgetDB
                 Assert.Equal(1, await context.Budgets.CountAsync());
 
                 var budget = await context.Budgets.SingleAsync();
-                Assert.Equal(amount, budget.Amount);
-                Assert.Equal(budgetName, budget.Name);
+                Assert.Equal(1000.0, budget.Amount);
+                Assert.Equal("General budget", budget.Name);
+                Assert.NotEqual(500, budget.Amount);
+                Assert.NotNull(budget);
             }
         }
 
@@ -61,7 +62,7 @@ namespace XUnitTestMyBudgetDB
                 .UseSqlite(connection)
                 .Options;
 
-            // Insert seed data into the database using one instance of the context
+            // Insert data into the database using one instance of the context
             using (var context = new ApplicationDbContext(options))
             {
                 context.Database.EnsureCreated();
@@ -75,13 +76,13 @@ namespace XUnitTestMyBudgetDB
             // Use a separate instance of the context to verify correct data was saved to database
             using (var context = new ApplicationDbContext(options))
             {
-                var service = new  BudgetService(context);
-
+                var service = new BudgetService(context);
                 var budget = service.GetBudgetDetail(2);
 
                 Assert.NotNull(budget);
                 Assert.Equal(2, budget.Id);
                 Assert.Equal("Traveling", budget.Name);
+                Assert.NotEqual(500, budget.Amount);
             }
         }
 
@@ -101,7 +102,7 @@ namespace XUnitTestMyBudgetDB
             using (var context = new ApplicationDbContext(options))
             {
                 context.Database.EnsureCreated();
-                context.Budgets.Add(new UserBudget { BudgetId  = 1, Name = "Budget1" });
+                context.Budgets.Add(new UserBudget { BudgetId = 1, Name = "Budget1" });
                 context.Budgets.Add(new UserBudget { BudgetId = 2, Name = budgetName, IsDeleted = true });
                 context.Budgets.Add(new UserBudget { BudgetId = 3, Name = "Budget3" });
                 context.SaveChanges();
@@ -111,10 +112,14 @@ namespace XUnitTestMyBudgetDB
             using (var context = new ApplicationDbContext(options))
             {
                 var service = new BudgetService(context);
+                var budgetDeleted = service.GetBudgetDetail(budgetId);
+                var budgetNotDel1 = service.GetBudgetDetail(1);
+                var budgetNotDel3 = service.GetBudgetDetail(3);
 
-                var budget = service.GetBudgetDetail(budgetId);
-
-                Assert.Null(budget);
+                Assert.Null(budgetDeleted);
+                Assert.Equal("Budget1", budgetNotDel1.Name);
+                Assert.Equal("Budget3", budgetNotDel3.Name);
+                Assert.NotEqual("Budget3", budgetNotDel1.Name);
             }
         }
 
@@ -131,6 +136,7 @@ namespace XUnitTestMyBudgetDB
             {
                 context.Database.EnsureCreated();
                 context.Budgets.Add(new UserBudget { BudgetId = 1, Name = "Budget1" });
+                context.Budgets.Add(new UserBudget { BudgetId = 2, Name = "Budget2" });
                 context.SaveChanges();
             }
 
@@ -142,8 +148,11 @@ namespace XUnitTestMyBudgetDB
                 context.SaveChanges();
 
                 var budgetIsDeleted = service.GetBudgetDetail(1);
+                var budgetNotDel2 = service.GetBudgetDetail(2);
 
                 Assert.Null(budgetIsDeleted);
+                Assert.Equal("Budget2", budgetNotDel2.Name);
+                Assert.NotEqual("Budget1", budgetNotDel2.Name);
             }
         }
 
@@ -155,11 +164,12 @@ namespace XUnitTestMyBudgetDB
             var options = new DbContextOptionsBuilder<ApplicationDbContext>()
                 .UseSqlite(connection)
                 .Options;
+
             // Insert seed data into the database using one instance of the context
             using (var context = new ApplicationDbContext(options))
             {
                 context.Database.EnsureCreated();
-                context.Budgets.Add(new UserBudget {BudgetId = 1, Name = "Budget1"});
+                context.Budgets.Add(new UserBudget { BudgetId = 1, Name = "Budget1" });
                 context.SaveChanges();
             }
 
@@ -207,10 +217,13 @@ namespace XUnitTestMyBudgetDB
                 var service = new BudgetService(context);
 
                 var budget = service.GetBudget(1);
+                var budget2 = service.GetBudget(2);
 
                 Assert.NotNull(budget);
                 Assert.Equal(1, budget.BudgetId);
                 Assert.Equal("Sofia", budget.Owner);
+                Assert.Equal("Camilla", budget2.Name);
+                Assert.NotEqual("Cama", budget.Owner);
             }
         }
 
@@ -228,8 +241,8 @@ namespace XUnitTestMyBudgetDB
             {
                 context.Database.EnsureCreated();
                 context.Budgets.AddRange(
-                    new UserBudget { BudgetId = 1, Name = "General_house", UserId = "123"},
-                    new UserBudget { BudgetId = 2, Name = "Traveling", Amount = 700, UserId = "123"});
+                    new UserBudget { BudgetId = 1, Name = "General_house", UserId = "123" },
+                    new UserBudget { BudgetId = 2, Name = "Traveling", Amount = 700, UserId = "123" });
                 context.SaveChanges();
             }
 
@@ -241,6 +254,7 @@ namespace XUnitTestMyBudgetDB
 
                 Assert.NotNull(budgets);
                 Assert.Equal(2, budgets.Count);
+                Assert.NotEqual(1, budgets.Count);
             }
         }
 
@@ -273,9 +287,9 @@ namespace XUnitTestMyBudgetDB
                 Assert.Equal(1, budgets.Count);
             }
         }
-        
+
         [Fact]
-        public void UpdateBudget_CanLoadUpdateBudget()
+        public void UpdateBudget_CanLoadUpdateBudgetType()
         {
             var connection = new SqliteConnection("DataSource=:memory:");
             connection.Open();
@@ -318,7 +332,7 @@ namespace XUnitTestMyBudgetDB
             {
                 context.Database.EnsureCreated();
                 context.Budgets.AddRange(
-                    new UserBudget { BudgetId = 1, Owner = "Sofia", UserId = "123"}
+                    new UserBudget { BudgetId = 1, Owner = "Sofia", UserId = "123" }
                      );
                 context.SaveChanges();
             }
@@ -332,6 +346,8 @@ namespace XUnitTestMyBudgetDB
 
                 Assert.NotNull(obj);
                 Assert.Equal("Sofia", obj.Owner);
+                Assert.Equal("123", obj.UserId);
+                Assert.NotEqual("Linda", obj.Owner);
             }
         }
 
@@ -355,7 +371,7 @@ namespace XUnitTestMyBudgetDB
                 explist.Add(exp1);
                 context.Budgets.AddRange(
                     new UserBudget { BudgetId = 1, Owner = "Sofia" },
-                    new UserBudget { BudgetId = 2, Name = "Camilla", Expenses = explist});
+                    new UserBudget { BudgetId = 2, Name = "Camilla", Expenses = explist });
                 context.SaveChanges();
             }
 
@@ -372,8 +388,10 @@ namespace XUnitTestMyBudgetDB
                 //explist.Add(exp2);
                 var user1 = new UserBudget
                 {
-                    BudgetId = 1, Owner = "Bob", Expenses = explist
-                        
+                    BudgetId = 1,
+                    Owner = "Bob",
+                    Expenses = explist
+
                 };
 
                 service.InsertOrUpdateBudget(user1);

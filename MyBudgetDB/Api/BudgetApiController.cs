@@ -21,8 +21,7 @@ namespace MyBudgetDB.Api
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly IAuthorizationService _authService;
         private readonly ILogger _log;
-
-        //public BudgetApiController() { }
+        
         public BudgetApiController(
             BudgetService service, 
             ILogger<BudgetApiController> log,
@@ -47,14 +46,14 @@ namespace MyBudgetDB.Api
             return Ok(budgets);
         }
 
-        [HttpGet("GetBy/{id}"), EnsureBudgetExist]
+        [HttpGet("GetBy/{id}/{format}"), EnsureBudgetExist]
         public IActionResult GetById(int id)
         {
             var budget = _budgetService.GetBudget(id);
             return Ok(budget);
         }
 
-        [HttpGet("GetUser")]
+        [HttpGet("GetUser/{format}")]
         public async Task<IActionResult> GetUserDetails()
         {
             var user = await _userManager.GetUserAsync(User);

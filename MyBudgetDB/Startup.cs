@@ -38,8 +38,7 @@ namespace MyBudgetDB
             services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
-
-            // Add application services.
+            
             services.AddTransient<IEmailSender, EmailSender>();
             services.AddScoped<BudgetService>();
             //services.AddScoped<IAuthorizationService>();
@@ -98,14 +97,6 @@ namespace MyBudgetDB
                     .AllowAnyOrigin()
                     .AllowAnyMethod()
                     .AllowAnyHeader());
-
-                //app.UseCors(builder =>
-                //{
-                //    builder.WithOrigins("https://dmacc.edu",
-                //        "http://dmacc.edu",
-                //        "https://localhost:44375",
-                //        "https://localhost:5001");
-                //});
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
