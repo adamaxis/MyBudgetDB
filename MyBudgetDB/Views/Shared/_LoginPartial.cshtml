@@ -1,30 +1,21 @@
 @using Microsoft.AspNetCore.Identity
 @using MyBudgetDB.Data
-@using MyBudgetDB.Models
+@using System.Security.Claims
 
 @inject SignInManager<ApplicationUser> SignInManager
 @inject UserManager<ApplicationUser> UserManager
 
 @if (SignInManager.IsSignedIn(User))
 {
-    <ul class="nav navbar-nav"> <!-- Menu items for registered users-->
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                MyBudget
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" asp-area="" asp-controller="Budget" asp-action="ViewBudgets">Manage Budgets</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" asp-area="" asp-controller="Budget" asp-action="CreateBudget">Create Budget</a>
-            </div>
-        </li>
+    <ul class="nav navbar-nav">
+        <!-- Menu items for registered users-->
         <li><a asp-area="" asp-controller="Budget" asp-action="CreateBudget">Create Budget</a></li>
         <li><a asp-area="" asp-controller="Budget" asp-action="ViewBudgets">Manage Budgets</a></li>
-    </ul>                       <!-- /Menu items -->
+    </ul> <!-- /Menu items -->
     <form asp-area="" asp-controller="Account" asp-action="Logout" method="post" id="logoutForm" class="navbar-right">
         <ul class="nav navbar-nav navbar-right">
             <li>
-                <a asp-area="" asp-controller="Manage" asp-action="Index" title="Manage">Hello @UserManager.GetUserName(User)!</a>
+                <a asp-area="" asp-controller="Manage" asp-action="Index" title="Manage">Hello @(User.FindFirstValue("FullName") == null ? @UserManager.GetUserName(User) : User.FindFirstValue("FullName"))! @if(@User.HasClaim(c => c.Type == "IsAdmin")) { <bold>[ADMIN]</bold> }</a>
             </li>
             <li>
                 <button type="submit" class="btn btn-link navbar-btn navbar-link">Log out</button>

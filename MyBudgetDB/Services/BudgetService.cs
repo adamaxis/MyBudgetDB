@@ -39,6 +39,10 @@ namespace MyBudgetDB.Services
             _log.LogError($"errorLog:{JsonConvert.SerializeObject(log)}");
         }
 
+        public void DoLog(LogLevel lvl, string msg)
+        {
+            _log.Log(lvl, msg);
+        }
 
         public bool DoesBudgetExist(int id)
         {

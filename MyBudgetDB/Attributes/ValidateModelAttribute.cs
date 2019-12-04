@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
+using MyBudgetDB.Services;
+using Microsoft.Extensions.Logging;
 
 namespace MyBudgetDB.Attributes
 {
@@ -13,6 +15,8 @@ namespace MyBudgetDB.Attributes
         {
             if (!context.ModelState.IsValid)
             {
+                var service = (BudgetService)context.HttpContext.RequestServices.GetService(typeof(BudgetService));
+                service.DoLog(LogLevel.Warning, $"{context.HttpContext.User} failed to validate model on {context.Controller}");
                 context.Result = new BadRequestObjectResult(context.ModelState);
             }
         }

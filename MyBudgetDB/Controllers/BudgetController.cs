@@ -16,7 +16,7 @@ using MyBudgetDB.Services;
 namespace MyBudgetDB.Controllers
 {
     [Authorize, LogRequestAsync(IsEnabled = true)]
-    [RequireHttps, HandleException]
+    [RequireHttps, HandleException, ValidateUser]
     public class BudgetController : Controller
     {
         public BudgetService _service;
@@ -42,21 +42,20 @@ namespace MyBudgetDB.Controllers
             return View(new CreateBudgetCommand());
         }
 
-        [HttpPost, ValidateModel]
+        [HttpPost, AutoValidateAntiforgeryToken]
         public async Task<IActionResult> CreateBudget(CreateBudgetCommand command)
         {
-                var user = await _userService.GetUserAsync(User);
-                if (user == null)
-                {
-                    _log.LogWarning($"Unable to load user with ID '{_userService.GetUserId(User)}'. Info:{command}");
-                    return Forbid();
-                }
+            var user = await _userService.GetUserAsync(User);
+            if (user == null)
+            {
+                _log.LogWarning($"Unable to load user with ID '{_userService.GetUserId(User)}'. Info:{command}");
+                return Forbid();
+            }
             if (ModelState.IsValid)
             {
                 var id = _service.CreateBudget(command, user);
-                return RedirectToAction(nameof(ViewBudgets));
-            }//, new { id = id }
-
+                return RedirectToAction(nameof(ViewBudget), new { id = id });
+            }
             return View(command);
         }
         
@@ -65,9 +64,10 @@ namespace MyBudgetDB.Controllers
             var user = await _userService.GetUserAsync(User);
             if (user == null)
             {
-                _log.LogInformation($"Unable to load user with ID '{_userService.GetUserId(User)}'.");
+                _log.LogWarning($"Unable to load user with ID '{_userService.GetUserId(User)}'.");
                 return Forbid();
             }
+
             // show budgets(user-specific for user; all for admin)
             var budgets = _service.GetBudgetsBrief(user.Id, User.HasClaim(c => c.Type == Claims.IsAdmin));
 
@@ -76,22 +76,14 @@ namespace MyBudgetDB.Controllers
 
         public async Task<IActionResult> ViewBudget(int id)
         {
-            var user = await _userService.GetUserAsync(User);
-            if (user == null)
-            {
-                _log.LogInformation($"Unable to load user with ID '{_userService.GetUserId(User)}'.");
-                return Forbid();
-            }
-
             var model = _service.GetBudgetDetail(id);
-
             if (model == null)
             {
-                _log.LogInformation($"Budget #{id} was request by {user.UserName}, but wasn't found.");
+                _log.LogWarning($"{_userService.GetUserName(User)} tried to view budget#{id}, but it wasn't found.");
                 return NotFound();
             }
 
-            // Add this for authorization
+            // Authorization
             var budget = _service.GetBudget(id);
             var authResult = await _authService.AuthorizeAsync(User, budget, "CanViewBudget");
             if(!authResult.Succeeded)
@@ -102,14 +94,9 @@ namespace MyBudgetDB.Controllers
             return View(model);
         }
 
+
         public async Task<IActionResult> EditBudget(int id)
         {
-            var user = await _userService.GetUserAsync(User);
-            if (user == null)
-            {
-                _log.LogInformation($"Unable to load user with ID '{_userService.GetUserId(User)}'.");
-                return Forbid();
-            }
 
             // Add this for authorization
             var budget = _service.GetBudget(id);
@@ -117,56 +104,58 @@ namespace MyBudgetDB.Controllers
             
             if (!authResult.Succeeded)
             {
+                _log.LogWarning($"{_userService.GetUserName(User)} went to edit budget#{id}, but wasn't authorized.");
                 return new ForbidResult();
             }
 
             var model = _service.GetBudgetForUpdate(id);
             if (model == null)
             {
-                _log.LogInformation($"{user.UserName} requested Budget #{id} for editing, but it wasn't found.");
+                _log.LogWarning($"User with ID '{_userService.GetUserName(User)}' went to edit Budget #{id}, but it wasn't found.");
                 return NotFound();
             }
 
             return View(model);
         }
 
-        [HttpPost, ValidateModel]
+        [HttpPost, AutoValidateAntiforgeryToken]
         public async Task<IActionResult> EditBudget(UpdateBudgetCommand command)
         {
-            var user = await _userService.GetUserAsync(User);
-            if (user == null)
-            {
-                _log.LogInformation($"Unable to load user with ID '{_userService.GetUserId(User)}'.");
-                return Forbid();
-            }
-            //var person = _service.GetBudget(command.BudgetId);
-            /*var authResult = await _authService.AuthorizeAsync(User, person, "CanEditPerson");
+            var budget = _service.GetBudget(command.BudgetId);
+            var authResult = await _authService.AuthorizeAsync(User, budget, "CanViewBudget");
             if (!authResult.Succeeded)
             {
-                return new ForbidResult();
-            }*/
+                _log.LogWarning($"{_userService.GetUserName(User)} attempted to change budget#{command.BudgetId}, but wasn't authorized.");
+                return Forbid();
+            }
+
+            if (!ModelState.IsValid)
+            {
+                return View(command);
+            }
 
             _service.UpdateBudget(command);
             return RedirectToAction(nameof(ViewBudget), new { id = command.BudgetId });
-                //            throw new Exception($"{JsonConvert.SerializeObject(budget)}");
         }
 
         public async Task<IActionResult> DeleteBudget(int id)
         {
-
-            var user = await _userService.GetUserAsync(User);
-            if (user == null)
+            // Authorization
+            var budget = _service.GetBudget(id);
+            var authResult = await _authService.AuthorizeAsync(User, budget, "CanViewBudget");
+            if (!authResult.Succeeded)
             {
-                _log.LogInformation($"Unable to load user with ID '{_userService.GetUserId(User)}'.");
+                _log.LogWarning($"{_userService.GetUserName(User)} tried to delete budget #{id}, but wasn't authorized.");
                 return Forbid();
             }
 
             var model = _service.GetBudgetDetail(id);
             if (!_service.DoesBudgetExist(id))
             {
-                _log.LogInformation($"{user.UserName} attempted to delete Budget #{id}, but it wasn't found.");
+                _log.LogWarning($"User with ID '{_userService.GetUserName(User)}' attempted to delete Budget #{id}, but it wasn't found.");
                 return NotFound();
             }
+
             _service.DeleteBudget(id);
             return RedirectToAction(nameof(ViewBudgets));
         }

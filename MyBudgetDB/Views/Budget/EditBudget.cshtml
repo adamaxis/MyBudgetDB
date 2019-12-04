@@ -1,7 +1,7 @@
 ﻿@model MyBudgetDB.Models.BudgetCommands.UpdateBudgetCommand
 
 @{
-    ViewData["Title"] = "Edit Person";
+    ViewData["Title"] = "Edit Budget";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -72,6 +72,18 @@
 @section Scripts {
     @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
 <script>
+    function formatDate(date) {
+        var d = new Date(date),
+            month = '' + (d.getMonth() + 1),
+            day = '' + d.getDate(),
+            year = d.getFullYear();
+
+        if (month.length < 2) month = '0' + month;
+        if (day.length < 2) day = '0' + day;
+
+        return [year, month, day].join('-');
+    }
+
     $(document).ready(function () {
 
         $.fn.dataTable.ext.order['dom-input'] = function (settings, col) {
@@ -100,13 +112,13 @@
         $("#addExpense").click(function () {
             table = $('#ExpenseTable').DataTable();
             let rowIndex = table.rows().count();
-
+            let dt = new Date();
             table.row.add([
                 '<td><input name="Expenses[' + rowIndex + '].Name" id=Expenses_' + rowIndex + '__Name  type="text"></input></td>',
                 '<td><input name="Expenses[' + rowIndex + '].Notes" id=Expenses_' + rowIndex + '__Notes  type="text"></input></td>',
                 '<td><input name="Expenses[' + rowIndex + '].Category" id=Expenses_' + rowIndex + '__Category  type="text"></input></td>',
                 '<td><input name="Expenses[' + rowIndex + '].Amount" id=Expenses_' + rowIndex + '__Amount  type="number"></input></td>',
-                '<td><input name="Expenses[' + rowIndex + '].DateAdded" id=Expenses_' + rowIndex + '__DateAdded  type="date"></input></td>',
+                '<td><input name="Expenses[' + rowIndex + '].DateAdded" id=Expenses_' + rowIndex + '__DateAdded  type="date" value="' + formatDate(dt) + '"></input></td>',
                 '<td><a href="#" class="remove">Remove</a></td>'
             ]).draw();
         });
