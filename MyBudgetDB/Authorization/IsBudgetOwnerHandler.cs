@@ -25,7 +25,7 @@ namespace MyBudgetDB.Authorization
                 return;
             }
 
-            if (resource.UserId == appUser.Id)
+            if (resource.UserId == appUser.Id || context.User.HasClaim(c => c.Type == Claims.IsAdmin)) // admin bypass
             {
                 context.Succeed(requirement);
             }

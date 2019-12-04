@@ -73,45 +73,44 @@
     @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
 <script>
     $(document).ready(function () {
+
+        $.fn.dataTable.ext.order['dom-input'] = function (settings, col) {
+            return this.api().column(col, { order: 'index' }).nodes().map(function (td, i) {
+                return $('input', td).val();
+            });
+        }
         $('#ExpenseTable').DataTable({
             'lengthChange': false,
             'paging': false,
-            'searching': false
+            'searching': false,
+            "columnDefs": [
+                {
+                    "orderDataType": "dom-input", "targets": [0,1,2,3,4,5],
+                },
+            ]
         });
-    });
 
-    var expenses = $('#ExpenseTable tbody');
-    $("#addExpense").click(function () {
-        let listName = 'Expenses'; 
-        let fieldsNames = ['Name', 'Category', 'Notes', 'Amount', 'DateAdded', 'remove']; //field names from Expense
-        var rowIndex = expenses.find('tr').length;
-        if (document.getElementById('ExpenseTable_info').textContent.indexOf('0 to 0') > 0) rowIndex--;
-        let row = document.createElement('tr');
-        row.id = 'item';
-        fieldsNames.forEach((fieldName) => {
-            let col = document.createElement('td');
-            let input = document.createElement('input');
-            if (fieldName == "DateAdded") input.type = 'date';
-            else if (fieldName == 'Amount') input.type = 'number';
-            else if (fieldName === 'IdExpense') col.classList.add('d-none'); //field with id - hidden
-            else input.type = 'text';
-            //input.classList.add('form-control');
-            input.id = listName + rowIndex + '.' + fieldName;
-            input.setAttribute('name', listName + '[' + rowIndex + '].' + fieldName);
-            if (fieldName == "remove") {
-                input = document.createElement('a');
-                input.href = "#";
-                input.textContent = "Remove";
-                input.classList.add('remove');
-            }
-            col.appendChild(input);
-            row.appendChild(col);
+        var expenses = $('#ExpenseTable tbody');
+        expenses.on('click', '.remove', function (e) {
+            var dtRow = $(this).closest('tr');  // get tr
+            $('#ExpenseTable').DataTable().row(dtRow).remove().draw(false);
+            //$(this).closest('tr').remove();
         });
-        document.getElementById('ExpenseBody').appendChild(row);
-    });
 
-    expenses.on('click', '.remove', function (e) {
-        $(this).closest('tr').remove();
+        $("#addExpense").click(function () {
+            table = $('#ExpenseTable').DataTable();
+            let rowIndex = table.rows().count();
+
+            table.row.add([
+                '<td><input name="Expenses[' + rowIndex + '].Name" id=Expenses_' + rowIndex + '__Name  type="text"></input></td>',
+                '<td><input name="Expenses[' + rowIndex + '].Notes" id=Expenses_' + rowIndex + '__Notes  type="text"></input></td>',
+                '<td><input name="Expenses[' + rowIndex + '].Category" id=Expenses_' + rowIndex + '__Category  type="text"></input></td>',
+                '<td><input name="Expenses[' + rowIndex + '].Amount" id=Expenses_' + rowIndex + '__Amount  type="number"></input></td>',
+                '<td><input name="Expenses[' + rowIndex + '].DateAdded" id=Expenses_' + rowIndex + '__DateAdded  type="date"></input></td>',
+                '<td><a href="#" class="remove">Remove</a></td>'
+            ]).draw();
+        });
+
     });
 
     </script>

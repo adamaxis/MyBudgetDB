@@ -1,10 +1,12 @@
-﻿using System.Diagnostics;
+﻿using System.Collections.Generic;
+using System.Diagnostics;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using MyBudgetDB.Attributes;
+using MyBudgetDB.Authorization;
 using MyBudgetDB.Data;
 using MyBudgetDB.Filters;
 using MyBudgetDB.Models;
@@ -14,8 +16,7 @@ using MyBudgetDB.Services;
 namespace MyBudgetDB.Controllers
 {
     [Authorize, LogRequestAsync(IsEnabled = true)]
-    [RequireHttps,
-     HandleException]
+    [RequireHttps, HandleException]
     public class BudgetController : Controller
     {
         public BudgetService _service;
@@ -67,8 +68,9 @@ namespace MyBudgetDB.Controllers
                 _log.LogInformation($"Unable to load user with ID '{_userService.GetUserId(User)}'.");
                 return Forbid();
             }
+            // show budgets(user-specific for user; all for admin)
+            var budgets = _service.GetBudgetsBrief(user.Id, User.HasClaim(c => c.Type == Claims.IsAdmin));
 
-            var budgets = _service.GetBudgetsBrief(user.Id);
             return View(budgets);
         }
 
@@ -91,9 +93,12 @@ namespace MyBudgetDB.Controllers
 
             // Add this for authorization
             var budget = _service.GetBudget(id);
-            var authResult = await _authService.AuthorizeAsync(User, budget,"CanViewBudget");
-            model.CanEditBudget = authResult.Succeeded;
-
+            var authResult = await _authService.AuthorizeAsync(User, budget, "CanViewBudget");
+            if(!authResult.Succeeded)
+            {
+                return Forbid();
+            }
+            model.CanEditBudget = true;
             return View(model);
         }
 

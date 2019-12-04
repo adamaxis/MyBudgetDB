@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
+using MyBudgetDB.Authorization;
 using MyBudgetDB.Data;
 using MyBudgetDB.Models.BudgetCommands;
 using MyBudgetDB.Models.FilterModels;
@@ -14,11 +16,12 @@ namespace MyBudgetDB.Services
     {
         readonly ApplicationDbContext _context;
         readonly ILogger _log;
-
-        public BudgetService(ApplicationDbContext context, ILoggerFactory factory)
+        readonly UserManager<ApplicationUser> userService;
+        public BudgetService(ApplicationDbContext context, ILoggerFactory factory, UserManager<ApplicationUser> _userService)
         {
             _context = context;
             _log = factory.CreateLogger<BudgetService>();
+            userService = _userService;
         }
 
         public BudgetService(ApplicationDbContext context)
@@ -98,15 +101,17 @@ namespace MyBudgetDB.Services
 
         //    return initAmt - fnBalance;
         //}
-
-        public ICollection<UserBudgetBrief> GetBudgetsBrief(string id)
+        //                 .Where(r => r.UserId == id)
+        public ICollection<UserBudgetBrief> GetBudgetsBrief(string id, bool isAdmin = false)
         {
             return _context.Budgets
                 .Where(r => !r.IsDeleted)
+                .Where(r => (isAdmin ? r.UserId != null : r.UserId == id))
                 .Select(x => new UserBudgetBrief
                 {
                     Id = x.BudgetId,
                     Name = x.Name,
+                    Owner = x.Owner,
                     CreationDate = x.CreationDate,
                     Amount = x.Amount,
                     Expenses = x.Expenses

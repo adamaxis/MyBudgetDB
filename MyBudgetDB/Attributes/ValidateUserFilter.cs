@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using MyBudgetDB.Data;
 
 namespace MyBudgetDB.Attributes
@@ -11,14 +12,17 @@ namespace MyBudgetDB.Attributes
         private readonly DbContext _demoContext;
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly SignInManager<ApplicationUser> _signInManager;
+        private readonly ILogger _log;
 
         public ValidateUserFilter(ApplicationDbContext _context,
             UserManager<ApplicationUser> userManager,
-            SignInManager<ApplicationUser> signInManager)
+            SignInManager<ApplicationUser> signInManager,
+            ILogger<ValidateUserFilter> log)
         {
             _demoContext = _context;
             _userManager = userManager;
             _signInManager = signInManager;
+            _log = log;
         }
 
         public void OnActionExecuted(ActionExecutedContext context)
@@ -32,6 +36,7 @@ namespace MyBudgetDB.Attributes
             //var user = _userManager.GetUserAsync(_user);
             if (user == null)
             {
+                _log.LogWarning($"Unable to load user with ID '{context.HttpContext.User}'");
                 context.Result = new UnauthorizedResult();
             }
         }
