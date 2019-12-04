@@ -71,14 +71,20 @@ namespace MyBudgetDB.Controllers
         
         public async Task<IActionResult> ViewBudget(int id)
         {
+            var budget = _service.GetBudget(id);
+            var authResult = await _authService.AuthorizeAsync(User, budget, "CanManageBudget");
+
+            if (!authResult.Succeeded)
+            {
+                return new ForbidResult();
+            }
+
             var model = _service.GetBudgetDetail(id);
 
             if (model == null)
             {
                 return NotFound();
             }
-
-            var budget = _service.GetBudget(id);
 
             var user = await _userService.GetUserAsync(User);
             if (user == null)
@@ -91,13 +97,13 @@ namespace MyBudgetDB.Controllers
         public async Task<IActionResult> EditBudget(int id)
         {
             // Add this for authorization
-            //var budget = _service.GetBudget(id);
-            //var authResult = await _authService.AuthorizeAsync(User, budget, "CanManageBudget");
+            var budget = _service.GetBudget(id);
+            var authResult = await _authService.AuthorizeAsync(User, budget, "CanManageBudget");
 
-            //if (!authResult.Succeeded)
-            //{
-            //    return new ForbidResult();
-            //}
+            if (!authResult.Succeeded)
+            {
+                return new ForbidResult();
+            }
 
             var model = _service.GetBudgetForUpdate(id);
             if (model == null)
@@ -118,11 +124,11 @@ namespace MyBudgetDB.Controllers
             try
             {
                 var person = _service.GetBudget(command.BudgetId);
-                /*var authResult = await _authService.AuthorizeAsync(User, person, "CanEditPerson");
+                var authResult = await _authService.AuthorizeAsync(User, person, "CanEditPerson");
                 if (!authResult.Succeeded)
                 {
                     return new ForbidResult();
-                }*/
+                }
 
                 if (ModelState.IsValid)
                 {
