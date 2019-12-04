@@ -33,7 +33,6 @@ namespace MyBudgetDB.Attributes
         public void OnActionExecuting(ActionExecutingContext context)
         {
             var user = context.HttpContext.User;
-            //var user = _userManager.GetUserAsync(_user);
             if (user == null)
             {
                 _log.LogWarning($"Unable to load user with ID '{context.HttpContext.User}'");
