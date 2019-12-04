@@ -7,7 +7,7 @@
 
 <h2>@ViewData["Title"]</h2>
 <hr />
-<form asp-controller="Home" asp-action="EditBudget" method="post" class="form-horizontal">
+<form asp-controller="Budget" asp-action="EditBudget" method="post" class="form-horizontal">
     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
     @Html.Partial("_EditBudgetPartial")
