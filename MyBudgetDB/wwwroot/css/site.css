@@ -33,3 +33,15 @@
         display: none;
     }
 }
+
+/*.carousel-inner>.item>img {
+    width: 100%;
+}
+
+#myCarousel {
+    width: 640px;
+}*/
+
+h1, h2, a {
+    text-align: center;
+}

@@ -10,6 +10,8 @@ using Microsoft.Net.Http.Headers;
 using MyBudgetDB.Authorization;
 using MyBudgetDB.Data;
 using MyBudgetDB.Services;
+using Microsoft.AspNetCore.Authorization;
+using MyBudgetDB.Authorization;
 
 namespace MyBudgetDB
 {
@@ -42,8 +44,13 @@ namespace MyBudgetDB
             // Add application services.
             services.AddTransient<IEmailSender, EmailSender>();
             services.AddScoped<BudgetService>();
+
             //services.AddScoped<IAuthorizationService>();
 
+            services.AddAuthorization(options => {
+                options.AddPolicy("CanManageBudget", policyBuilder => policyBuilder
+                    .AddRequirements(new CanManageBudgetRequirement()));
+            });
 
             services.AddAuthorization(options => {
                 options.AddPolicy("CanViewBudget",

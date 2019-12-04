@@ -6,8 +6,8 @@ using MyBudgetDB.Models;
 
 namespace MyBudgetDB.Authorization
 {
-    /* commented out for now, but this will be the authorization filter
-    public class CanViewBudgetHandler :
+     //commented out for now, but this will be the authorization filter
+    /*public class CanViewBudgetHandler :
         AuthorizationHandler<CanEditPersonRequirement, User>
     {
         private readonly UserManager<ApplicationUser> _userManager;

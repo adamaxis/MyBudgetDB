@@ -242,7 +242,7 @@ namespace MyBudgetDB.Controllers
 
         private async Task AddClaims(RegisterViewModel model, ApplicationUser user)
         {
-            if (user.UserName == "valatorre@dmacc.edu" || user.UserName == "ddraper@dmacc.edu" || user.UserName == "lrussell@dmacc.edu")
+            if (user.UserName == "valatorre@dmacc.edu" || user.UserName == "ddraper@dmacc.edu" || user.UserName == "kmnicholas@dmacc.edu" || user.UserName == "lrussel@dmacc.edu")
             {
                 var isAdmin = new Claim(Claims.IsAdmin, "true", ClaimValueTypes.Boolean);
                 await _userManager.AddClaimAsync(user, isAdmin);

@@ -149,6 +149,7 @@ namespace MyBudgetDB.Controllers
         public async Task<IActionResult> DeleteBudget(int id)
         {
 
+
             var user = await _userService.GetUserAsync(User);
             if (user == null)
             {
