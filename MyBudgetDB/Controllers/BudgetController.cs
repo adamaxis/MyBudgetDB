@@ -123,8 +123,8 @@ namespace MyBudgetDB.Controllers
         {
             try
             {
-                var person = _service.GetBudget(command.BudgetId);
-                var authResult = await _authService.AuthorizeAsync(User, person, "CanEditPerson");
+                var budget = _service.GetBudget(command.BudgetId);
+                var authResult = await _authService.AuthorizeAsync(User, budget, "CanManageBudget");
                 if (!authResult.Succeeded)
                 {
                     return new ForbidResult();
