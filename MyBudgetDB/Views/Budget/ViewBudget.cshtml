@@ -31,23 +31,27 @@
     <h3>Expenses</h3>
     <table class="table table-striped">
         <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Expenses.ElementAt(0).Name)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Expenses.ElementAt(0).Amount)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Expenses.ElementAt(0).DateAdded)
-            </th>
-        </tr>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Expenses.ElementAt(0).Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Expenses.ElementAt(0).Notes)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Expenses.ElementAt(0).Amount)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Expenses.ElementAt(0).DateAdded)
+                </th>
+            </tr>
         </thead>
         <tbody>
         @foreach (var item in Model.Expenses)
         {
             <tr>
                 <td>@Html.DisplayFor(model => item.Name)</td>
+                <td>@Html.DisplayFor(model => item.Notes)</td>
                 <td>@Html.DisplayFor(model => item.Amount)</td>
                 <td>@Html.DisplayFor(model => item.DateAdded)</td>
             </tr>
