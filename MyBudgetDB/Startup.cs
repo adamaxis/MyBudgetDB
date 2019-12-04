@@ -1,8 +1,10 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc.Formatters;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -25,8 +27,6 @@ namespace MyBudgetDB
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddCors();
-
             var config = new AppSecrets();
             Configuration.Bind("MyBudgetDB", config);
             services.AddSingleton(config);
@@ -38,19 +38,10 @@ namespace MyBudgetDB
             services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
-
-            // Add application services.
+            
             services.AddTransient<IEmailSender, EmailSender>();
             services.AddScoped<BudgetService>();
-            //services.AddScoped<IAuthorizationService>();
-
-
-            services.AddAuthorization(options => {
-                options.AddPolicy("CanViewBudget",
-                    policyBuilder => policyBuilder
-                        .AddRequirements(new IsBudgetOwnerRequirement()));
-            });
-
+            
             services.AddScoped<IAuthorizationHandler, IsBudgetOwnerHandler>();
 
             services.AddHsts(options =>
@@ -59,11 +50,33 @@ namespace MyBudgetDB
                 options.IncludeSubDomains = true;
             });
 
-            services.AddMvc(options =>
-            {
-                options.RespectBrowserAcceptHeader = true; // false by default
+            services.AddAuthorization(options => {
+                options.AddPolicy("CanViewBudget",
+                    policyBuilder => policyBuilder
+                        .AddRequirements(new IsBudgetOwnerRequirement()));
             });
 
+            // set to status code when not authorize in api
+            services.ConfigureApplicationCookie(options =>
+            {
+                options.Events.OnRedirectToLogin = context =>
+                {
+                    if (context.Request.Path.StartsWithSegments("/api"))
+                    {
+                        context.Response.StatusCode = 401;
+                        return Task.CompletedTask;
+                    }
+                    return Task.CompletedTask;
+                };
+            });
+
+            services.AddCors();
+
+            services.AddMvc(options =>
+            {
+                options.RespectBrowserAcceptHeader = true; 
+            });
+            
             services.AddMvc(options =>
                 {
                     options.OutputFormatters.Add(new XmlDataContractSerializerOutputFormatter());
@@ -75,6 +88,12 @@ namespace MyBudgetDB
                         ("js", MediaTypeHeaderValue.Parse("application/json"));
                 })
                 .AddXmlSerializerFormatters();
+            
+            services.AddAntiforgery(options =>
+            {
+                //cookie should only be transmitted on HTTPS request
+                options.Cookie.SecurePolicy = CookieSecurePolicy.Always;
+            });
 
             services.AddMvcCore()
                 .AddFormatterMappings();
@@ -98,14 +117,6 @@ namespace MyBudgetDB
                     .AllowAnyOrigin()
                     .AllowAnyMethod()
                     .AllowAnyHeader());
-
-                //app.UseCors(builder =>
-                //{
-                //    builder.WithOrigins("https://dmacc.edu",
-                //        "http://dmacc.edu",
-                //        "https://localhost:44375",
-                //        "https://localhost:5001");
-                //});
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
