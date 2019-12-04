@@ -1,0 +1,1666 @@
+2019-12-04 00:11:52.624 -06:00 [INF] User profile is available. Using 'C:\Users\Kyle\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-12-04 00:11:53.475 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/  
+2019-12-04 00:11:53.475 -06:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:5364/  0
+2019-12-04 00:11:53.554 -06:00 [INF] Request finished in 87.0868ms 200 
+2019-12-04 00:11:53.604 -06:00 [INF] Identity.Application was not authenticated. Failure message: Unprotect ticket failed
+2019-12-04 00:11:54.071 -06:00 [INF] Executing action method MyBudgetDB.Controllers.HomeController.Index (MyBudgetDB) with arguments (null) - ModelState is "Valid"
+2019-12-04 00:11:57.525 -06:00 [INF] Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2019-12-04 00:11:58.089 -06:00 [INF] Executed action MyBudgetDB.Controllers.HomeController.Index (MyBudgetDB) in 4259.6711000000005ms
+2019-12-04 00:11:58.099 -06:00 [INF] Request finished in 4635.7352ms 200 text/html; charset=utf-8
+2019-12-04 00:11:58.136 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/css/site.css  
+2019-12-04 00:11:58.136 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/images/dollars.jpg  
+2019-12-04 00:11:58.136 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/lib/bootstrap/dist/css/bootstrap.css  
+2019-12-04 00:11:58.136 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/lib/datatables/css/dataTables.bootstrap.min.css  
+2019-12-04 00:11:58.150 -06:00 [INF] Sending file. Request path: '/images/dollars.jpg'. Physical path: 'C:\Users\Kyle\Documents\school\cis174\mybudget\fork\MyBudgetDB\MyBudgetDB\wwwroot\images\dollars.jpg'
+2019-12-04 00:11:58.150 -06:00 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'C:\Users\Kyle\Documents\school\cis174\mybudget\fork\MyBudgetDB\MyBudgetDB\wwwroot\css\site.css'
+2019-12-04 00:11:58.150 -06:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.css'. Physical path: 'C:\Users\Kyle\Documents\school\cis174\mybudget\fork\MyBudgetDB\MyBudgetDB\wwwroot\lib\bootstrap\dist\css\bootstrap.css'
+2019-12-04 00:11:58.150 -06:00 [INF] Sending file. Request path: '/lib/datatables/css/dataTables.bootstrap.min.css'. Physical path: 'C:\Users\Kyle\Documents\school\cis174\mybudget\fork\MyBudgetDB\MyBudgetDB\wwwroot\lib\datatables\css\dataTables.bootstrap.min.css'
+2019-12-04 00:11:58.173 -06:00 [INF] Request finished in 38.0115ms 200 text/css
+2019-12-04 00:11:58.173 -06:00 [INF] Request finished in 37.1923ms 200 text/css
+2019-12-04 00:11:58.180 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/images/coins.jpg  
+2019-12-04 00:11:58.180 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/lib/datatables/js/jquery.dataTables.min.js  
+2019-12-04 00:11:58.180 -06:00 [INF] Sending file. Request path: '/images/coins.jpg'. Physical path: 'C:\Users\Kyle\Documents\school\cis174\mybudget\fork\MyBudgetDB\MyBudgetDB\wwwroot\images\coins.jpg'
+2019-12-04 00:11:58.181 -06:00 [INF] Sending file. Request path: '/lib/datatables/js/jquery.dataTables.min.js'. Physical path: 'C:\Users\Kyle\Documents\school\cis174\mybudget\fork\MyBudgetDB\MyBudgetDB\wwwroot\lib\datatables\js\jquery.dataTables.min.js'
+2019-12-04 00:11:58.183 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/js/site.js?v=ji3-IxbEzYWjzzLCGkF1KDjrT2jLbbrSYXw-AhMPNIA  
+2019-12-04 00:11:58.183 -06:00 [INF] Sending file. Request path: '/js/site.js'. Physical path: 'C:\Users\Kyle\Documents\school\cis174\mybudget\fork\MyBudgetDB\MyBudgetDB\wwwroot\js\site.js'
+2019-12-04 00:11:58.183 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/images/moneyjars.jpg  
+2019-12-04 00:11:58.183 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/images/bitcoin.jpg  
+2019-12-04 00:11:58.183 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/lib/jquery/jquery.js  
+2019-12-04 00:11:58.184 -06:00 [INF] Sending file. Request path: '/images/bitcoin.jpg'. Physical path: 'C:\Users\Kyle\Documents\school\cis174\mybudget\fork\MyBudgetDB\MyBudgetDB\wwwroot\images\bitcoin.jpg'
+2019-12-04 00:11:58.184 -06:00 [INF] Sending file. Request path: '/images/moneyjars.jpg'. Physical path: 'C:\Users\Kyle\Documents\school\cis174\mybudget\fork\MyBudgetDB\MyBudgetDB\wwwroot\images\moneyjars.jpg'
+2019-12-04 00:11:58.184 -06:00 [INF] Sending file. Request path: '/lib/jquery/jquery.js'. Physical path: 'C:\Users\Kyle\Documents\school\cis174\mybudget\fork\MyBudgetDB\MyBudgetDB\wwwroot\lib\jquery\jquery.js'
+2019-12-04 00:11:58.186 -06:00 [INF] Request finished in 2.2631ms 200 image/jpeg
+2019-12-04 00:11:58.186 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/lib/datatables/js/dataTables.bootstrap.min.js  
+2019-12-04 00:11:58.186 -06:00 [INF] Request finished in 2.8317ms 200 application/javascript
+2019-12-04 00:11:58.186 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/lib/bootstrap/dist/js/bootstrap.js  
+2019-12-04 00:11:58.188 -06:00 [INF] Sending file. Request path: '/lib/datatables/js/dataTables.bootstrap.min.js'. Physical path: 'C:\Users\Kyle\Documents\school\cis174\mybudget\fork\MyBudgetDB\MyBudgetDB\wwwroot\lib\datatables\js\dataTables.bootstrap.min.js'
+2019-12-04 00:11:58.188 -06:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.js'. Physical path: 'C:\Users\Kyle\Documents\school\cis174\mybudget\fork\MyBudgetDB\MyBudgetDB\wwwroot\lib\bootstrap\dist\js\bootstrap.js'
+2019-12-04 00:11:58.194 -06:00 [INF] Request finished in 10.2305ms 200 image/jpeg
+2019-12-04 00:11:58.197 -06:00 [INF] Request finished in 16.6053ms 200 image/jpeg
+2019-12-04 00:11:58.201 -06:00 [INF] Request finished in 21.2496ms 200 application/javascript
+2019-12-04 00:11:58.201 -06:00 [INF] Request finished in 65.2285ms 200 image/jpeg
+2019-12-04 00:11:58.209 -06:00 [INF] Request finished in 23.1714ms 200 application/javascript
+2019-12-04 00:11:58.209 -06:00 [INF] Request finished in 23.3213ms 200 application/javascript
+2019-12-04 00:11:58.216 -06:00 [INF] Request finished in 79.0544ms 200 text/css
+2019-12-04 00:11:58.241 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2  
+2019-12-04 00:11:58.242 -06:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2'. Physical path: 'C:\Users\Kyle\Documents\school\cis174\mybudget\fork\MyBudgetDB\MyBudgetDB\wwwroot\lib\bootstrap\dist\fonts\glyphicons-halflings-regular.woff2'
+2019-12-04 00:11:58.245 -06:00 [INF] Request finished in 4.0313ms 200 font/woff2
+2019-12-04 00:11:58.248 -06:00 [INF] Request finished in 64.4901ms 200 application/javascript
+2019-12-04 00:12:04.399 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/Account/Login  
+2019-12-04 00:12:04.400 -06:00 [INF] Identity.Application was not authenticated. Failure message: Unprotect ticket failed
+2019-12-04 00:12:04.474 -06:00 [INF] Executing action method MyBudgetDB.Controllers.AccountController.Login (MyBudgetDB) with arguments ([""]) - ModelState is "Valid"
+2019-12-04 00:12:04.503 -06:00 [INF] AuthenticationScheme: Identity.External signed out.
+2019-12-04 00:12:04.983 -06:00 [INF] Executing ViewResult, running view at path /Views/Account/Login.cshtml.
+2019-12-04 00:12:05.227 -06:00 [INF] Executed action MyBudgetDB.Controllers.AccountController.Login (MyBudgetDB) in 788.51150000000007ms
+2019-12-04 00:12:05.227 -06:00 [INF] Request finished in 827.7438ms 200 text/html; charset=utf-8
+2019-12-04 00:12:05.277 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/lib/bootstrap/dist/css/bootstrap.css  
+2019-12-04 00:12:05.277 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/lib/datatables/css/dataTables.bootstrap.min.css  
+2019-12-04 00:12:05.278 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/lib/jquery/jquery.js  
+2019-12-04 00:12:05.278 -06:00 [INF] The file /lib/datatables/css/dataTables.bootstrap.min.css was not modified
+2019-12-04 00:12:05.278 -06:00 [INF] The file /lib/bootstrap/dist/css/bootstrap.css was not modified
+2019-12-04 00:12:05.278 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/css/site.css  
+2019-12-04 00:12:05.278 -06:00 [INF] The file /lib/jquery/jquery.js was not modified
+2019-12-04 00:12:05.278 -06:00 [INF] The file /css/site.css was not modified
+2019-12-04 00:12:05.279 -06:00 [INF] Request finished in 1.7811ms 304 application/javascript
+2019-12-04 00:12:05.280 -06:00 [INF] Request finished in 1.5803ms 304 text/css
+2019-12-04 00:12:05.280 -06:00 [INF] Request finished in 2.2257ms 304 text/css
+2019-12-04 00:12:05.279 -06:00 [INF] Request finished in 2.2662ms 304 text/css
+2019-12-04 00:12:05.285 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/lib/datatables/js/jquery.dataTables.min.js  
+2019-12-04 00:12:05.286 -06:00 [INF] The file /lib/datatables/js/jquery.dataTables.min.js was not modified
+2019-12-04 00:12:05.286 -06:00 [INF] Request finished in 1.0919ms 304 application/javascript
+2019-12-04 00:12:05.295 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/lib/bootstrap/dist/js/bootstrap.js  
+2019-12-04 00:12:05.295 -06:00 [INF] The file /lib/bootstrap/dist/js/bootstrap.js was not modified
+2019-12-04 00:12:05.295 -06:00 [INF] Request finished in 0.4328ms 304 application/javascript
+2019-12-04 00:12:05.299 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/lib/datatables/js/dataTables.bootstrap.min.js  
+2019-12-04 00:12:05.299 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/js/site.js?v=ji3-IxbEzYWjzzLCGkF1KDjrT2jLbbrSYXw-AhMPNIA  
+2019-12-04 00:12:05.299 -06:00 [INF] The file /lib/datatables/js/dataTables.bootstrap.min.js was not modified
+2019-12-04 00:12:05.299 -06:00 [INF] Request finished in 0.4091ms 304 application/javascript
+2019-12-04 00:12:05.299 -06:00 [INF] The file /js/site.js was not modified
+2019-12-04 00:12:05.299 -06:00 [INF] Request finished in 0.567ms 304 application/javascript
+2019-12-04 00:12:05.303 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/lib/jquery-validation/dist/jquery.validate.js  
+2019-12-04 00:12:05.305 -06:00 [INF] Sending file. Request path: '/lib/jquery-validation/dist/jquery.validate.js'. Physical path: 'C:\Users\Kyle\Documents\school\cis174\mybudget\fork\MyBudgetDB\MyBudgetDB\wwwroot\lib\jquery-validation\dist\jquery.validate.js'
+2019-12-04 00:12:05.305 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js  
+2019-12-04 00:12:05.305 -06:00 [INF] Sending file. Request path: '/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js'. Physical path: 'C:\Users\Kyle\Documents\school\cis174\mybudget\fork\MyBudgetDB\MyBudgetDB\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js'
+2019-12-04 00:12:05.308 -06:00 [INF] Request finished in 4.7651ms 200 application/javascript
+2019-12-04 00:12:05.316 -06:00 [INF] Request finished in 10.8972ms 200 application/javascript
+2019-12-04 00:12:12.236 -06:00 [INF] Request starting HTTP/1.1 POST http://localhost:44317/Account/Login application/x-www-form-urlencoded 233
+2019-12-04 00:12:12.236 -06:00 [INF] Identity.Application was not authenticated. Failure message: Unprotect ticket failed
+2019-12-04 00:12:12.330 -06:00 [INF] Executing action method MyBudgetDB.Controllers.AccountController.Login (MyBudgetDB) with arguments (["MyBudgetDB.Models.AccountViewModels.LoginViewModel",""]) - ModelState is "Valid"
+2019-12-04 00:12:12.806 -06:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data, this mode should only be enabled during development.
+2019-12-04 00:12:12.910 -06:00 [INF] Entity Framework Core 2.1.1-rtm-30846 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: SensitiveDataLoggingEnabled 
+2019-12-04 00:12:14.110 -06:00 [INF] Executed DbCommand (140ms) [Parameters=[@__normalizedUserName_0='A@A.COM' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[DateOfBirth], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0
+2019-12-04 00:12:14.438 -06:00 [INF] Executed DbCommand (68ms) [Parameters=[@__user_Id_0='a4ccea5f-c097-4c09-b27b-e6842294285a' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [AspNetUserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0
+2019-12-04 00:12:14.570 -06:00 [INF] Executed DbCommand (77ms) [Parameters=[@__userId_0='a4ccea5f-c097-4c09-b27b-e6842294285a' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [role].[Name]
+FROM [AspNetUserRoles] AS [userRole]
+INNER JOIN [AspNetRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0
+2019-12-04 00:12:14.588 -06:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2019-12-04 00:12:14.591 -06:00 [INF] User logged in.
+2019-12-04 00:12:14.598 -06:00 [INF] Executing RedirectResult, redirecting to /.
+2019-12-04 00:12:14.601 -06:00 [INF] Executed action MyBudgetDB.Controllers.AccountController.Login (MyBudgetDB) in 2354.7634000000003ms
+2019-12-04 00:12:14.605 -06:00 [INF] Request finished in 2369.6398ms 302 
+2019-12-04 00:12:14.615 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/  
+2019-12-04 00:12:14.624 -06:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2019-12-04 00:12:14.625 -06:00 [INF] Executing action method MyBudgetDB.Controllers.HomeController.Index (MyBudgetDB) with arguments (null) - ModelState is "Valid"
+2019-12-04 00:12:14.626 -06:00 [INF] Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2019-12-04 00:12:14.635 -06:00 [INF] Executed action MyBudgetDB.Controllers.HomeController.Index (MyBudgetDB) in 9.6057ms
+2019-12-04 00:12:14.635 -06:00 [INF] Request finished in 19.7583ms 200 text/html; charset=utf-8
+2019-12-04 00:12:14.667 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/lib/bootstrap/dist/css/bootstrap.css  
+2019-12-04 00:12:14.668 -06:00 [INF] The file /lib/bootstrap/dist/css/bootstrap.css was not modified
+2019-12-04 00:12:14.669 -06:00 [INF] Request finished in 1.0017ms 304 text/css
+2019-12-04 00:12:14.672 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/lib/jquery/jquery.js  
+2019-12-04 00:12:14.672 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/lib/datatables/css/dataTables.bootstrap.min.css  
+2019-12-04 00:12:14.672 -06:00 [INF] The file /lib/jquery/jquery.js was not modified
+2019-12-04 00:12:14.672 -06:00 [INF] The file /lib/datatables/css/dataTables.bootstrap.min.css was not modified
+2019-12-04 00:12:14.672 -06:00 [INF] Request finished in 0.7924ms 304 text/css
+2019-12-04 00:12:14.672 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/css/site.css  
+2019-12-04 00:12:14.672 -06:00 [INF] Request finished in 0.8365ms 304 application/javascript
+2019-12-04 00:12:14.673 -06:00 [INF] The file /css/site.css was not modified
+2019-12-04 00:12:14.673 -06:00 [INF] Request finished in 0.217ms 304 text/css
+2019-12-04 00:12:14.681 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/lib/datatables/js/jquery.dataTables.min.js  
+2019-12-04 00:12:14.681 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/js/site.js?v=ji3-IxbEzYWjzzLCGkF1KDjrT2jLbbrSYXw-AhMPNIA  
+2019-12-04 00:12:14.681 -06:00 [INF] The file /lib/datatables/js/jquery.dataTables.min.js was not modified
+2019-12-04 00:12:14.681 -06:00 [INF] The file /js/site.js was not modified
+2019-12-04 00:12:14.681 -06:00 [INF] Request finished in 0.4594ms 304 application/javascript
+2019-12-04 00:12:14.682 -06:00 [INF] Request finished in 0.5099ms 304 application/javascript
+2019-12-04 00:12:14.687 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/lib/bootstrap/dist/js/bootstrap.js  
+2019-12-04 00:12:14.687 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/lib/datatables/js/dataTables.bootstrap.min.js  
+2019-12-04 00:12:14.688 -06:00 [INF] The file /lib/datatables/js/dataTables.bootstrap.min.js was not modified
+2019-12-04 00:12:14.688 -06:00 [INF] The file /lib/bootstrap/dist/js/bootstrap.js was not modified
+2019-12-04 00:12:14.688 -06:00 [INF] Request finished in 0.389ms 304 application/javascript
+2019-12-04 00:12:14.688 -06:00 [INF] Request finished in 0.5195ms 304 application/javascript
+2019-12-04 00:12:14.693 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/images/coins.jpg  
+2019-12-04 00:12:14.693 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/images/moneyjars.jpg  
+2019-12-04 00:12:14.693 -06:00 [INF] The file /images/coins.jpg was not modified
+2019-12-04 00:12:14.693 -06:00 [INF] The file /images/moneyjars.jpg was not modified
+2019-12-04 00:12:14.693 -06:00 [INF] Request finished in 0.3434ms 304 image/jpeg
+2019-12-04 00:12:14.693 -06:00 [INF] Request finished in 0.3018ms 304 image/jpeg
+2019-12-04 00:12:14.696 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/images/bitcoin.jpg  
+2019-12-04 00:12:14.696 -06:00 [INF] The file /images/bitcoin.jpg was not modified
+2019-12-04 00:12:14.696 -06:00 [INF] Request finished in 0.6775ms 304 image/jpeg
+2019-12-04 00:12:14.706 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/images/dollars.jpg  
+2019-12-04 00:12:14.708 -06:00 [INF] The file /images/dollars.jpg was not modified
+2019-12-04 00:12:14.708 -06:00 [INF] Request finished in 2.5165ms 304 image/jpeg
+2019-12-04 00:12:16.150 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/Budget/ViewBudgets  
+2019-12-04 00:12:16.150 -06:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2019-12-04 00:12:16.166 -06:00 [INF] Authorization was successful.
+2019-12-04 00:12:16.174 -06:00 [INF] Executing action method MyBudgetDB.Controllers.BudgetController.ViewBudgets (MyBudgetDB) with arguments (null) - ModelState is "Valid"
+2019-12-04 00:12:16.181 -06:00 [INF] Entity Framework Core 2.1.1-rtm-30846 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: SensitiveDataLoggingEnabled 
+2019-12-04 00:12:16.276 -06:00 [INF] Executed DbCommand (80ms) [Parameters=[@__get_Item_0='a4ccea5f-c097-4c09-b27b-e6842294285a' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[ConcurrencyStamp], [e].[DateOfBirth], [e].[Email], [e].[EmailConfirmed], [e].[FirstName], [e].[LastName], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UserName]
+FROM [AspNetUsers] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+2019-12-04 00:12:16.476 -06:00 [INF] Executed DbCommand (78ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[BudgetId] AS [Id], [r].[Name], [r].[CreationDate], [r].[Amount]
+FROM [Budgets] AS [r]
+WHERE [r].[IsDeleted] = 0
+ORDER BY [r].[BudgetId]
+2019-12-04 00:12:16.557 -06:00 [INF] Executed DbCommand (72ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r.Expenses].[IdExpense], [r.Expenses].[Amount], [r.Expenses].[Category], [r.Expenses].[DateAdded], [r.Expenses].[Name], [r.Expenses].[Notes], [r.Expenses].[UserBudgetBudgetId], [r.Expenses].[UserId], [t].[BudgetId]
+FROM [Expenses] AS [r.Expenses]
+INNER JOIN (
+    SELECT [r0].[BudgetId]
+    FROM [Budgets] AS [r0]
+    WHERE [r0].[IsDeleted] = 0
+) AS [t] ON [r.Expenses].[UserBudgetBudgetId] = [t].[BudgetId]
+ORDER BY [t].[BudgetId]
+2019-12-04 00:12:16.696 -06:00 [INF] Executing ViewResult, running view at path /Views/Budget/ViewBudgets.cshtml.
+2019-12-04 00:12:16.882 -06:00 [INF] accessLog:{"RequestId":"98958977-a8f1-4898-bd3a-b6c25a0195d9","Request":"/Budget/ViewBudgets","Response":"200"}
+2019-12-04 00:12:16.882 -06:00 [INF] Executed action MyBudgetDB.Controllers.BudgetController.ViewBudgets (MyBudgetDB) in 728.8419ms
+2019-12-04 00:12:16.882 -06:00 [INF] Request finished in 732.4303ms 200 text/html; charset=utf-8
+2019-12-04 00:12:24.101 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/3  
+2019-12-04 00:12:24.102 -06:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2019-12-04 00:12:24.105 -06:00 [INF] Authorization was successful.
+2019-12-04 00:12:24.105 -06:00 [INF] Executing action method MyBudgetDB.Controllers.BudgetController.ViewBudget (MyBudgetDB) with arguments (["3"]) - ModelState is "Valid"
+2019-12-04 00:12:24.107 -06:00 [INF] Entity Framework Core 2.1.1-rtm-30846 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: SensitiveDataLoggingEnabled 
+2019-12-04 00:12:24.180 -06:00 [INF] Executed DbCommand (70ms) [Parameters=[@__get_Item_0='a4ccea5f-c097-4c09-b27b-e6842294285a' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[ConcurrencyStamp], [e].[DateOfBirth], [e].[Email], [e].[EmailConfirmed], [e].[FirstName], [e].[LastName], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UserName]
+FROM [AspNetUsers] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+2019-12-04 00:12:24.281 -06:00 [INF] Executed DbCommand (78ms) [Parameters=[@__id_0='3'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [x].[BudgetId] AS [Id], [x].[CreationDate], [x].[Amount], [x].[Owner], [x].[Name], [x].[Balance], [x].[LastModified]
+FROM [Budgets] AS [x]
+WHERE ([x].[BudgetId] = @__id_0) AND ([x].[IsDeleted] = 0)
+2019-12-04 00:12:24.358 -06:00 [INF] Executed DbCommand (67ms) [Parameters=[@__id_0='3', @__id_1='3'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [x].[BudgetId], [x].[Amount], [x].[Balance], [x].[CreationDate], [x].[IsDeleted], [x].[LastModified], [x].[Name], [x].[Owner], [x].[UserId]
+FROM [Budgets] AS [x]
+WHERE ([x].[BudgetId] = @__id_0) AND ([x].[BudgetId] = @__id_1)
+2019-12-04 00:12:24.372 -06:00 [INF] Authorization failed.
+2019-12-04 00:12:24.499 -06:00 [INF] Executing ViewResult, running view at path /Views/Budget/ViewBudget.cshtml.
+2019-12-04 00:12:24.638 -06:00 [INF] Executed DbCommand (74ms) [Parameters=[@_outer_BudgetId='3'], CommandType='"Text"', CommandTimeout='30']
+SELECT [item].[Name], [item].[Amount], [item].[DateAdded]
+FROM [Expenses] AS [item]
+WHERE @_outer_BudgetId = [item].[UserBudgetBudgetId]
+2019-12-04 00:12:24.715 -06:00 [INF] Executed DbCommand (72ms) [Parameters=[@_outer_BudgetId='3'], CommandType='"Text"', CommandTimeout='30']
+SELECT [item].[Name], [item].[Amount], [item].[DateAdded]
+FROM [Expenses] AS [item]
+WHERE @_outer_BudgetId = [item].[UserBudgetBudgetId]
+2019-12-04 00:12:24.720 -06:00 [INF] accessLog:{"RequestId":"565f2059-5db0-431d-82e4-535d3c0aaa35","Request":"/3","Response":"200"}
+2019-12-04 00:12:24.721 -06:00 [INF] Executed action MyBudgetDB.Controllers.BudgetController.ViewBudget (MyBudgetDB) in 615.61110000000008ms
+2019-12-04 00:12:24.721 -06:00 [INF] Request finished in 619.2489ms 200 text/html; charset=utf-8
+2019-12-04 00:12:24.757 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/lib/jquery/jquery.js  
+2019-12-04 00:12:24.758 -06:00 [INF] The file /lib/jquery/jquery.js was not modified
+2019-12-04 00:12:24.758 -06:00 [INF] Request finished in 0.3587ms 304 application/javascript
+2019-12-04 00:12:24.762 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/lib/bootstrap/dist/css/bootstrap.css  
+2019-12-04 00:12:24.762 -06:00 [INF] The file /lib/bootstrap/dist/css/bootstrap.css was not modified
+2019-12-04 00:12:24.762 -06:00 [INF] Request finished in 0.432ms 304 text/css
+2019-12-04 00:12:24.762 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/css/site.css  
+2019-12-04 00:12:24.762 -06:00 [INF] The file /css/site.css was not modified
+2019-12-04 00:12:24.762 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/lib/datatables/js/jquery.dataTables.min.js  
+2019-12-04 00:12:24.762 -06:00 [INF] Request finished in 0.2024ms 304 text/css
+2019-12-04 00:12:24.762 -06:00 [INF] The file /lib/datatables/js/jquery.dataTables.min.js was not modified
+2019-12-04 00:12:24.770 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/lib/datatables/css/dataTables.bootstrap.min.css  
+2019-12-04 00:12:24.770 -06:00 [INF] Request finished in 7.5252ms 304 application/javascript
+2019-12-04 00:12:24.770 -06:00 [INF] The file /lib/datatables/css/dataTables.bootstrap.min.css was not modified
+2019-12-04 00:12:24.770 -06:00 [INF] Request finished in 0.3245ms 304 text/css
+2019-12-04 00:12:24.770 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/js/site.js?v=ji3-IxbEzYWjzzLCGkF1KDjrT2jLbbrSYXw-AhMPNIA  
+2019-12-04 00:12:24.770 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/lib/bootstrap/dist/js/bootstrap.js  
+2019-12-04 00:12:24.770 -06:00 [INF] The file /js/site.js was not modified
+2019-12-04 00:12:24.770 -06:00 [INF] The file /lib/bootstrap/dist/js/bootstrap.js was not modified
+2019-12-04 00:12:24.770 -06:00 [INF] Request finished in 0.198ms 304 application/javascript
+2019-12-04 00:12:24.770 -06:00 [INF] Request finished in 0.2277ms 304 application/javascript
+2019-12-04 00:12:24.774 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/lib/datatables/js/dataTables.bootstrap.min.js  
+2019-12-04 00:12:24.774 -06:00 [INF] The file /lib/datatables/js/dataTables.bootstrap.min.js was not modified
+2019-12-04 00:12:24.775 -06:00 [INF] Request finished in 0.5662ms 304 application/javascript
+2019-12-04 00:12:45.485 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/Budget/ViewBudgets  
+2019-12-04 00:12:45.485 -06:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2019-12-04 00:12:45.485 -06:00 [INF] Authorization was successful.
+2019-12-04 00:12:45.486 -06:00 [INF] Executing action method MyBudgetDB.Controllers.BudgetController.ViewBudgets (MyBudgetDB) with arguments (null) - ModelState is "Valid"
+2019-12-04 00:12:45.486 -06:00 [INF] Entity Framework Core 2.1.1-rtm-30846 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: SensitiveDataLoggingEnabled 
+2019-12-04 00:12:45.552 -06:00 [INF] Executed DbCommand (65ms) [Parameters=[@__get_Item_0='a4ccea5f-c097-4c09-b27b-e6842294285a' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[ConcurrencyStamp], [e].[DateOfBirth], [e].[Email], [e].[EmailConfirmed], [e].[FirstName], [e].[LastName], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UserName]
+FROM [AspNetUsers] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+2019-12-04 00:12:45.625 -06:00 [INF] Executed DbCommand (71ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[BudgetId] AS [Id], [r].[Name], [r].[CreationDate], [r].[Amount]
+FROM [Budgets] AS [r]
+WHERE [r].[IsDeleted] = 0
+ORDER BY [r].[BudgetId]
+2019-12-04 00:12:46.005 -06:00 [INF] Executed DbCommand (380ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r.Expenses].[IdExpense], [r.Expenses].[Amount], [r.Expenses].[Category], [r.Expenses].[DateAdded], [r.Expenses].[Name], [r.Expenses].[Notes], [r.Expenses].[UserBudgetBudgetId], [r.Expenses].[UserId], [t].[BudgetId]
+FROM [Expenses] AS [r.Expenses]
+INNER JOIN (
+    SELECT [r0].[BudgetId]
+    FROM [Budgets] AS [r0]
+    WHERE [r0].[IsDeleted] = 0
+) AS [t] ON [r.Expenses].[UserBudgetBudgetId] = [t].[BudgetId]
+ORDER BY [t].[BudgetId]
+2019-12-04 00:12:46.006 -06:00 [INF] Executing ViewResult, running view at path /Views/Budget/ViewBudgets.cshtml.
+2019-12-04 00:12:46.012 -06:00 [INF] accessLog:{"RequestId":"2393cb75-f35d-49bb-94c5-f9892c8c1480","Request":"/Budget/ViewBudgets","Response":"200"}
+2019-12-04 00:12:46.012 -06:00 [INF] Executed action MyBudgetDB.Controllers.BudgetController.ViewBudgets (MyBudgetDB) in 526.6361ms
+2019-12-04 00:12:46.012 -06:00 [INF] Request finished in 527.2193ms 200 text/html; charset=utf-8
+2019-12-04 00:12:46.055 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/lib/datatables/css/dataTables.bootstrap.min.css  
+2019-12-04 00:12:46.056 -06:00 [INF] The file /lib/datatables/css/dataTables.bootstrap.min.css was not modified
+2019-12-04 00:12:46.056 -06:00 [INF] Request finished in 0.9117ms 304 text/css
+2019-12-04 00:12:46.059 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/css/site.css  
+2019-12-04 00:12:46.059 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/lib/bootstrap/dist/js/bootstrap.js  
+2019-12-04 00:12:46.059 -06:00 [INF] The file /lib/bootstrap/dist/js/bootstrap.js was not modified
+2019-12-04 00:12:46.059 -06:00 [INF] The file /css/site.css was not modified
+2019-12-04 00:12:46.059 -06:00 [INF] Request finished in 0.8465ms 304 text/css
+2019-12-04 00:12:46.059 -06:00 [INF] Request finished in 0.6787ms 304 application/javascript
+2019-12-04 00:12:46.063 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/lib/bootstrap/dist/css/bootstrap.css  
+2019-12-04 00:12:46.064 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/lib/jquery/jquery.js  
+2019-12-04 00:12:46.065 -06:00 [INF] The file /lib/bootstrap/dist/css/bootstrap.css was not modified
+2019-12-04 00:12:46.066 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/lib/datatables/js/jquery.dataTables.min.js  
+2019-12-04 00:12:46.066 -06:00 [INF] The file /lib/jquery/jquery.js was not modified
+2019-12-04 00:12:46.066 -06:00 [INF] Request finished in 3.2889ms 304 text/css
+2019-12-04 00:12:46.066 -06:00 [INF] Request finished in 2.3413ms 304 application/javascript
+2019-12-04 00:12:46.066 -06:00 [INF] The file /lib/datatables/js/jquery.dataTables.min.js was not modified
+2019-12-04 00:12:46.066 -06:00 [INF] Request finished in 0.3954ms 304 application/javascript
+2019-12-04 00:12:46.071 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/lib/datatables/js/dataTables.bootstrap.min.js  
+2019-12-04 00:12:46.072 -06:00 [INF] The file /lib/datatables/js/dataTables.bootstrap.min.js was not modified
+2019-12-04 00:12:46.072 -06:00 [INF] Request finished in 0.592ms 304 application/javascript
+2019-12-04 00:12:46.077 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/js/site.js?v=ji3-IxbEzYWjzzLCGkF1KDjrT2jLbbrSYXw-AhMPNIA  
+2019-12-04 00:12:46.078 -06:00 [INF] The file /js/site.js was not modified
+2019-12-04 00:12:46.078 -06:00 [INF] Request finished in 0.3899ms 304 application/javascript
+2019-12-04 00:12:47.582 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/3  
+2019-12-04 00:12:47.582 -06:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2019-12-04 00:12:47.582 -06:00 [INF] Authorization was successful.
+2019-12-04 00:12:47.583 -06:00 [INF] Executing action method MyBudgetDB.Controllers.BudgetController.ViewBudget (MyBudgetDB) with arguments (["3"]) - ModelState is "Valid"
+2019-12-04 00:12:47.583 -06:00 [INF] Entity Framework Core 2.1.1-rtm-30846 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: SensitiveDataLoggingEnabled 
+2019-12-04 00:12:47.652 -06:00 [INF] Executed DbCommand (68ms) [Parameters=[@__get_Item_0='a4ccea5f-c097-4c09-b27b-e6842294285a' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[ConcurrencyStamp], [e].[DateOfBirth], [e].[Email], [e].[EmailConfirmed], [e].[FirstName], [e].[LastName], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UserName]
+FROM [AspNetUsers] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+2019-12-04 00:12:47.719 -06:00 [INF] Executed DbCommand (66ms) [Parameters=[@__id_0='3'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [x].[BudgetId] AS [Id], [x].[CreationDate], [x].[Amount], [x].[Owner], [x].[Name], [x].[Balance], [x].[LastModified]
+FROM [Budgets] AS [x]
+WHERE ([x].[BudgetId] = @__id_0) AND ([x].[IsDeleted] = 0)
+2019-12-04 00:12:47.788 -06:00 [INF] Executed DbCommand (69ms) [Parameters=[@__id_0='3', @__id_1='3'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [x].[BudgetId], [x].[Amount], [x].[Balance], [x].[CreationDate], [x].[IsDeleted], [x].[LastModified], [x].[Name], [x].[Owner], [x].[UserId]
+FROM [Budgets] AS [x]
+WHERE ([x].[BudgetId] = @__id_0) AND ([x].[BudgetId] = @__id_1)
+2019-12-04 00:12:47.788 -06:00 [INF] Authorization failed.
+2019-12-04 00:12:47.789 -06:00 [INF] Executing ViewResult, running view at path /Views/Budget/ViewBudget.cshtml.
+2019-12-04 00:12:47.860 -06:00 [INF] Executed DbCommand (71ms) [Parameters=[@_outer_BudgetId='3'], CommandType='"Text"', CommandTimeout='30']
+SELECT [item].[Name], [item].[Amount], [item].[DateAdded]
+FROM [Expenses] AS [item]
+WHERE @_outer_BudgetId = [item].[UserBudgetBudgetId]
+2019-12-04 00:12:47.932 -06:00 [INF] Executed DbCommand (72ms) [Parameters=[@_outer_BudgetId='3'], CommandType='"Text"', CommandTimeout='30']
+SELECT [item].[Name], [item].[Amount], [item].[DateAdded]
+FROM [Expenses] AS [item]
+WHERE @_outer_BudgetId = [item].[UserBudgetBudgetId]
+2019-12-04 00:12:47.933 -06:00 [INF] accessLog:{"RequestId":"4a8cddd9-419a-464d-8634-4ce45119d4ee","Request":"/3","Response":"200"}
+2019-12-04 00:12:47.933 -06:00 [INF] Executed action MyBudgetDB.Controllers.BudgetController.ViewBudget (MyBudgetDB) in 351.2437ms
+2019-12-04 00:12:47.933 -06:00 [INF] Request finished in 351.8499ms 200 text/html; charset=utf-8
+2019-12-04 00:12:58.436 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/Budget/ViewBudgets  
+2019-12-04 00:12:58.437 -06:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2019-12-04 00:12:58.437 -06:00 [INF] Authorization was successful.
+2019-12-04 00:12:58.437 -06:00 [INF] Executing action method MyBudgetDB.Controllers.BudgetController.ViewBudgets (MyBudgetDB) with arguments (null) - ModelState is "Valid"
+2019-12-04 00:12:58.437 -06:00 [INF] Entity Framework Core 2.1.1-rtm-30846 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: SensitiveDataLoggingEnabled 
+2019-12-04 00:12:58.507 -06:00 [INF] Executed DbCommand (69ms) [Parameters=[@__get_Item_0='a4ccea5f-c097-4c09-b27b-e6842294285a' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[ConcurrencyStamp], [e].[DateOfBirth], [e].[Email], [e].[EmailConfirmed], [e].[FirstName], [e].[LastName], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UserName]
+FROM [AspNetUsers] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+2019-12-04 00:12:58.578 -06:00 [INF] Executed DbCommand (70ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[BudgetId] AS [Id], [r].[Name], [r].[CreationDate], [r].[Amount]
+FROM [Budgets] AS [r]
+WHERE [r].[IsDeleted] = 0
+ORDER BY [r].[BudgetId]
+2019-12-04 00:12:58.645 -06:00 [INF] Executed DbCommand (68ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r.Expenses].[IdExpense], [r.Expenses].[Amount], [r.Expenses].[Category], [r.Expenses].[DateAdded], [r.Expenses].[Name], [r.Expenses].[Notes], [r.Expenses].[UserBudgetBudgetId], [r.Expenses].[UserId], [t].[BudgetId]
+FROM [Expenses] AS [r.Expenses]
+INNER JOIN (
+    SELECT [r0].[BudgetId]
+    FROM [Budgets] AS [r0]
+    WHERE [r0].[IsDeleted] = 0
+) AS [t] ON [r.Expenses].[UserBudgetBudgetId] = [t].[BudgetId]
+ORDER BY [t].[BudgetId]
+2019-12-04 00:12:58.646 -06:00 [INF] Executing ViewResult, running view at path /Views/Budget/ViewBudgets.cshtml.
+2019-12-04 00:12:58.651 -06:00 [INF] accessLog:{"RequestId":"9a38c8ea-bf8e-410d-831a-839f00c909ae","Request":"/Budget/ViewBudgets","Response":"200"}
+2019-12-04 00:12:58.652 -06:00 [INF] Executed action MyBudgetDB.Controllers.BudgetController.ViewBudgets (MyBudgetDB) in 214.52700000000002ms
+2019-12-04 00:12:58.652 -06:00 [INF] Request finished in 215.183ms 200 text/html; charset=utf-8
+2019-12-04 00:12:58.689 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/lib/jquery/jquery.js  
+2019-12-04 00:12:58.689 -06:00 [INF] The file /lib/jquery/jquery.js was not modified
+2019-12-04 00:12:58.689 -06:00 [INF] Request finished in 0.4023ms 304 application/javascript
+2019-12-04 00:12:58.689 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/lib/bootstrap/dist/css/bootstrap.css  
+2019-12-04 00:12:58.690 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/lib/datatables/css/dataTables.bootstrap.min.css  
+2019-12-04 00:12:58.691 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/css/site.css  
+2019-12-04 00:12:58.691 -06:00 [INF] The file /lib/datatables/css/dataTables.bootstrap.min.css was not modified
+2019-12-04 00:12:58.691 -06:00 [INF] Request finished in 0.3807ms 304 text/css
+2019-12-04 00:12:58.691 -06:00 [INF] The file /css/site.css was not modified
+2019-12-04 00:12:58.691 -06:00 [INF] Request finished in 0.4536ms 304 text/css
+2019-12-04 00:12:58.696 -06:00 [INF] The file /lib/bootstrap/dist/css/bootstrap.css was not modified
+2019-12-04 00:12:58.696 -06:00 [INF] Request finished in 7.1521ms 304 text/css
+2019-12-04 00:12:58.701 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/lib/datatables/js/jquery.dataTables.min.js  
+2019-12-04 00:12:58.701 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/lib/bootstrap/dist/js/bootstrap.js  
+2019-12-04 00:12:58.701 -06:00 [INF] The file /lib/bootstrap/dist/js/bootstrap.js was not modified
+2019-12-04 00:12:58.701 -06:00 [INF] The file /lib/datatables/js/jquery.dataTables.min.js was not modified
+2019-12-04 00:12:58.701 -06:00 [INF] Request finished in 0.2838ms 304 application/javascript
+2019-12-04 00:12:58.701 -06:00 [INF] Request finished in 0.91ms 304 application/javascript
+2019-12-04 00:12:58.705 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/lib/datatables/js/dataTables.bootstrap.min.js  
+2019-12-04 00:12:58.705 -06:00 [INF] The file /lib/datatables/js/dataTables.bootstrap.min.js was not modified
+2019-12-04 00:12:58.705 -06:00 [INF] Request finished in 0.4105ms 304 application/javascript
+2019-12-04 00:12:58.710 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/js/site.js?v=ji3-IxbEzYWjzzLCGkF1KDjrT2jLbbrSYXw-AhMPNIA  
+2019-12-04 00:12:58.710 -06:00 [INF] The file /js/site.js was not modified
+2019-12-04 00:12:58.710 -06:00 [INF] Request finished in 1.8646ms 304 application/javascript
+2019-12-04 00:12:59.840 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/1  
+2019-12-04 00:12:59.841 -06:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2019-12-04 00:12:59.841 -06:00 [INF] Authorization was successful.
+2019-12-04 00:12:59.841 -06:00 [INF] Executing action method MyBudgetDB.Controllers.BudgetController.ViewBudget (MyBudgetDB) with arguments (["1"]) - ModelState is "Valid"
+2019-12-04 00:12:59.841 -06:00 [INF] Entity Framework Core 2.1.1-rtm-30846 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: SensitiveDataLoggingEnabled 
+2019-12-04 00:12:59.914 -06:00 [INF] Executed DbCommand (72ms) [Parameters=[@__get_Item_0='a4ccea5f-c097-4c09-b27b-e6842294285a' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[ConcurrencyStamp], [e].[DateOfBirth], [e].[Email], [e].[EmailConfirmed], [e].[FirstName], [e].[LastName], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UserName]
+FROM [AspNetUsers] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+2019-12-04 00:12:59.985 -06:00 [INF] Executed DbCommand (70ms) [Parameters=[@__id_0='1'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [x].[BudgetId] AS [Id], [x].[CreationDate], [x].[Amount], [x].[Owner], [x].[Name], [x].[Balance], [x].[LastModified]
+FROM [Budgets] AS [x]
+WHERE ([x].[BudgetId] = @__id_0) AND ([x].[IsDeleted] = 0)
+2019-12-04 00:13:00.058 -06:00 [INF] Executed DbCommand (73ms) [Parameters=[@__id_0='1', @__id_1='1'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [x].[BudgetId], [x].[Amount], [x].[Balance], [x].[CreationDate], [x].[IsDeleted], [x].[LastModified], [x].[Name], [x].[Owner], [x].[UserId]
+FROM [Budgets] AS [x]
+WHERE ([x].[BudgetId] = @__id_0) AND ([x].[BudgetId] = @__id_1)
+2019-12-04 00:13:00.058 -06:00 [INF] Authorization was successful.
+2019-12-04 00:13:00.058 -06:00 [INF] Executing ViewResult, running view at path /Views/Budget/ViewBudget.cshtml.
+2019-12-04 00:13:00.125 -06:00 [INF] Executed DbCommand (66ms) [Parameters=[@_outer_BudgetId='1'], CommandType='"Text"', CommandTimeout='30']
+SELECT [item].[Name], [item].[Amount], [item].[DateAdded]
+FROM [Expenses] AS [item]
+WHERE @_outer_BudgetId = [item].[UserBudgetBudgetId]
+2019-12-04 00:13:00.501 -06:00 [INF] Executed DbCommand (376ms) [Parameters=[@_outer_BudgetId='1'], CommandType='"Text"', CommandTimeout='30']
+SELECT [item].[Name], [item].[Amount], [item].[DateAdded]
+FROM [Expenses] AS [item]
+WHERE @_outer_BudgetId = [item].[UserBudgetBudgetId]
+2019-12-04 00:13:00.505 -06:00 [INF] accessLog:{"RequestId":"752909a1-bf20-407d-95ec-4ae0928539d6","Request":"/1","Response":"200"}
+2019-12-04 00:13:00.505 -06:00 [INF] Executed action MyBudgetDB.Controllers.BudgetController.ViewBudget (MyBudgetDB) in 664.42640000000006ms
+2019-12-04 00:13:00.505 -06:00 [INF] Request finished in 665.0409ms 200 text/html; charset=utf-8
+2019-12-04 00:14:24.758 -06:00 [INF] User profile is available. Using 'C:\Users\Kyle\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-12-04 00:14:25.448 -06:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:5364/  0
+2019-12-04 00:14:25.448 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/  
+2019-12-04 00:14:25.525 -06:00 [INF] Request finished in 83.3966ms 200 
+2019-12-04 00:14:25.713 -06:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2019-12-04 00:14:25.972 -06:00 [INF] Executing action method MyBudgetDB.Controllers.HomeController.Index (MyBudgetDB) with arguments (null) - ModelState is "Valid"
+2019-12-04 00:14:29.284 -06:00 [INF] Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2019-12-04 00:14:29.826 -06:00 [INF] Executed action MyBudgetDB.Controllers.HomeController.Index (MyBudgetDB) in 3885.1226ms
+2019-12-04 00:14:29.836 -06:00 [INF] Request finished in 4399.0741ms 200 text/html; charset=utf-8
+2019-12-04 00:14:29.869 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/lib/bootstrap/dist/css/bootstrap.css  
+2019-12-04 00:14:29.869 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/lib/datatables/css/dataTables.bootstrap.min.css  
+2019-12-04 00:14:29.874 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/images/coins.jpg  
+2019-12-04 00:14:29.874 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/images/bitcoin.jpg  
+2019-12-04 00:14:29.886 -06:00 [INF] The file /lib/datatables/css/dataTables.bootstrap.min.css was not modified
+2019-12-04 00:14:29.886 -06:00 [INF] The file /images/coins.jpg was not modified
+2019-12-04 00:14:29.886 -06:00 [INF] The file /images/bitcoin.jpg was not modified
+2019-12-04 00:14:29.886 -06:00 [INF] The file /lib/bootstrap/dist/css/bootstrap.css was not modified
+2019-12-04 00:14:29.889 -06:00 [INF] Request finished in 20.4495ms 304 text/css
+2019-12-04 00:14:29.889 -06:00 [INF] Request finished in 15.3538ms 304 image/jpeg
+2019-12-04 00:14:29.891 -06:00 [INF] Request finished in 17.537ms 304 image/jpeg
+2019-12-04 00:14:29.891 -06:00 [INF] Request finished in 22.843ms 304 text/css
+2019-12-04 00:14:29.896 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/css/site.css  
+2019-12-04 00:14:29.898 -06:00 [INF] The file /css/site.css was not modified
+2019-12-04 00:14:29.898 -06:00 [INF] Request finished in 1.6123ms 304 text/css
+2019-12-04 00:14:29.904 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/images/moneyjars.jpg  
+2019-12-04 00:14:29.904 -06:00 [INF] The file /images/moneyjars.jpg was not modified
+2019-12-04 00:14:29.904 -06:00 [INF] Request finished in 1.1909ms 304 image/jpeg
+2019-12-04 00:14:29.907 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/images/dollars.jpg  
+2019-12-04 00:14:29.907 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/js/site.js?v=ji3-IxbEzYWjzzLCGkF1KDjrT2jLbbrSYXw-AhMPNIA  
+2019-12-04 00:14:29.910 -06:00 [INF] The file /images/dollars.jpg was not modified
+2019-12-04 00:14:29.910 -06:00 [INF] Request finished in 2.73ms 304 image/jpeg
+2019-12-04 00:14:29.910 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/lib/datatables/js/jquery.dataTables.min.js  
+2019-12-04 00:14:29.910 -06:00 [INF] The file /js/site.js was not modified
+2019-12-04 00:14:29.910 -06:00 [INF] The file /lib/datatables/js/jquery.dataTables.min.js was not modified
+2019-12-04 00:14:29.910 -06:00 [INF] Request finished in 0.4611ms 304 application/javascript
+2019-12-04 00:14:29.910 -06:00 [INF] Request finished in 3.1153ms 304 application/javascript
+2019-12-04 00:14:29.917 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/lib/bootstrap/dist/js/bootstrap.js  
+2019-12-04 00:14:29.919 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/lib/jquery/jquery.js  
+2019-12-04 00:14:29.919 -06:00 [INF] The file /lib/bootstrap/dist/js/bootstrap.js was not modified
+2019-12-04 00:14:29.919 -06:00 [INF] Request finished in 2.734ms 304 application/javascript
+2019-12-04 00:14:29.920 -06:00 [INF] The file /lib/jquery/jquery.js was not modified
+2019-12-04 00:14:29.920 -06:00 [INF] Request finished in 0.5861ms 304 application/javascript
+2019-12-04 00:14:29.925 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/lib/datatables/js/dataTables.bootstrap.min.js  
+2019-12-04 00:14:29.925 -06:00 [INF] The file /lib/datatables/js/dataTables.bootstrap.min.js was not modified
+2019-12-04 00:14:29.926 -06:00 [INF] Request finished in 0.3431ms 304 application/javascript
+2019-12-04 00:14:29.930 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2  
+2019-12-04 00:14:29.931 -06:00 [INF] The file /lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2 was not modified
+2019-12-04 00:14:29.931 -06:00 [INF] Request finished in 0.5149ms 304 font/woff2
+2019-12-04 00:14:31.497 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/Budget/ViewBudgets  
+2019-12-04 00:14:31.497 -06:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2019-12-04 00:14:31.525 -06:00 [INF] Authorization was successful.
+2019-12-04 00:14:31.532 -06:00 [INF] Executing action method MyBudgetDB.Controllers.BudgetController.ViewBudgets (MyBudgetDB) with arguments (null) - ModelState is "Valid"
+2019-12-04 00:14:32.024 -06:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data, this mode should only be enabled during development.
+2019-12-04 00:14:32.132 -06:00 [INF] Entity Framework Core 2.1.1-rtm-30846 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: SensitiveDataLoggingEnabled 
+2019-12-04 00:14:33.762 -06:00 [INF] Executed DbCommand (138ms) [Parameters=[@__get_Item_0='a4ccea5f-c097-4c09-b27b-e6842294285a' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[ConcurrencyStamp], [e].[DateOfBirth], [e].[Email], [e].[EmailConfirmed], [e].[FirstName], [e].[LastName], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UserName]
+FROM [AspNetUsers] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+2019-12-04 00:14:34.117 -06:00 [INF] Executed DbCommand (86ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[BudgetId] AS [Id], [r].[Name], [r].[CreationDate], [r].[Amount]
+FROM [Budgets] AS [r]
+WHERE [r].[IsDeleted] = 0
+ORDER BY [r].[BudgetId]
+2019-12-04 00:14:34.203 -06:00 [INF] Executed DbCommand (75ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r.Expenses].[IdExpense], [r.Expenses].[Amount], [r.Expenses].[Category], [r.Expenses].[DateAdded], [r.Expenses].[Name], [r.Expenses].[Notes], [r.Expenses].[UserBudgetBudgetId], [r.Expenses].[UserId], [t].[BudgetId]
+FROM [Expenses] AS [r.Expenses]
+INNER JOIN (
+    SELECT [r0].[BudgetId]
+    FROM [Budgets] AS [r0]
+    WHERE [r0].[IsDeleted] = 0
+) AS [t] ON [r.Expenses].[UserBudgetBudgetId] = [t].[BudgetId]
+ORDER BY [t].[BudgetId]
+2019-12-04 00:14:34.578 -06:00 [INF] Executing ViewResult, running view at path /Views/Budget/ViewBudgets.cshtml.
+2019-12-04 00:14:34.777 -06:00 [INF] accessLog:{"RequestId":"61b2e6c4-a0a8-4dc9-b7f4-41c368ecd317","Request":"/Budget/ViewBudgets","Response":"200"}
+2019-12-04 00:14:34.779 -06:00 [INF] Executed action MyBudgetDB.Controllers.BudgetController.ViewBudgets (MyBudgetDB) in 3273.8496ms
+2019-12-04 00:14:34.786 -06:00 [INF] Request finished in 3289.9234ms 200 text/html; charset=utf-8
+2019-12-04 00:14:36.101 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/3  
+2019-12-04 00:14:36.101 -06:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2019-12-04 00:14:36.120 -06:00 [INF] Authorization was successful.
+2019-12-04 00:14:36.163 -06:00 [INF] Executing action method MyBudgetDB.Controllers.BudgetController.ViewBudget (MyBudgetDB) with arguments (["3"]) - ModelState is "Valid"
+2019-12-04 00:14:36.169 -06:00 [INF] Entity Framework Core 2.1.1-rtm-30846 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: SensitiveDataLoggingEnabled 
+2019-12-04 00:14:36.260 -06:00 [INF] Executed DbCommand (85ms) [Parameters=[@__get_Item_0='a4ccea5f-c097-4c09-b27b-e6842294285a' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[ConcurrencyStamp], [e].[DateOfBirth], [e].[Email], [e].[EmailConfirmed], [e].[FirstName], [e].[LastName], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UserName]
+FROM [AspNetUsers] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+2019-12-04 00:14:36.352 -06:00 [INF] Executed DbCommand (68ms) [Parameters=[@__id_0='3'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [x].[BudgetId] AS [Id], [x].[CreationDate], [x].[Amount], [x].[Owner], [x].[Name], [x].[Balance], [x].[LastModified]
+FROM [Budgets] AS [x]
+WHERE ([x].[BudgetId] = @__id_0) AND ([x].[IsDeleted] = 0)
+2019-12-04 00:14:36.438 -06:00 [INF] Executed DbCommand (71ms) [Parameters=[@__id_0='3', @__id_1='3'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [x].[BudgetId], [x].[Amount], [x].[Balance], [x].[CreationDate], [x].[IsDeleted], [x].[LastModified], [x].[Name], [x].[Owner], [x].[UserId]
+FROM [Budgets] AS [x]
+WHERE ([x].[BudgetId] = @__id_0) AND ([x].[BudgetId] = @__id_1)
+2019-12-04 00:14:36.452 -06:00 [INF] Authorization failed.
+2019-12-04 00:14:36.651 -06:00 [INF] Executing ViewResult, running view at path /Views/Budget/ViewBudget.cshtml.
+2019-12-04 00:14:36.781 -06:00 [INF] Executed DbCommand (69ms) [Parameters=[@_outer_BudgetId='3'], CommandType='"Text"', CommandTimeout='30']
+SELECT [item].[Name], [item].[Amount], [item].[DateAdded]
+FROM [Expenses] AS [item]
+WHERE @_outer_BudgetId = [item].[UserBudgetBudgetId]
+2019-12-04 00:14:37.166 -06:00 [INF] Executed DbCommand (379ms) [Parameters=[@_outer_BudgetId='3'], CommandType='"Text"', CommandTimeout='30']
+SELECT [item].[Name], [item].[Amount], [item].[DateAdded]
+FROM [Expenses] AS [item]
+WHERE @_outer_BudgetId = [item].[UserBudgetBudgetId]
+2019-12-04 00:14:37.173 -06:00 [INF] accessLog:{"RequestId":"1d4bfc80-c7a5-453a-8f2e-559f6c24616b","Request":"/3","Response":"200"}
+2019-12-04 00:14:37.173 -06:00 [INF] Executed action MyBudgetDB.Controllers.BudgetController.ViewBudget (MyBudgetDB) in 1052.8618000000001ms
+2019-12-04 00:14:37.173 -06:00 [INF] Request finished in 1072.4816ms 200 text/html; charset=utf-8
+2019-12-04 00:14:45.916 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/Budget/ViewBudgets  
+2019-12-04 00:14:45.916 -06:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2019-12-04 00:14:45.917 -06:00 [INF] Authorization was successful.
+2019-12-04 00:14:45.917 -06:00 [INF] Executing action method MyBudgetDB.Controllers.BudgetController.ViewBudgets (MyBudgetDB) with arguments (null) - ModelState is "Valid"
+2019-12-04 00:14:45.917 -06:00 [INF] Entity Framework Core 2.1.1-rtm-30846 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: SensitiveDataLoggingEnabled 
+2019-12-04 00:14:45.987 -06:00 [INF] Executed DbCommand (69ms) [Parameters=[@__get_Item_0='a4ccea5f-c097-4c09-b27b-e6842294285a' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[ConcurrencyStamp], [e].[DateOfBirth], [e].[Email], [e].[EmailConfirmed], [e].[FirstName], [e].[LastName], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UserName]
+FROM [AspNetUsers] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+2019-12-04 00:14:46.057 -06:00 [INF] Executed DbCommand (67ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[BudgetId] AS [Id], [r].[Name], [r].[CreationDate], [r].[Amount]
+FROM [Budgets] AS [r]
+WHERE [r].[IsDeleted] = 0
+ORDER BY [r].[BudgetId]
+2019-12-04 00:14:46.126 -06:00 [INF] Executed DbCommand (69ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r.Expenses].[IdExpense], [r.Expenses].[Amount], [r.Expenses].[Category], [r.Expenses].[DateAdded], [r.Expenses].[Name], [r.Expenses].[Notes], [r.Expenses].[UserBudgetBudgetId], [r.Expenses].[UserId], [t].[BudgetId]
+FROM [Expenses] AS [r.Expenses]
+INNER JOIN (
+    SELECT [r0].[BudgetId]
+    FROM [Budgets] AS [r0]
+    WHERE [r0].[IsDeleted] = 0
+) AS [t] ON [r.Expenses].[UserBudgetBudgetId] = [t].[BudgetId]
+ORDER BY [t].[BudgetId]
+2019-12-04 00:14:46.127 -06:00 [INF] Executing ViewResult, running view at path /Views/Budget/ViewBudgets.cshtml.
+2019-12-04 00:14:46.133 -06:00 [INF] accessLog:{"RequestId":"ebe7fc30-0084-41ae-9022-ac70c8c34020","Request":"/Budget/ViewBudgets","Response":"200"}
+2019-12-04 00:14:46.133 -06:00 [INF] Executed action MyBudgetDB.Controllers.BudgetController.ViewBudgets (MyBudgetDB) in 215.9403ms
+2019-12-04 00:14:46.133 -06:00 [INF] Request finished in 217.2033ms 200 text/html; charset=utf-8
+2019-12-04 00:14:47.782 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/5  
+2019-12-04 00:14:47.783 -06:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2019-12-04 00:14:47.783 -06:00 [INF] Authorization was successful.
+2019-12-04 00:14:47.784 -06:00 [INF] Executing action method MyBudgetDB.Controllers.BudgetController.ViewBudget (MyBudgetDB) with arguments (["5"]) - ModelState is "Valid"
+2019-12-04 00:14:47.784 -06:00 [INF] Entity Framework Core 2.1.1-rtm-30846 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: SensitiveDataLoggingEnabled 
+2019-12-04 00:14:47.854 -06:00 [INF] Executed DbCommand (69ms) [Parameters=[@__get_Item_0='a4ccea5f-c097-4c09-b27b-e6842294285a' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[ConcurrencyStamp], [e].[DateOfBirth], [e].[Email], [e].[EmailConfirmed], [e].[FirstName], [e].[LastName], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UserName]
+FROM [AspNetUsers] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+2019-12-04 00:14:48.242 -06:00 [INF] Executed DbCommand (388ms) [Parameters=[@__id_0='5'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [x].[BudgetId] AS [Id], [x].[CreationDate], [x].[Amount], [x].[Owner], [x].[Name], [x].[Balance], [x].[LastModified]
+FROM [Budgets] AS [x]
+WHERE ([x].[BudgetId] = @__id_0) AND ([x].[IsDeleted] = 0)
+2019-12-04 00:14:48.315 -06:00 [INF] Executed DbCommand (72ms) [Parameters=[@__id_0='5', @__id_1='5'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [x].[BudgetId], [x].[Amount], [x].[Balance], [x].[CreationDate], [x].[IsDeleted], [x].[LastModified], [x].[Name], [x].[Owner], [x].[UserId]
+FROM [Budgets] AS [x]
+WHERE ([x].[BudgetId] = @__id_0) AND ([x].[BudgetId] = @__id_1)
+2019-12-04 00:14:48.315 -06:00 [INF] Authorization was successful.
+2019-12-04 00:14:48.315 -06:00 [INF] Executing ViewResult, running view at path /Views/Budget/ViewBudget.cshtml.
+2019-12-04 00:14:48.388 -06:00 [INF] Executed DbCommand (72ms) [Parameters=[@_outer_BudgetId='5'], CommandType='"Text"', CommandTimeout='30']
+SELECT [item].[Name], [item].[Amount], [item].[DateAdded]
+FROM [Expenses] AS [item]
+WHERE @_outer_BudgetId = [item].[UserBudgetBudgetId]
+2019-12-04 00:14:48.460 -06:00 [INF] Executed DbCommand (72ms) [Parameters=[@_outer_BudgetId='5'], CommandType='"Text"', CommandTimeout='30']
+SELECT [item].[Name], [item].[Amount], [item].[DateAdded]
+FROM [Expenses] AS [item]
+WHERE @_outer_BudgetId = [item].[UserBudgetBudgetId]
+2019-12-04 00:14:48.464 -06:00 [INF] accessLog:{"RequestId":"173cfaed-fd75-4930-b3f6-d3e6ee0d599c","Request":"/5","Response":"200"}
+2019-12-04 00:14:48.464 -06:00 [INF] Executed action MyBudgetDB.Controllers.BudgetController.ViewBudget (MyBudgetDB) in 681.1371ms
+2019-12-04 00:14:48.464 -06:00 [INF] Request finished in 681.8459ms 200 text/html; charset=utf-8
+2019-12-04 00:25:49.377 -06:00 [INF] User profile is available. Using 'C:\Users\Kyle\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-12-04 00:25:50.228 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/  
+2019-12-04 00:25:50.228 -06:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:5364/  0
+2019-12-04 00:25:50.304 -06:00 [INF] Request finished in 83.5569ms 200 
+2019-12-04 00:25:50.494 -06:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2019-12-04 00:25:50.575 -06:00 [ERR] An unhandled exception has occurred while executing the request
+System.InvalidOperationException: The AuthorizationPolicy named: 'IsAdmin' was not found.
+   at Microsoft.AspNetCore.Authorization.AuthorizationPolicy.CombineAsync(IAuthorizationPolicyProvider policyProvider, IEnumerable`1 authorizeData)
+   at Microsoft.AspNetCore.Mvc.Internal.AuthorizationApplicationModelProvider.GetFilter(IAuthorizationPolicyProvider policyProvider, IEnumerable`1 authData)
+   at Microsoft.AspNetCore.Mvc.Internal.AuthorizationApplicationModelProvider.OnProvidersExecuting(ApplicationModelProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.BuildModel()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.GetDescriptors()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.OnProvidersExecuting(ActionDescriptorProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionDescriptorCollectionProvider.UpdateCollection()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionDescriptorCollectionProvider.get_ActionDescriptors()
+   at Microsoft.AspNetCore.Mvc.Internal.AttributeRoute.GetTreeRouter()
+   at Microsoft.AspNetCore.Mvc.Internal.AttributeRoute.RouteAsync(RouteContext context)
+   at Microsoft.AspNetCore.Routing.RouteCollection.RouteAsync(RouteContext context)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-12-04 00:25:50.719 -06:00 [INF] Request finished in 502.751ms 500 text/html; charset=utf-8
+2019-12-04 00:29:39.390 -06:00 [INF] User profile is available. Using 'C:\Users\Kyle\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-12-04 00:29:40.359 -06:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:5364/  0
+2019-12-04 00:29:40.359 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/  
+2019-12-04 00:29:40.444 -06:00 [INF] Request finished in 92.3711ms 200 
+2019-12-04 00:29:40.627 -06:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2019-12-04 00:29:40.897 -06:00 [INF] Executing action method MyBudgetDB.Controllers.HomeController.Index (MyBudgetDB) with arguments (null) - ModelState is "Valid"
+2019-12-04 00:29:44.357 -06:00 [INF] Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2019-12-04 00:29:44.881 -06:00 [INF] Executed action MyBudgetDB.Controllers.HomeController.Index (MyBudgetDB) in 4014.0703000000003ms
+2019-12-04 00:29:44.891 -06:00 [INF] Request finished in 4543.5169ms 200 text/html; charset=utf-8
+2019-12-04 00:29:44.931 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/lib/datatables/css/dataTables.bootstrap.min.css  
+2019-12-04 00:29:44.931 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/lib/bootstrap/dist/css/bootstrap.css  
+2019-12-04 00:29:44.931 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/images/dollars.jpg  
+2019-12-04 00:29:44.932 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/images/coins.jpg  
+2019-12-04 00:29:44.945 -06:00 [INF] The file /images/dollars.jpg was not modified
+2019-12-04 00:29:44.945 -06:00 [INF] The file /lib/bootstrap/dist/css/bootstrap.css was not modified
+2019-12-04 00:29:44.945 -06:00 [INF] The file /images/coins.jpg was not modified
+2019-12-04 00:29:44.945 -06:00 [INF] The file /lib/datatables/css/dataTables.bootstrap.min.css was not modified
+2019-12-04 00:29:44.949 -06:00 [INF] Request finished in 17.3899ms 304 image/jpeg
+2019-12-04 00:29:44.950 -06:00 [INF] Request finished in 18.0551ms 304 text/css
+2019-12-04 00:29:44.950 -06:00 [INF] Request finished in 18.7053ms 304 image/jpeg
+2019-12-04 00:29:44.951 -06:00 [INF] Request finished in 19.3882ms 304 text/css
+2019-12-04 00:29:44.962 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/lib/datatables/js/jquery.dataTables.min.js  
+2019-12-04 00:29:44.962 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/css/site.css  
+2019-12-04 00:29:44.962 -06:00 [INF] The file /lib/datatables/js/jquery.dataTables.min.js was not modified
+2019-12-04 00:29:44.962 -06:00 [INF] Request finished in 0.3871ms 304 application/javascript
+2019-12-04 00:29:44.962 -06:00 [INF] The file /css/site.css was not modified
+2019-12-04 00:29:44.963 -06:00 [INF] Request finished in 0.4139ms 304 text/css
+2019-12-04 00:29:44.974 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/images/bitcoin.jpg  
+2019-12-04 00:29:44.975 -06:00 [INF] The file /images/bitcoin.jpg was not modified
+2019-12-04 00:29:44.975 -06:00 [INF] Request finished in 1.654ms 304 image/jpeg
+2019-12-04 00:29:44.975 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/lib/jquery/jquery.js  
+2019-12-04 00:29:44.976 -06:00 [INF] The file /lib/jquery/jquery.js was not modified
+2019-12-04 00:29:44.976 -06:00 [INF] Request finished in 0.2455ms 304 application/javascript
+2019-12-04 00:29:44.991 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/js/site.js?v=ji3-IxbEzYWjzzLCGkF1KDjrT2jLbbrSYXw-AhMPNIA  
+2019-12-04 00:29:44.991 -06:00 [INF] The file /js/site.js was not modified
+2019-12-04 00:29:44.991 -06:00 [INF] Request finished in 1.0933ms 304 application/javascript
+2019-12-04 00:29:44.992 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/lib/bootstrap/dist/js/bootstrap.js  
+2019-12-04 00:29:44.992 -06:00 [INF] The file /lib/bootstrap/dist/js/bootstrap.js was not modified
+2019-12-04 00:29:44.992 -06:00 [INF] Request finished in 0.3798ms 304 application/javascript
+2019-12-04 00:29:44.998 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/lib/datatables/js/dataTables.bootstrap.min.js  
+2019-12-04 00:29:44.998 -06:00 [INF] The file /lib/datatables/js/dataTables.bootstrap.min.js was not modified
+2019-12-04 00:29:44.998 -06:00 [INF] Request finished in 0.6684ms 304 application/javascript
+2019-12-04 00:29:45.007 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/images/moneyjars.jpg  
+2019-12-04 00:29:45.008 -06:00 [INF] The file /images/moneyjars.jpg was not modified
+2019-12-04 00:29:45.008 -06:00 [INF] Request finished in 0.4903ms 304 image/jpeg
+2019-12-04 00:29:45.012 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2  
+2019-12-04 00:29:45.013 -06:00 [INF] The file /lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2 was not modified
+2019-12-04 00:29:45.013 -06:00 [INF] Request finished in 0.7991ms 304 font/woff2
+2019-12-04 00:29:47.126 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/Home/Admin  
+2019-12-04 00:29:47.127 -06:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2019-12-04 00:29:47.149 -06:00 [INF] Authorization failed.
+2019-12-04 00:29:47.151 -06:00 [INF] Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+2019-12-04 00:29:47.156 -06:00 [INF] Executing ForbidResult with authentication schemes ([]).
+2019-12-04 00:29:47.170 -06:00 [INF] AuthenticationScheme: Identity.Application was forbidden.
+2019-12-04 00:29:47.170 -06:00 [INF] Executed action MyBudgetDB.Controllers.HomeController.Admin (MyBudgetDB) in 41.289100000000005ms
+2019-12-04 00:29:47.170 -06:00 [INF] Request finished in 44.0348ms 302 
+2019-12-04 00:29:47.181 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/Account/AccessDenied?ReturnUrl=%2FHome%2FAdmin  
+2019-12-04 00:29:47.182 -06:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2019-12-04 00:29:47.190 -06:00 [INF] Authorization was successful.
+2019-12-04 00:29:47.194 -06:00 [INF] Executing action method MyBudgetDB.Controllers.AccountController.AccessDenied (MyBudgetDB) with arguments (null) - ModelState is "Valid"
+2019-12-04 00:29:47.273 -06:00 [INF] Executing ViewResult, running view at path /Views/Account/AccessDenied.cshtml.
+2019-12-04 00:29:47.294 -06:00 [INF] Executed action MyBudgetDB.Controllers.AccountController.AccessDenied (MyBudgetDB) in 104.8673ms
+2019-12-04 00:29:47.294 -06:00 [INF] Request finished in 112.9272ms 200 text/html; charset=utf-8
+2019-12-04 00:29:50.814 -06:00 [INF] Request starting HTTP/1.1 POST http://localhost:44317/Account/Logout application/x-www-form-urlencoded 225
+2019-12-04 00:29:50.815 -06:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2019-12-04 00:29:50.822 -06:00 [INF] Authorization was successful.
+2019-12-04 00:29:50.866 -06:00 [INF] Executing action method MyBudgetDB.Controllers.AccountController.Logout (MyBudgetDB) with arguments (null) - ModelState is "Valid"
+2019-12-04 00:29:50.882 -06:00 [INF] AuthenticationScheme: Identity.Application signed out.
+2019-12-04 00:29:50.884 -06:00 [INF] AuthenticationScheme: Identity.External signed out.
+2019-12-04 00:29:50.884 -06:00 [INF] AuthenticationScheme: Identity.TwoFactorUserId signed out.
+2019-12-04 00:29:50.885 -06:00 [INF] User logged out.
+2019-12-04 00:29:50.888 -06:00 [INF] Executing RedirectResult, redirecting to /.
+2019-12-04 00:29:50.889 -06:00 [INF] Executed action MyBudgetDB.Controllers.AccountController.Logout (MyBudgetDB) in 66.5618ms
+2019-12-04 00:29:50.890 -06:00 [INF] Request finished in 76.5623ms 302 
+2019-12-04 00:29:50.903 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/  
+2019-12-04 00:29:50.905 -06:00 [INF] Executing action method MyBudgetDB.Controllers.HomeController.Index (MyBudgetDB) with arguments (null) - ModelState is "Valid"
+2019-12-04 00:29:50.906 -06:00 [INF] Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2019-12-04 00:29:50.907 -06:00 [INF] Executed action MyBudgetDB.Controllers.HomeController.Index (MyBudgetDB) in 2.7474000000000003ms
+2019-12-04 00:29:50.907 -06:00 [INF] Request finished in 3.8546ms 200 text/html; charset=utf-8
+2019-12-04 00:29:51.837 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/Account/Register  
+2019-12-04 00:29:51.884 -06:00 [INF] Executing action method MyBudgetDB.Controllers.AccountController.Register (MyBudgetDB) with arguments ([""]) - ModelState is "Valid"
+2019-12-04 00:29:52.212 -06:00 [INF] Executing ViewResult, running view at path /Views/Account/Register.cshtml.
+2019-12-04 00:29:52.400 -06:00 [INF] Executed action MyBudgetDB.Controllers.AccountController.Register (MyBudgetDB) in 535.5701ms
+2019-12-04 00:29:52.401 -06:00 [INF] Request finished in 563.9746ms 200 text/html; charset=utf-8
+2019-12-04 00:29:52.454 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/lib/jquery-validation/dist/jquery.validate.js  
+2019-12-04 00:29:52.454 -06:00 [INF] The file /lib/jquery-validation/dist/jquery.validate.js was not modified
+2019-12-04 00:29:52.454 -06:00 [INF] Request finished in 0.4977ms 304 application/javascript
+2019-12-04 00:29:52.458 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js  
+2019-12-04 00:29:52.459 -06:00 [INF] The file /lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js was not modified
+2019-12-04 00:29:52.459 -06:00 [INF] Request finished in 0.7699ms 304 application/javascript
+2019-12-04 00:30:13.997 -06:00 [INF] Request starting HTTP/1.1 POST http://localhost:44317/Account/Register application/x-www-form-urlencoded 254
+2019-12-04 00:30:14.040 -06:00 [INF] Executing action method MyBudgetDB.Controllers.AccountController.Register (MyBudgetDB) with arguments (["MyBudgetDB.Models.AccountViewModels.RegisterViewModel",""]) - ModelState is "Valid"
+2019-12-04 00:30:14.549 -06:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data, this mode should only be enabled during development.
+2019-12-04 00:30:14.651 -06:00 [INF] Entity Framework Core 2.1.1-rtm-30846 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: SensitiveDataLoggingEnabled 
+2019-12-04 00:30:15.831 -06:00 [INF] Executed DbCommand (142ms) [Parameters=[@__normalizedUserName_0='KMNICHOLAS@DMACC.EDU' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[DateOfBirth], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0
+2019-12-04 00:30:16.556 -06:00 [INF] Executed DbCommand (398ms) [Parameters=[@p0='cfd2f09e-7eac-481f-8c35-552b75374c15' (Nullable = false) (Size = 450), @p1='0', @p2='914770ad-91af-4f27-8c8f-f2e96fd5800a' (Size = 4000), @p3='' (DbType = DateTime2), @p4='kmnicholas@dmacc.edu' (Size = 256), @p5='False', @p6='' (Size = 4000), @p7='' (Size = 4000), @p8='True', @p9='' (DbType = DateTimeOffset), @p10='KMNICHOLAS@DMACC.EDU' (Size = 256), @p11='KMNICHOLAS@DMACC.EDU' (Size = 256), @p12='AQAAAAEAACcQAAAAEPW5KVfrxMM3/jVQFWOrJVo2TmWaKR/K5PRArYPG2RXDirEf0lbsMX30p8Vlx3s9bA==' (Size = 4000), @p13='' (Size = 4000), @p14='False', @p15='9cc8f918-df36-4f20-9b46-a8e6340b3603' (Size = 4000), @p16='False', @p17='kmnicholas@dmacc.edu' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [ConcurrencyStamp], [DateOfBirth], [Email], [EmailConfirmed], [FirstName], [LastName], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17);
+2019-12-04 00:30:16.759 -06:00 [INF] Executed DbCommand (69ms) [Parameters=[@__normalizedUserName_0='KMNICHOLAS@DMACC.EDU' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[DateOfBirth], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0
+2019-12-04 00:30:16.950 -06:00 [INF] Executed DbCommand (81ms) [Parameters=[@p0='IsAdmin' (Size = 4000), @p1='true' (Size = 4000), @p2='cfd2f09e-7eac-481f-8c35-552b75374c15' (Nullable = false) (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUserClaims] ([ClaimType], [ClaimValue], [UserId])
+VALUES (@p0, @p1, @p2);
+SELECT [Id]
+FROM [AspNetUserClaims]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2019-12-04 00:30:17.045 -06:00 [INF] Executed DbCommand (81ms) [Parameters=[@p17='cfd2f09e-7eac-481f-8c35-552b75374c15' (Nullable = false) (Size = 450), @p0='0', @p1='ea2defd7-08e2-46de-a237-cf5cf47b17fa' (Size = 4000), @p18='914770ad-91af-4f27-8c8f-f2e96fd5800a' (Size = 4000), @p2='' (DbType = DateTime2), @p3='kmnicholas@dmacc.edu' (Size = 256), @p4='False', @p5='' (Size = 4000), @p6='' (Size = 4000), @p7='True', @p8='' (DbType = DateTimeOffset), @p9='KMNICHOLAS@DMACC.EDU' (Size = 256), @p10='KMNICHOLAS@DMACC.EDU' (Size = 256), @p11='AQAAAAEAACcQAAAAEPW5KVfrxMM3/jVQFWOrJVo2TmWaKR/K5PRArYPG2RXDirEf0lbsMX30p8Vlx3s9bA==' (Size = 4000), @p12='' (Size = 4000), @p13='False', @p14='9cc8f918-df36-4f20-9b46-a8e6340b3603' (Size = 4000), @p15='False', @p16='kmnicholas@dmacc.edu' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [DateOfBirth] = @p2, [Email] = @p3, [EmailConfirmed] = @p4, [FirstName] = @p5, [LastName] = @p6, [LockoutEnabled] = @p7, [LockoutEnd] = @p8, [NormalizedEmail] = @p9, [NormalizedUserName] = @p10, [PasswordHash] = @p11, [PhoneNumber] = @p12, [PhoneNumberConfirmed] = @p13, [SecurityStamp] = @p14, [TwoFactorEnabled] = @p15, [UserName] = @p16
+WHERE [Id] = @p17 AND [ConcurrencyStamp] = @p18;
+SELECT @@ROWCOUNT;
+2019-12-04 00:30:17.192 -06:00 [INF] Executed DbCommand (69ms) [Parameters=[@__normalizedUserName_0='KMNICHOLAS@DMACC.EDU' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[DateOfBirth], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0
+2019-12-04 00:30:17.333 -06:00 [INF] Executed DbCommand (70ms) [Parameters=[@p0='IsActive' (Size = 4000), @p1='true' (Size = 4000), @p2='cfd2f09e-7eac-481f-8c35-552b75374c15' (Nullable = false) (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUserClaims] ([ClaimType], [ClaimValue], [UserId])
+VALUES (@p0, @p1, @p2);
+SELECT [Id]
+FROM [AspNetUserClaims]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2019-12-04 00:30:17.406 -06:00 [INF] Executed DbCommand (71ms) [Parameters=[@p17='cfd2f09e-7eac-481f-8c35-552b75374c15' (Nullable = false) (Size = 450), @p0='0', @p1='bde49863-3c24-4fb2-8618-8c34e3404a08' (Size = 4000), @p18='ea2defd7-08e2-46de-a237-cf5cf47b17fa' (Size = 4000), @p2='' (DbType = DateTime2), @p3='kmnicholas@dmacc.edu' (Size = 256), @p4='False', @p5='' (Size = 4000), @p6='' (Size = 4000), @p7='True', @p8='' (DbType = DateTimeOffset), @p9='KMNICHOLAS@DMACC.EDU' (Size = 256), @p10='KMNICHOLAS@DMACC.EDU' (Size = 256), @p11='AQAAAAEAACcQAAAAEPW5KVfrxMM3/jVQFWOrJVo2TmWaKR/K5PRArYPG2RXDirEf0lbsMX30p8Vlx3s9bA==' (Size = 4000), @p12='' (Size = 4000), @p13='False', @p14='9cc8f918-df36-4f20-9b46-a8e6340b3603' (Size = 4000), @p15='False', @p16='kmnicholas@dmacc.edu' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [DateOfBirth] = @p2, [Email] = @p3, [EmailConfirmed] = @p4, [FirstName] = @p5, [LastName] = @p6, [LockoutEnabled] = @p7, [LockoutEnd] = @p8, [NormalizedEmail] = @p9, [NormalizedUserName] = @p10, [PasswordHash] = @p11, [PhoneNumber] = @p12, [PhoneNumberConfirmed] = @p13, [SecurityStamp] = @p14, [TwoFactorEnabled] = @p15, [UserName] = @p16
+WHERE [Id] = @p17 AND [ConcurrencyStamp] = @p18;
+SELECT @@ROWCOUNT;
+2019-12-04 00:30:17.498 -06:00 [INF] User created a new account with password.
+2019-12-04 00:30:17.662 -06:00 [INF] Executed DbCommand (72ms) [Parameters=[@__user_Id_0='cfd2f09e-7eac-481f-8c35-552b75374c15' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [AspNetUserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0
+2019-12-04 00:30:17.783 -06:00 [INF] Executed DbCommand (74ms) [Parameters=[@__userId_0='cfd2f09e-7eac-481f-8c35-552b75374c15' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [role].[Name]
+FROM [AspNetUserRoles] AS [userRole]
+INNER JOIN [AspNetRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0
+2019-12-04 00:30:17.799 -06:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2019-12-04 00:30:17.799 -06:00 [INF] User created a new account with password.
+2019-12-04 00:30:17.804 -06:00 [INF] Executing RedirectResult, redirecting to /.
+2019-12-04 00:30:17.806 -06:00 [INF] Executed action MyBudgetDB.Controllers.AccountController.Register (MyBudgetDB) in 3798.6975ms
+2019-12-04 00:30:17.812 -06:00 [INF] Request finished in 3814.6051ms 302 
+2019-12-04 00:30:17.822 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/  
+2019-12-04 00:30:17.823 -06:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2019-12-04 00:30:17.823 -06:00 [INF] Executing action method MyBudgetDB.Controllers.HomeController.Index (MyBudgetDB) with arguments (null) - ModelState is "Valid"
+2019-12-04 00:30:17.823 -06:00 [INF] Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2019-12-04 00:30:17.824 -06:00 [INF] Executed action MyBudgetDB.Controllers.HomeController.Index (MyBudgetDB) in 0.7146ms
+2019-12-04 00:30:17.824 -06:00 [INF] Request finished in 1.3625ms 200 text/html; charset=utf-8
+2019-12-04 00:30:19.920 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/Home/Admin  
+2019-12-04 00:30:19.920 -06:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2019-12-04 00:30:19.920 -06:00 [INF] Authorization was successful.
+2019-12-04 00:30:19.920 -06:00 [INF] Executing action method MyBudgetDB.Controllers.HomeController.Admin (MyBudgetDB) with arguments (null) - ModelState is "Valid"
+2019-12-04 00:30:20.005 -06:00 [INF] Executing ViewResult, running view at path /Views/Home/Admin.cshtml.
+2019-12-04 00:30:20.007 -06:00 [INF] Executed action MyBudgetDB.Controllers.HomeController.Admin (MyBudgetDB) in 87.448900000000009ms
+2019-12-04 00:30:20.008 -06:00 [INF] Request finished in 88.0607ms 200 text/html; charset=utf-8
+2019-12-04 00:30:25.794 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/Manage/Index  
+2019-12-04 00:30:25.795 -06:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2019-12-04 00:30:25.797 -06:00 [INF] Authorization was successful.
+2019-12-04 00:30:25.797 -06:00 [INF] Executing action method MyBudgetDB.Controllers.ManageController.Index (MyBudgetDB) with arguments (null) - ModelState is "Valid"
+2019-12-04 00:30:25.803 -06:00 [INF] Entity Framework Core 2.1.1-rtm-30846 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: SensitiveDataLoggingEnabled 
+2019-12-04 00:30:25.887 -06:00 [INF] Executed DbCommand (70ms) [Parameters=[@__get_Item_0='cfd2f09e-7eac-481f-8c35-552b75374c15' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[ConcurrencyStamp], [e].[DateOfBirth], [e].[Email], [e].[EmailConfirmed], [e].[FirstName], [e].[LastName], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UserName]
+FROM [AspNetUsers] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+2019-12-04 00:30:26.036 -06:00 [INF] Executing ViewResult, running view at path /Views/Manage/Index.cshtml.
+2019-12-04 00:30:26.411 -06:00 [INF] Executed action MyBudgetDB.Controllers.ManageController.Index (MyBudgetDB) in 614.089ms
+2019-12-04 00:30:26.411 -06:00 [INF] Request finished in 617.1422ms 200 text/html; charset=utf-8
+2019-12-04 00:30:28.296 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/Home/Admin  
+2019-12-04 00:30:28.297 -06:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2019-12-04 00:30:28.297 -06:00 [INF] Authorization was successful.
+2019-12-04 00:30:28.297 -06:00 [INF] Executing action method MyBudgetDB.Controllers.HomeController.Admin (MyBudgetDB) with arguments (null) - ModelState is "Valid"
+2019-12-04 00:30:28.297 -06:00 [INF] Executing ViewResult, running view at path /Views/Home/Admin.cshtml.
+2019-12-04 00:30:28.297 -06:00 [INF] Executed action MyBudgetDB.Controllers.HomeController.Admin (MyBudgetDB) in 0.60610000000000008ms
+2019-12-04 00:30:28.297 -06:00 [INF] Request finished in 1.1664ms 200 text/html; charset=utf-8
+2019-12-04 00:49:38.123 -06:00 [INF] User profile is available. Using 'C:\Users\Kyle\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-12-04 00:49:39.048 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/  
+2019-12-04 00:49:39.048 -06:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:5364/  0
+2019-12-04 00:49:39.130 -06:00 [INF] Request finished in 88.6693ms 200 
+2019-12-04 00:49:39.330 -06:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2019-12-04 00:49:39.593 -06:00 [INF] Executing action method MyBudgetDB.Controllers.HomeController.Index (MyBudgetDB) with arguments (null) - ModelState is "Valid"
+2019-12-04 00:49:43.015 -06:00 [INF] Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2019-12-04 00:49:43.552 -06:00 [INF] Executed action MyBudgetDB.Controllers.HomeController.Index (MyBudgetDB) in 3987.7824ms
+2019-12-04 00:49:43.564 -06:00 [INF] Request finished in 4527.903ms 200 text/html; charset=utf-8
+2019-12-04 00:49:43.606 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/lib/datatables/css/dataTables.bootstrap.min.css  
+2019-12-04 00:49:43.606 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/images/coins.jpg  
+2019-12-04 00:49:43.607 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/lib/jquery/jquery.js  
+2019-12-04 00:49:43.607 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/lib/bootstrap/dist/css/bootstrap.css  
+2019-12-04 00:49:43.621 -06:00 [INF] The file /lib/datatables/css/dataTables.bootstrap.min.css was not modified
+2019-12-04 00:49:43.622 -06:00 [INF] The file /images/coins.jpg was not modified
+2019-12-04 00:49:43.621 -06:00 [INF] The file /lib/jquery/jquery.js was not modified
+2019-12-04 00:49:43.621 -06:00 [INF] The file /lib/bootstrap/dist/css/bootstrap.css was not modified
+2019-12-04 00:49:43.625 -06:00 [INF] Request finished in 19.0392ms 304 text/css
+2019-12-04 00:49:43.625 -06:00 [INF] Request finished in 17.9457ms 304 application/javascript
+2019-12-04 00:49:43.625 -06:00 [INF] Request finished in 17.7467ms 304 text/css
+2019-12-04 00:49:43.626 -06:00 [INF] Request finished in 20.3749ms 304 image/jpeg
+2019-12-04 00:49:43.634 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/images/dollars.jpg  
+2019-12-04 00:49:43.634 -06:00 [INF] The file /images/dollars.jpg was not modified
+2019-12-04 00:49:43.635 -06:00 [INF] Request finished in 0.4199ms 304 image/jpeg
+2019-12-04 00:49:43.639 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/images/bitcoin.jpg  
+2019-12-04 00:49:43.640 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/images/moneyjars.jpg  
+2019-12-04 00:49:43.641 -06:00 [INF] The file /images/bitcoin.jpg was not modified
+2019-12-04 00:49:43.641 -06:00 [INF] The file /images/moneyjars.jpg was not modified
+2019-12-04 00:49:43.641 -06:00 [INF] Request finished in 1.9619ms 304 image/jpeg
+2019-12-04 00:49:43.641 -06:00 [INF] Request finished in 1.339ms 304 image/jpeg
+2019-12-04 00:49:43.641 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/lib/datatables/js/jquery.dataTables.min.js  
+2019-12-04 00:49:43.641 -06:00 [INF] The file /lib/datatables/js/jquery.dataTables.min.js was not modified
+2019-12-04 00:49:43.641 -06:00 [INF] Request finished in 0.2176ms 304 application/javascript
+2019-12-04 00:49:43.645 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/css/site.css  
+2019-12-04 00:49:43.649 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/lib/bootstrap/dist/js/bootstrap.js  
+2019-12-04 00:49:43.649 -06:00 [INF] The file /css/site.css was not modified
+2019-12-04 00:49:43.649 -06:00 [INF] Request finished in 3.6448ms 304 text/css
+2019-12-04 00:49:43.649 -06:00 [INF] The file /lib/bootstrap/dist/js/bootstrap.js was not modified
+2019-12-04 00:49:43.649 -06:00 [INF] Request finished in 1.4641ms 304 application/javascript
+2019-12-04 00:49:43.653 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/js/site.js?v=ji3-IxbEzYWjzzLCGkF1KDjrT2jLbbrSYXw-AhMPNIA  
+2019-12-04 00:49:43.653 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/lib/datatables/js/dataTables.bootstrap.min.js  
+2019-12-04 00:49:43.654 -06:00 [INF] The file /lib/datatables/js/dataTables.bootstrap.min.js was not modified
+2019-12-04 00:49:43.654 -06:00 [INF] Request finished in 0.284ms 304 application/javascript
+2019-12-04 00:49:43.656 -06:00 [INF] Sending file. Request path: '/js/site.js'. Physical path: 'C:\Users\Kyle\Documents\school\cis174\mybudget\fork\MyBudgetDB\MyBudgetDB\wwwroot\js\site.js'
+2019-12-04 00:49:43.674 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2  
+2019-12-04 00:49:43.674 -06:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2'. Physical path: 'C:\Users\Kyle\Documents\school\cis174\mybudget\fork\MyBudgetDB\MyBudgetDB\wwwroot\lib\bootstrap\dist\fonts\glyphicons-halflings-regular.woff2'
+2019-12-04 00:49:43.696 -06:00 [INF] Request finished in 44.8603ms 200 application/javascript
+2019-12-04 00:49:43.696 -06:00 [INF] Request finished in 21.6157ms 200 font/woff2
+2019-12-04 00:49:45.922 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/Home/Admin  
+2019-12-04 00:49:45.922 -06:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2019-12-04 00:49:45.945 -06:00 [INF] Authorization was successful.
+2019-12-04 00:49:45.945 -06:00 [INF] Executing action method MyBudgetDB.Controllers.HomeController.Admin (MyBudgetDB) with arguments (null) - ModelState is "Valid"
+2019-12-04 00:49:46.041 -06:00 [INF] Executing ViewResult, running view at path /Views/Home/Admin.cshtml.
+2019-12-04 00:49:46.048 -06:00 [INF] Executed action MyBudgetDB.Controllers.HomeController.Admin (MyBudgetDB) in 123.4499ms
+2019-12-04 00:49:46.048 -06:00 [INF] Request finished in 126.3623ms 200 text/html; charset=utf-8
+2019-12-04 00:49:47.289 -06:00 [INF] Request starting HTTP/1.1 POST http://localhost:44317/Account/Logout application/x-www-form-urlencoded 225
+2019-12-04 00:49:47.290 -06:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2019-12-04 00:49:47.304 -06:00 [INF] Authorization was successful.
+2019-12-04 00:49:47.350 -06:00 [INF] Executing action method MyBudgetDB.Controllers.AccountController.Logout (MyBudgetDB) with arguments (null) - ModelState is "Valid"
+2019-12-04 00:49:47.381 -06:00 [INF] AuthenticationScheme: Identity.Application signed out.
+2019-12-04 00:49:47.382 -06:00 [INF] AuthenticationScheme: Identity.External signed out.
+2019-12-04 00:49:47.383 -06:00 [INF] AuthenticationScheme: Identity.TwoFactorUserId signed out.
+2019-12-04 00:49:47.384 -06:00 [INF] User logged out.
+2019-12-04 00:49:47.386 -06:00 [INF] Executing RedirectResult, redirecting to /.
+2019-12-04 00:49:47.394 -06:00 [INF] Executed action MyBudgetDB.Controllers.AccountController.Logout (MyBudgetDB) in 90.6448ms
+2019-12-04 00:49:47.395 -06:00 [INF] Request finished in 106.7524ms 302 
+2019-12-04 00:49:47.408 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/  
+2019-12-04 00:49:47.409 -06:00 [INF] Executing action method MyBudgetDB.Controllers.HomeController.Index (MyBudgetDB) with arguments (null) - ModelState is "Valid"
+2019-12-04 00:49:47.409 -06:00 [INF] Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2019-12-04 00:49:47.411 -06:00 [INF] Executed action MyBudgetDB.Controllers.HomeController.Index (MyBudgetDB) in 1.7546000000000002ms
+2019-12-04 00:49:47.411 -06:00 [INF] Request finished in 3.0744ms 200 text/html; charset=utf-8
+2019-12-04 00:49:49.021 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/Account/Login  
+2019-12-04 00:49:49.070 -06:00 [INF] Executing action method MyBudgetDB.Controllers.AccountController.Login (MyBudgetDB) with arguments ([""]) - ModelState is "Valid"
+2019-12-04 00:49:49.076 -06:00 [INF] AuthenticationScheme: Identity.External signed out.
+2019-12-04 00:49:49.607 -06:00 [INF] Executing ViewResult, running view at path /Views/Account/Login.cshtml.
+2019-12-04 00:49:49.826 -06:00 [INF] Executed action MyBudgetDB.Controllers.AccountController.Login (MyBudgetDB) in 777.63ms
+2019-12-04 00:49:49.826 -06:00 [INF] Request finished in 804.6039ms 200 text/html; charset=utf-8
+2019-12-04 00:49:49.887 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js  
+2019-12-04 00:49:49.888 -06:00 [INF] The file /lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js was not modified
+2019-12-04 00:49:49.888 -06:00 [INF] Request finished in 0.8128ms 304 application/javascript
+2019-12-04 00:49:49.888 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/lib/jquery-validation/dist/jquery.validate.js  
+2019-12-04 00:49:49.891 -06:00 [INF] The file /lib/jquery-validation/dist/jquery.validate.js was not modified
+2019-12-04 00:49:49.891 -06:00 [INF] Request finished in 3.1379ms 304 application/javascript
+2019-12-04 00:49:56.417 -06:00 [INF] Request starting HTTP/1.1 POST http://localhost:44317/Account/Login application/x-www-form-urlencoded 233
+2019-12-04 00:49:56.465 -06:00 [INF] Executing action method MyBudgetDB.Controllers.AccountController.Login (MyBudgetDB) with arguments (["MyBudgetDB.Models.AccountViewModels.LoginViewModel",""]) - ModelState is "Valid"
+2019-12-04 00:49:56.937 -06:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data, this mode should only be enabled during development.
+2019-12-04 00:49:57.038 -06:00 [INF] Entity Framework Core 2.1.1-rtm-30846 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: SensitiveDataLoggingEnabled 
+2019-12-04 00:49:58.183 -06:00 [INF] Executed DbCommand (149ms) [Parameters=[@__normalizedUserName_0='A@A.COM' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[DateOfBirth], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0
+2019-12-04 00:49:58.516 -06:00 [INF] Executed DbCommand (76ms) [Parameters=[@__user_Id_0='a4ccea5f-c097-4c09-b27b-e6842294285a' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [AspNetUserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0
+2019-12-04 00:49:58.651 -06:00 [INF] Executed DbCommand (78ms) [Parameters=[@__userId_0='a4ccea5f-c097-4c09-b27b-e6842294285a' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [role].[Name]
+FROM [AspNetUserRoles] AS [userRole]
+INNER JOIN [AspNetRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0
+2019-12-04 00:49:58.667 -06:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2019-12-04 00:49:58.670 -06:00 [INF] User logged in.
+2019-12-04 00:49:58.675 -06:00 [INF] Executing RedirectResult, redirecting to /.
+2019-12-04 00:49:58.676 -06:00 [INF] Executed action MyBudgetDB.Controllers.AccountController.Login (MyBudgetDB) in 2247.9337ms
+2019-12-04 00:49:58.680 -06:00 [INF] Request finished in 2263.6453ms 302 
+2019-12-04 00:49:58.693 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/  
+2019-12-04 00:49:58.694 -06:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2019-12-04 00:49:58.694 -06:00 [INF] Executing action method MyBudgetDB.Controllers.HomeController.Index (MyBudgetDB) with arguments (null) - ModelState is "Valid"
+2019-12-04 00:49:58.694 -06:00 [INF] Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2019-12-04 00:49:58.695 -06:00 [INF] Executed action MyBudgetDB.Controllers.HomeController.Index (MyBudgetDB) in 0.9032ms
+2019-12-04 00:49:58.695 -06:00 [INF] Request finished in 1.7809ms 200 text/html; charset=utf-8
+2019-12-04 00:50:00.883 -06:00 [INF] Request starting HTTP/1.1 POST http://localhost:44317/Account/Logout application/x-www-form-urlencoded 225
+2019-12-04 00:50:00.883 -06:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2019-12-04 00:50:00.883 -06:00 [INF] Authorization was successful.
+2019-12-04 00:50:00.884 -06:00 [INF] Executing action method MyBudgetDB.Controllers.AccountController.Logout (MyBudgetDB) with arguments (null) - ModelState is "Valid"
+2019-12-04 00:50:00.884 -06:00 [INF] AuthenticationScheme: Identity.Application signed out.
+2019-12-04 00:50:00.884 -06:00 [INF] AuthenticationScheme: Identity.External signed out.
+2019-12-04 00:50:00.884 -06:00 [INF] AuthenticationScheme: Identity.TwoFactorUserId signed out.
+2019-12-04 00:50:00.884 -06:00 [INF] User logged out.
+2019-12-04 00:50:00.884 -06:00 [INF] Executing RedirectResult, redirecting to /.
+2019-12-04 00:50:00.884 -06:00 [INF] Executed action MyBudgetDB.Controllers.AccountController.Logout (MyBudgetDB) in 0.8509ms
+2019-12-04 00:50:00.884 -06:00 [INF] Request finished in 1.5959ms 302 
+2019-12-04 00:50:00.894 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/  
+2019-12-04 00:50:00.895 -06:00 [INF] Executing action method MyBudgetDB.Controllers.HomeController.Index (MyBudgetDB) with arguments (null) - ModelState is "Valid"
+2019-12-04 00:50:00.895 -06:00 [INF] Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2019-12-04 00:50:00.895 -06:00 [INF] Executed action MyBudgetDB.Controllers.HomeController.Index (MyBudgetDB) in 0.5887ms
+2019-12-04 00:50:00.895 -06:00 [INF] Request finished in 0.8992ms 200 text/html; charset=utf-8
+2019-12-04 00:50:02.411 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/Account/Login  
+2019-12-04 00:50:02.412 -06:00 [INF] Executing action method MyBudgetDB.Controllers.AccountController.Login (MyBudgetDB) with arguments ([""]) - ModelState is "Valid"
+2019-12-04 00:50:02.412 -06:00 [INF] AuthenticationScheme: Identity.External signed out.
+2019-12-04 00:50:02.412 -06:00 [INF] Executing ViewResult, running view at path /Views/Account/Login.cshtml.
+2019-12-04 00:50:02.414 -06:00 [INF] Executed action MyBudgetDB.Controllers.AccountController.Login (MyBudgetDB) in 2.7581ms
+2019-12-04 00:50:02.414 -06:00 [INF] Request finished in 3.1737ms 200 text/html; charset=utf-8
+2019-12-04 00:50:22.687 -06:00 [INF] Request starting HTTP/1.1 POST http://localhost:44317/Account/Login application/x-www-form-urlencoded 246
+2019-12-04 00:50:22.689 -06:00 [INF] Executing action method MyBudgetDB.Controllers.AccountController.Login (MyBudgetDB) with arguments (["MyBudgetDB.Models.AccountViewModels.LoginViewModel",""]) - ModelState is "Valid"
+2019-12-04 00:50:22.696 -06:00 [INF] Entity Framework Core 2.1.1-rtm-30846 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: SensitiveDataLoggingEnabled 
+2019-12-04 00:50:22.776 -06:00 [INF] Executed DbCommand (75ms) [Parameters=[@__normalizedUserName_0='KMNICHOLAS@DMACC.EDU' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[DateOfBirth], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0
+2019-12-04 00:50:22.852 -06:00 [INF] Executed DbCommand (70ms) [Parameters=[@__user_Id_0='cfd2f09e-7eac-481f-8c35-552b75374c15' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [AspNetUserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0
+2019-12-04 00:50:22.924 -06:00 [INF] Executed DbCommand (69ms) [Parameters=[@__userId_0='cfd2f09e-7eac-481f-8c35-552b75374c15' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [role].[Name]
+FROM [AspNetUserRoles] AS [userRole]
+INNER JOIN [AspNetRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0
+2019-12-04 00:50:22.924 -06:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2019-12-04 00:50:22.924 -06:00 [INF] User logged in.
+2019-12-04 00:50:22.924 -06:00 [INF] Executing RedirectResult, redirecting to /.
+2019-12-04 00:50:22.924 -06:00 [INF] Executed action MyBudgetDB.Controllers.AccountController.Login (MyBudgetDB) in 236.96290000000002ms
+2019-12-04 00:50:22.924 -06:00 [INF] Request finished in 237.3205ms 302 
+2019-12-04 00:50:22.937 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/  
+2019-12-04 00:50:22.937 -06:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2019-12-04 00:50:22.937 -06:00 [INF] Executing action method MyBudgetDB.Controllers.HomeController.Index (MyBudgetDB) with arguments (null) - ModelState is "Valid"
+2019-12-04 00:50:22.937 -06:00 [INF] Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2019-12-04 00:50:22.938 -06:00 [INF] Executed action MyBudgetDB.Controllers.HomeController.Index (MyBudgetDB) in 0.7087ms
+2019-12-04 00:50:22.938 -06:00 [INF] Request finished in 1.3104ms 200 text/html; charset=utf-8
+2019-12-04 00:50:24.446 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/Home/Admin  
+2019-12-04 00:50:24.446 -06:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2019-12-04 00:50:24.447 -06:00 [INF] Authorization was successful.
+2019-12-04 00:50:24.447 -06:00 [INF] Executing action method MyBudgetDB.Controllers.HomeController.Admin (MyBudgetDB) with arguments (null) - ModelState is "Valid"
+2019-12-04 00:50:24.447 -06:00 [INF] Executing ViewResult, running view at path /Views/Home/Admin.cshtml.
+2019-12-04 00:50:24.447 -06:00 [INF] Executed action MyBudgetDB.Controllers.HomeController.Admin (MyBudgetDB) in 0.6007ms
+2019-12-04 00:50:24.447 -06:00 [INF] Request finished in 1.1861ms 200 text/html; charset=utf-8
+2019-12-04 01:00:04.737 -06:00 [INF] User profile is available. Using 'C:\Users\Kyle\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-12-04 01:00:05.686 -06:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:5364/  0
+2019-12-04 01:00:05.686 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/  
+2019-12-04 01:00:05.784 -06:00 [INF] Request finished in 108.8521ms 200 
+2019-12-04 01:00:05.985 -06:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2019-12-04 01:00:06.264 -06:00 [INF] Executing action method MyBudgetDB.Controllers.HomeController.Index (MyBudgetDB) with arguments (null) - ModelState is "Valid"
+2019-12-04 01:00:09.692 -06:00 [INF] Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2019-12-04 01:00:10.228 -06:00 [INF] Executed action MyBudgetDB.Controllers.HomeController.Index (MyBudgetDB) in 3996.8277000000003ms
+2019-12-04 01:00:10.237 -06:00 [INF] Request finished in 4565.8039ms 200 text/html; charset=utf-8
+2019-12-04 01:00:10.279 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/lib/bootstrap/dist/css/bootstrap.css  
+2019-12-04 01:00:10.280 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/lib/datatables/css/dataTables.bootstrap.min.css  
+2019-12-04 01:00:10.286 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/css/site.css  
+2019-12-04 01:00:10.287 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/images/coins.jpg  
+2019-12-04 01:00:10.302 -06:00 [INF] The file /css/site.css was not modified
+2019-12-04 01:00:10.302 -06:00 [INF] The file /lib/bootstrap/dist/css/bootstrap.css was not modified
+2019-12-04 01:00:10.302 -06:00 [INF] The file /images/coins.jpg was not modified
+2019-12-04 01:00:10.302 -06:00 [INF] The file /lib/datatables/css/dataTables.bootstrap.min.css was not modified
+2019-12-04 01:00:10.305 -06:00 [INF] Request finished in 18.2737ms 304 text/css
+2019-12-04 01:00:10.305 -06:00 [INF] Request finished in 25.4065ms 304 text/css
+2019-12-04 01:00:10.305 -06:00 [INF] Request finished in 25.6359ms 304 text/css
+2019-12-04 01:00:10.307 -06:00 [INF] Request finished in 20.2695ms 304 image/jpeg
+2019-12-04 01:00:10.315 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/images/dollars.jpg  
+2019-12-04 01:00:10.315 -06:00 [INF] The file /images/dollars.jpg was not modified
+2019-12-04 01:00:10.316 -06:00 [INF] Request finished in 1.3714ms 304 image/jpeg
+2019-12-04 01:00:10.316 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/lib/datatables/js/jquery.dataTables.min.js  
+2019-12-04 01:00:10.316 -06:00 [INF] The file /lib/datatables/js/jquery.dataTables.min.js was not modified
+2019-12-04 01:00:10.316 -06:00 [INF] Request finished in 0.3415ms 304 application/javascript
+2019-12-04 01:00:10.323 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/js/site.js?v=ji3-IxbEzYWjzzLCGkF1KDjrT2jLbbrSYXw-AhMPNIA  
+2019-12-04 01:00:10.323 -06:00 [INF] The file /js/site.js was not modified
+2019-12-04 01:00:10.323 -06:00 [INF] Request finished in 0.4584ms 304 application/javascript
+2019-12-04 01:00:10.327 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/images/bitcoin.jpg  
+2019-12-04 01:00:10.328 -06:00 [INF] The file /images/bitcoin.jpg was not modified
+2019-12-04 01:00:10.328 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/lib/jquery/jquery.js  
+2019-12-04 01:00:10.329 -06:00 [INF] Request finished in 2.0143ms 304 image/jpeg
+2019-12-04 01:00:10.329 -06:00 [INF] The file /lib/jquery/jquery.js was not modified
+2019-12-04 01:00:10.329 -06:00 [INF] Request finished in 0.4211ms 304 application/javascript
+2019-12-04 01:00:10.335 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2  
+2019-12-04 01:00:10.337 -06:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2'. Physical path: 'C:\Users\Kyle\Documents\school\cis174\mybudget\fork\MyBudgetDB\MyBudgetDB\wwwroot\lib\bootstrap\dist\fonts\glyphicons-halflings-regular.woff2'
+2019-12-04 01:00:10.342 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/images/moneyjars.jpg  
+2019-12-04 01:00:10.342 -06:00 [INF] The file /images/moneyjars.jpg was not modified
+2019-12-04 01:00:10.342 -06:00 [INF] Request finished in 0.3692ms 304 image/jpeg
+2019-12-04 01:00:10.344 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/lib/bootstrap/dist/js/bootstrap.js  
+2019-12-04 01:00:10.344 -06:00 [INF] The file /lib/bootstrap/dist/js/bootstrap.js was not modified
+2019-12-04 01:00:10.344 -06:00 [INF] Request finished in 0.6176ms 304 application/javascript
+2019-12-04 01:00:10.350 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/lib/datatables/js/dataTables.bootstrap.min.js  
+2019-12-04 01:00:10.350 -06:00 [INF] The file /lib/datatables/js/dataTables.bootstrap.min.js was not modified
+2019-12-04 01:00:10.350 -06:00 [INF] Request finished in 0.3946ms 304 application/javascript
+2019-12-04 01:00:10.384 -06:00 [INF] Request finished in 48.9706ms 200 font/woff2
+2019-12-04 01:00:14.031 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/Budget/ViewBudgets  
+2019-12-04 01:00:14.032 -06:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2019-12-04 01:00:14.058 -06:00 [INF] Authorization was successful.
+2019-12-04 01:00:14.065 -06:00 [INF] Executing action method MyBudgetDB.Controllers.BudgetController.ViewBudgets (MyBudgetDB) with arguments (null) - ModelState is "Valid"
+2019-12-04 01:00:14.532 -06:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data, this mode should only be enabled during development.
+2019-12-04 01:00:14.631 -06:00 [INF] Entity Framework Core 2.1.1-rtm-30846 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: SensitiveDataLoggingEnabled 
+2019-12-04 01:00:15.866 -06:00 [INF] Executed DbCommand (139ms) [Parameters=[@__get_Item_0='cfd2f09e-7eac-481f-8c35-552b75374c15' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[ConcurrencyStamp], [e].[DateOfBirth], [e].[Email], [e].[EmailConfirmed], [e].[FirstName], [e].[LastName], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UserName]
+FROM [AspNetUsers] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+2019-12-04 01:00:16.217 -06:00 [INF] Executed DbCommand (78ms) [Parameters=[@__id_0='cfd2f09e-7eac-481f-8c35-552b75374c15' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[BudgetId] AS [Id], [r].[Name], [r].[CreationDate], [r].[Amount]
+FROM [Budgets] AS [r]
+WHERE ([r].[IsDeleted] = 0) AND ([r].[UserId] = @__id_0)
+ORDER BY [r].[BudgetId]
+2019-12-04 01:00:16.571 -06:00 [INF] Executing ViewResult, running view at path /Views/Budget/ViewBudgets.cshtml.
+2019-12-04 01:00:16.741 -06:00 [INF] accessLog:{"RequestId":"56bae669-8eb8-4547-a695-96e72cba4a8d","Request":"/Budget/ViewBudgets","Response":"200"}
+2019-12-04 01:00:16.744 -06:00 [INF] Executed action MyBudgetDB.Controllers.BudgetController.ViewBudgets (MyBudgetDB) in 2703.963ms
+2019-12-04 01:00:16.749 -06:00 [INF] Request finished in 2717.7188ms 200 text/html; charset=utf-8
+2019-12-04 01:00:19.697 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/Budget/ViewBudgets  
+2019-12-04 01:00:19.697 -06:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2019-12-04 01:00:19.698 -06:00 [INF] Authorization was successful.
+2019-12-04 01:00:19.698 -06:00 [INF] Executing action method MyBudgetDB.Controllers.BudgetController.ViewBudgets (MyBudgetDB) with arguments (null) - ModelState is "Valid"
+2019-12-04 01:00:19.699 -06:00 [INF] Entity Framework Core 2.1.1-rtm-30846 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: SensitiveDataLoggingEnabled 
+2019-12-04 01:00:19.779 -06:00 [INF] Executed DbCommand (75ms) [Parameters=[@__get_Item_0='cfd2f09e-7eac-481f-8c35-552b75374c15' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[ConcurrencyStamp], [e].[DateOfBirth], [e].[Email], [e].[EmailConfirmed], [e].[FirstName], [e].[LastName], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UserName]
+FROM [AspNetUsers] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+2019-12-04 01:00:19.860 -06:00 [INF] Executed DbCommand (78ms) [Parameters=[@__id_0='cfd2f09e-7eac-481f-8c35-552b75374c15' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[BudgetId] AS [Id], [r].[Name], [r].[CreationDate], [r].[Amount]
+FROM [Budgets] AS [r]
+WHERE ([r].[IsDeleted] = 0) AND ([r].[UserId] = @__id_0)
+ORDER BY [r].[BudgetId]
+2019-12-04 01:00:19.862 -06:00 [INF] Executing ViewResult, running view at path /Views/Budget/ViewBudgets.cshtml.
+2019-12-04 01:00:19.863 -06:00 [INF] accessLog:{"RequestId":"732c1324-76d3-4d94-8347-fabc7725c2ff","Request":"/Budget/ViewBudgets","Response":"200"}
+2019-12-04 01:00:19.863 -06:00 [INF] Executed action MyBudgetDB.Controllers.BudgetController.ViewBudgets (MyBudgetDB) in 165.5769ms
+2019-12-04 01:00:19.863 -06:00 [INF] Request finished in 166.9194ms 200 text/html; charset=utf-8
+2019-12-04 01:00:24.114 -06:00 [INF] Request starting HTTP/1.1 POST http://localhost:44317/Account/Logout application/x-www-form-urlencoded 225
+2019-12-04 01:00:24.114 -06:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2019-12-04 01:00:24.125 -06:00 [INF] Authorization was successful.
+2019-12-04 01:00:24.175 -06:00 [INF] Executing action method MyBudgetDB.Controllers.AccountController.Logout (MyBudgetDB) with arguments (null) - ModelState is "Valid"
+2019-12-04 01:00:24.205 -06:00 [INF] AuthenticationScheme: Identity.Application signed out.
+2019-12-04 01:00:24.206 -06:00 [INF] AuthenticationScheme: Identity.External signed out.
+2019-12-04 01:00:24.206 -06:00 [INF] AuthenticationScheme: Identity.TwoFactorUserId signed out.
+2019-12-04 01:00:24.207 -06:00 [INF] User logged out.
+2019-12-04 01:00:24.209 -06:00 [INF] Executing RedirectResult, redirecting to /.
+2019-12-04 01:00:24.217 -06:00 [INF] Executed action MyBudgetDB.Controllers.AccountController.Logout (MyBudgetDB) in 91.6611ms
+2019-12-04 01:00:24.218 -06:00 [INF] Request finished in 104.7705ms 302 
+2019-12-04 01:00:24.232 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/  
+2019-12-04 01:00:24.233 -06:00 [INF] Executing action method MyBudgetDB.Controllers.HomeController.Index (MyBudgetDB) with arguments (null) - ModelState is "Valid"
+2019-12-04 01:00:24.233 -06:00 [INF] Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2019-12-04 01:00:24.234 -06:00 [INF] Executed action MyBudgetDB.Controllers.HomeController.Index (MyBudgetDB) in 1.8352000000000002ms
+2019-12-04 01:00:24.234 -06:00 [INF] Request finished in 2.3946ms 200 text/html; charset=utf-8
+2019-12-04 01:00:24.976 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/Account/Login  
+2019-12-04 01:00:25.016 -06:00 [INF] Executing action method MyBudgetDB.Controllers.AccountController.Login (MyBudgetDB) with arguments ([""]) - ModelState is "Valid"
+2019-12-04 01:00:25.020 -06:00 [INF] AuthenticationScheme: Identity.External signed out.
+2019-12-04 01:00:25.304 -06:00 [INF] Executing ViewResult, running view at path /Views/Account/Login.cshtml.
+2019-12-04 01:00:25.512 -06:00 [INF] Executed action MyBudgetDB.Controllers.AccountController.Login (MyBudgetDB) in 517.79860000000008ms
+2019-12-04 01:00:25.512 -06:00 [INF] Request finished in 536.7932ms 200 text/html; charset=utf-8
+2019-12-04 01:00:25.570 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js  
+2019-12-04 01:00:25.570 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/lib/jquery-validation/dist/jquery.validate.js  
+2019-12-04 01:00:25.571 -06:00 [INF] The file /lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js was not modified
+2019-12-04 01:00:25.571 -06:00 [INF] Request finished in 0.4345ms 304 application/javascript
+2019-12-04 01:00:25.571 -06:00 [INF] The file /lib/jquery-validation/dist/jquery.validate.js was not modified
+2019-12-04 01:00:25.573 -06:00 [INF] Request finished in 0.2821ms 304 application/javascript
+2019-12-04 01:00:31.641 -06:00 [INF] Request starting HTTP/1.1 POST http://localhost:44317/Account/Login application/x-www-form-urlencoded 233
+2019-12-04 01:00:31.686 -06:00 [INF] Executing action method MyBudgetDB.Controllers.AccountController.Login (MyBudgetDB) with arguments (["MyBudgetDB.Models.AccountViewModels.LoginViewModel",""]) - ModelState is "Valid"
+2019-12-04 01:00:31.692 -06:00 [INF] Entity Framework Core 2.1.1-rtm-30846 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: SensitiveDataLoggingEnabled 
+2019-12-04 01:00:31.773 -06:00 [INF] Executed DbCommand (73ms) [Parameters=[@__normalizedUserName_0='A@A.COM' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[DateOfBirth], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0
+2019-12-04 01:00:31.963 -06:00 [INF] Executed DbCommand (73ms) [Parameters=[@__user_Id_0='a4ccea5f-c097-4c09-b27b-e6842294285a' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [AspNetUserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0
+2019-12-04 01:00:32.068 -06:00 [INF] Executed DbCommand (66ms) [Parameters=[@__userId_0='a4ccea5f-c097-4c09-b27b-e6842294285a' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [role].[Name]
+FROM [AspNetUserRoles] AS [userRole]
+INNER JOIN [AspNetRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0
+2019-12-04 01:00:32.085 -06:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2019-12-04 01:00:32.087 -06:00 [INF] User logged in.
+2019-12-04 01:00:32.087 -06:00 [INF] Executing RedirectResult, redirecting to /.
+2019-12-04 01:00:32.088 -06:00 [INF] Executed action MyBudgetDB.Controllers.AccountController.Login (MyBudgetDB) in 436.5301ms
+2019-12-04 01:00:32.088 -06:00 [INF] Request finished in 446.2373ms 302 
+2019-12-04 01:00:32.096 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/  
+2019-12-04 01:00:32.096 -06:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2019-12-04 01:00:32.096 -06:00 [INF] Executing action method MyBudgetDB.Controllers.HomeController.Index (MyBudgetDB) with arguments (null) - ModelState is "Valid"
+2019-12-04 01:00:32.096 -06:00 [INF] Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2019-12-04 01:00:32.097 -06:00 [INF] Executed action MyBudgetDB.Controllers.HomeController.Index (MyBudgetDB) in 0.62630000000000008ms
+2019-12-04 01:00:32.097 -06:00 [INF] Request finished in 1.2019ms 200 text/html; charset=utf-8
+2019-12-04 01:00:33.815 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/Budget/ViewBudgets  
+2019-12-04 01:00:33.815 -06:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2019-12-04 01:00:33.815 -06:00 [INF] Authorization was successful.
+2019-12-04 01:00:33.815 -06:00 [INF] Executing action method MyBudgetDB.Controllers.BudgetController.ViewBudgets (MyBudgetDB) with arguments (null) - ModelState is "Valid"
+2019-12-04 01:00:33.815 -06:00 [INF] Entity Framework Core 2.1.1-rtm-30846 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: SensitiveDataLoggingEnabled 
+2019-12-04 01:00:33.886 -06:00 [INF] Executed DbCommand (70ms) [Parameters=[@__get_Item_0='a4ccea5f-c097-4c09-b27b-e6842294285a' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[ConcurrencyStamp], [e].[DateOfBirth], [e].[Email], [e].[EmailConfirmed], [e].[FirstName], [e].[LastName], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UserName]
+FROM [AspNetUsers] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+2019-12-04 01:00:33.965 -06:00 [INF] Executed DbCommand (77ms) [Parameters=[@__id_0='a4ccea5f-c097-4c09-b27b-e6842294285a' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[BudgetId] AS [Id], [r].[Name], [r].[CreationDate], [r].[Amount]
+FROM [Budgets] AS [r]
+WHERE ([r].[IsDeleted] = 0) AND ([r].[UserId] = @__id_0)
+ORDER BY [r].[BudgetId]
+2019-12-04 01:00:34.047 -06:00 [INF] Executed DbCommand (74ms) [Parameters=[@__id_0='a4ccea5f-c097-4c09-b27b-e6842294285a' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r.Expenses].[IdExpense], [r.Expenses].[Amount], [r.Expenses].[Category], [r.Expenses].[DateAdded], [r.Expenses].[Name], [r.Expenses].[Notes], [r.Expenses].[UserBudgetBudgetId], [r.Expenses].[UserId], [t].[BudgetId]
+FROM [Expenses] AS [r.Expenses]
+INNER JOIN (
+    SELECT [r0].[BudgetId]
+    FROM [Budgets] AS [r0]
+    WHERE ([r0].[IsDeleted] = 0) AND ([r0].[UserId] = @__id_0)
+) AS [t] ON [r.Expenses].[UserBudgetBudgetId] = [t].[BudgetId]
+ORDER BY [t].[BudgetId]
+2019-12-04 01:00:34.074 -06:00 [INF] Executing ViewResult, running view at path /Views/Budget/ViewBudgets.cshtml.
+2019-12-04 01:00:34.106 -06:00 [INF] accessLog:{"RequestId":"f13d4eaf-b6b6-4251-8bbd-37275981c47d","Request":"/Budget/ViewBudgets","Response":"200"}
+2019-12-04 01:00:34.107 -06:00 [INF] Executed action MyBudgetDB.Controllers.BudgetController.ViewBudgets (MyBudgetDB) in 291.69460000000004ms
+2019-12-04 01:00:34.107 -06:00 [INF] Request finished in 292.4762ms 200 text/html; charset=utf-8
+2019-12-04 01:00:35.830 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/Budget/ViewBudgets  
+2019-12-04 01:00:35.830 -06:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2019-12-04 01:00:35.831 -06:00 [INF] Authorization was successful.
+2019-12-04 01:00:35.831 -06:00 [INF] Executing action method MyBudgetDB.Controllers.BudgetController.ViewBudgets (MyBudgetDB) with arguments (null) - ModelState is "Valid"
+2019-12-04 01:00:35.831 -06:00 [INF] Entity Framework Core 2.1.1-rtm-30846 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: SensitiveDataLoggingEnabled 
+2019-12-04 01:00:35.911 -06:00 [INF] Executed DbCommand (80ms) [Parameters=[@__get_Item_0='a4ccea5f-c097-4c09-b27b-e6842294285a' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[ConcurrencyStamp], [e].[DateOfBirth], [e].[Email], [e].[EmailConfirmed], [e].[FirstName], [e].[LastName], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UserName]
+FROM [AspNetUsers] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+2019-12-04 01:00:35.986 -06:00 [INF] Executed DbCommand (74ms) [Parameters=[@__id_0='a4ccea5f-c097-4c09-b27b-e6842294285a' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[BudgetId] AS [Id], [r].[Name], [r].[CreationDate], [r].[Amount]
+FROM [Budgets] AS [r]
+WHERE ([r].[IsDeleted] = 0) AND ([r].[UserId] = @__id_0)
+ORDER BY [r].[BudgetId]
+2019-12-04 01:00:36.055 -06:00 [INF] Executed DbCommand (69ms) [Parameters=[@__id_0='a4ccea5f-c097-4c09-b27b-e6842294285a' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r.Expenses].[IdExpense], [r.Expenses].[Amount], [r.Expenses].[Category], [r.Expenses].[DateAdded], [r.Expenses].[Name], [r.Expenses].[Notes], [r.Expenses].[UserBudgetBudgetId], [r.Expenses].[UserId], [t].[BudgetId]
+FROM [Expenses] AS [r.Expenses]
+INNER JOIN (
+    SELECT [r0].[BudgetId]
+    FROM [Budgets] AS [r0]
+    WHERE ([r0].[IsDeleted] = 0) AND ([r0].[UserId] = @__id_0)
+) AS [t] ON [r.Expenses].[UserBudgetBudgetId] = [t].[BudgetId]
+ORDER BY [t].[BudgetId]
+2019-12-04 01:00:36.056 -06:00 [INF] Executing ViewResult, running view at path /Views/Budget/ViewBudgets.cshtml.
+2019-12-04 01:00:36.061 -06:00 [INF] accessLog:{"RequestId":"e778a0c0-0cc9-43aa-a891-7657bbc1b434","Request":"/Budget/ViewBudgets","Response":"200"}
+2019-12-04 01:00:36.061 -06:00 [INF] Executed action MyBudgetDB.Controllers.BudgetController.ViewBudgets (MyBudgetDB) in 230.7367ms
+2019-12-04 01:00:36.061 -06:00 [INF] Request finished in 231.3717ms 200 text/html; charset=utf-8
+2019-12-04 10:22:02.854 -06:00 [INF] User profile is available. Using 'C:\Users\Kyle\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-12-04 10:22:04.032 -06:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:5364/  0
+2019-12-04 10:22:04.032 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/  
+2019-12-04 10:22:04.135 -06:00 [INF] Request finished in 111.168ms 200 
+2019-12-04 10:22:04.674 -06:00 [INF] Executing action method MyBudgetDB.Controllers.HomeController.Index (MyBudgetDB) with arguments (null) - ModelState is "Valid"
+2019-12-04 10:22:08.436 -06:00 [INF] Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2019-12-04 10:22:08.979 -06:00 [INF] Executed action MyBudgetDB.Controllers.HomeController.Index (MyBudgetDB) in 4532.4760000000006ms
+2019-12-04 10:22:08.994 -06:00 [INF] Request finished in 4975.7926ms 200 text/html; charset=utf-8
+2019-12-04 10:22:09.086 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/css/site.css  
+2019-12-04 10:22:09.086 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/lib/bootstrap/dist/css/bootstrap.css  
+2019-12-04 10:22:09.086 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/images/coins.jpg  
+2019-12-04 10:22:09.086 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/lib/datatables/css/dataTables.bootstrap.min.css  
+2019-12-04 10:22:09.107 -06:00 [INF] Sending file. Request path: '/images/coins.jpg'. Physical path: 'C:\Users\Kyle\Documents\school\cis174\mybudget\fork\MyBudgetDB\MyBudgetDB\wwwroot\images\coins.jpg'
+2019-12-04 10:22:09.107 -06:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.css'. Physical path: 'C:\Users\Kyle\Documents\school\cis174\mybudget\fork\MyBudgetDB\MyBudgetDB\wwwroot\lib\bootstrap\dist\css\bootstrap.css'
+2019-12-04 10:22:09.107 -06:00 [INF] Sending file. Request path: '/lib/datatables/css/dataTables.bootstrap.min.css'. Physical path: 'C:\Users\Kyle\Documents\school\cis174\mybudget\fork\MyBudgetDB\MyBudgetDB\wwwroot\lib\datatables\css\dataTables.bootstrap.min.css'
+2019-12-04 10:22:09.107 -06:00 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'C:\Users\Kyle\Documents\school\cis174\mybudget\fork\MyBudgetDB\MyBudgetDB\wwwroot\css\site.css'
+2019-12-04 10:22:09.126 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/images/moneyjars.jpg  
+2019-12-04 10:22:09.126 -06:00 [INF] Sending file. Request path: '/images/moneyjars.jpg'. Physical path: 'C:\Users\Kyle\Documents\school\cis174\mybudget\fork\MyBudgetDB\MyBudgetDB\wwwroot\images\moneyjars.jpg'
+2019-12-04 10:22:09.128 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/images/dollars.jpg  
+2019-12-04 10:22:09.128 -06:00 [INF] Sending file. Request path: '/images/dollars.jpg'. Physical path: 'C:\Users\Kyle\Documents\school\cis174\mybudget\fork\MyBudgetDB\MyBudgetDB\wwwroot\images\dollars.jpg'
+2019-12-04 10:22:09.128 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/js/site.js?v=ji3-IxbEzYWjzzLCGkF1KDjrT2jLbbrSYXw-AhMPNIA  
+2019-12-04 10:22:09.129 -06:00 [INF] Sending file. Request path: '/js/site.js'. Physical path: 'C:\Users\Kyle\Documents\school\cis174\mybudget\fork\MyBudgetDB\MyBudgetDB\wwwroot\js\site.js'
+2019-12-04 10:22:09.135 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/images/bitcoin.jpg  
+2019-12-04 10:22:09.135 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/lib/datatables/js/jquery.dataTables.min.js  
+2019-12-04 10:22:09.135 -06:00 [INF] Sending file. Request path: '/images/bitcoin.jpg'. Physical path: 'C:\Users\Kyle\Documents\school\cis174\mybudget\fork\MyBudgetDB\MyBudgetDB\wwwroot\images\bitcoin.jpg'
+2019-12-04 10:22:09.139 -06:00 [INF] Request finished in 52.464ms 200 text/css
+2019-12-04 10:22:09.139 -06:00 [INF] Request finished in 52.7853ms 200 text/css
+2019-12-04 10:22:09.139 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/lib/datatables/js/dataTables.bootstrap.min.js  
+2019-12-04 10:22:09.146 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/lib/bootstrap/dist/js/bootstrap.js  
+2019-12-04 10:22:09.146 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/lib/jquery/jquery.js  
+2019-12-04 10:22:09.148 -06:00 [INF] The file /lib/bootstrap/dist/js/bootstrap.js was not modified
+2019-12-04 10:22:09.148 -06:00 [INF] The file /lib/datatables/js/dataTables.bootstrap.min.js was not modified
+2019-12-04 10:22:09.148 -06:00 [INF] The file /lib/jquery/jquery.js was not modified
+2019-12-04 10:22:09.148 -06:00 [INF] The file /lib/datatables/js/jquery.dataTables.min.js was not modified
+2019-12-04 10:22:09.149 -06:00 [INF] Request finished in 3.6753ms 304 application/javascript
+2019-12-04 10:22:09.149 -06:00 [INF] Request finished in 10.1436ms 304 application/javascript
+2019-12-04 10:22:09.149 -06:00 [INF] Request finished in 3.6506ms 304 application/javascript
+2019-12-04 10:22:09.150 -06:00 [INF] Request finished in 15.1651ms 304 application/javascript
+2019-12-04 10:22:09.156 -06:00 [INF] Request finished in 29.8772ms 200 image/jpeg
+2019-12-04 10:22:09.162 -06:00 [INF] Request finished in 31.1457ms 200 application/javascript
+2019-12-04 10:22:09.167 -06:00 [INF] Request finished in 31.5945ms 200 image/jpeg
+2019-12-04 10:22:09.170 -06:00 [INF] Request finished in 83.7552ms 200 image/jpeg
+2019-12-04 10:22:09.172 -06:00 [INF] Request finished in 86.0483ms 200 text/css
+2019-12-04 10:22:09.172 -06:00 [INF] Request finished in 44.3654ms 200 image/jpeg
+2019-12-04 10:22:09.200 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2  
+2019-12-04 10:22:09.201 -06:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2'. Physical path: 'C:\Users\Kyle\Documents\school\cis174\mybudget\fork\MyBudgetDB\MyBudgetDB\wwwroot\lib\bootstrap\dist\fonts\glyphicons-halflings-regular.woff2'
+2019-12-04 10:22:09.202 -06:00 [INF] Request finished in 1.6117ms 200 font/woff2
+2019-12-04 10:22:12.001 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/Account/Login  
+2019-12-04 10:22:12.086 -06:00 [INF] Executing action method MyBudgetDB.Controllers.AccountController.Login (MyBudgetDB) with arguments ([""]) - ModelState is "Valid"
+2019-12-04 10:22:12.114 -06:00 [INF] AuthenticationScheme: Identity.External signed out.
+2019-12-04 10:22:12.605 -06:00 [INF] Executing ViewResult, running view at path /Views/Account/Login.cshtml.
+2019-12-04 10:22:12.835 -06:00 [INF] Executed action MyBudgetDB.Controllers.AccountController.Login (MyBudgetDB) in 786.18450000000007ms
+2019-12-04 10:22:12.835 -06:00 [INF] Request finished in 834.5576ms 200 text/html; charset=utf-8
+2019-12-04 10:22:12.871 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/lib/datatables/css/dataTables.bootstrap.min.css  
+2019-12-04 10:22:12.871 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/css/site.css  
+2019-12-04 10:22:12.872 -06:00 [INF] The file /lib/datatables/css/dataTables.bootstrap.min.css was not modified
+2019-12-04 10:22:12.873 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/lib/bootstrap/dist/css/bootstrap.css  
+2019-12-04 10:22:12.873 -06:00 [INF] Request finished in 2.162ms 304 text/css
+2019-12-04 10:22:12.876 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js  
+2019-12-04 10:22:12.876 -06:00 [INF] The file /lib/bootstrap/dist/css/bootstrap.css was not modified
+2019-12-04 10:22:12.876 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/lib/jquery-validation/dist/jquery.validate.js  
+2019-12-04 10:22:12.876 -06:00 [INF] Request finished in 3.5999ms 304 text/css
+2019-12-04 10:22:12.876 -06:00 [INF] The file /css/site.css was not modified
+2019-12-04 10:22:12.876 -06:00 [INF] The file /lib/jquery-validation/dist/jquery.validate.js was not modified
+2019-12-04 10:22:12.876 -06:00 [INF] Request finished in 5.2262ms 304 text/css
+2019-12-04 10:22:12.876 -06:00 [INF] Request finished in 0.2686ms 304 application/javascript
+2019-12-04 10:22:12.876 -06:00 [INF] The file /lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js was not modified
+2019-12-04 10:22:12.876 -06:00 [INF] Request finished in 0.374ms 304 application/javascript
+2019-12-04 10:22:19.213 -06:00 [INF] Request starting HTTP/1.1 POST http://localhost:44317/Account/Login application/x-www-form-urlencoded 233
+2019-12-04 10:22:19.314 -06:00 [INF] Executing action method MyBudgetDB.Controllers.AccountController.Login (MyBudgetDB) with arguments (["MyBudgetDB.Models.AccountViewModels.LoginViewModel",""]) - ModelState is "Valid"
+2019-12-04 10:22:19.782 -06:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data, this mode should only be enabled during development.
+2019-12-04 10:22:19.896 -06:00 [INF] Entity Framework Core 2.1.1-rtm-30846 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: SensitiveDataLoggingEnabled 
+2019-12-04 10:22:21.257 -06:00 [INF] Executed DbCommand (148ms) [Parameters=[@__normalizedUserName_0='A@A.COM' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[DateOfBirth], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0
+2019-12-04 10:22:21.587 -06:00 [INF] Executed DbCommand (71ms) [Parameters=[@__user_Id_0='a4ccea5f-c097-4c09-b27b-e6842294285a' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [AspNetUserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0
+2019-12-04 10:22:21.709 -06:00 [INF] Executed DbCommand (69ms) [Parameters=[@__userId_0='a4ccea5f-c097-4c09-b27b-e6842294285a' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [role].[Name]
+FROM [AspNetUserRoles] AS [userRole]
+INNER JOIN [AspNetRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0
+2019-12-04 10:22:21.727 -06:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2019-12-04 10:22:21.731 -06:00 [INF] User logged in.
+2019-12-04 10:22:21.738 -06:00 [INF] Executing RedirectResult, redirecting to /.
+2019-12-04 10:22:21.741 -06:00 [INF] Executed action MyBudgetDB.Controllers.AccountController.Login (MyBudgetDB) in 2517.1382000000003ms
+2019-12-04 10:22:21.746 -06:00 [INF] Request finished in 2532.7262ms 302 
+2019-12-04 10:22:21.758 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/  
+2019-12-04 10:22:21.768 -06:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2019-12-04 10:22:21.769 -06:00 [INF] Executing action method MyBudgetDB.Controllers.HomeController.Index (MyBudgetDB) with arguments (null) - ModelState is "Valid"
+2019-12-04 10:22:21.771 -06:00 [INF] Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2019-12-04 10:22:21.779 -06:00 [INF] Executed action MyBudgetDB.Controllers.HomeController.Index (MyBudgetDB) in 10.1029ms
+2019-12-04 10:22:21.780 -06:00 [INF] Request finished in 21.6725ms 200 text/html; charset=utf-8
+2019-12-04 10:22:24.676 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/Budget/ViewBudgets  
+2019-12-04 10:22:24.676 -06:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2019-12-04 10:22:24.677 -06:00 [ERR] Request matched multiple actions resulting in ambiguity. Matching actions: MyBudgetDB.Controllers.BudgetController.ViewBudgets (MyBudgetDB)
+MyBudgetDB.Controllers.BudgetController.ViewBudgets (MyBudgetDB)
+2019-12-04 10:22:24.683 -06:00 [ERR] An unhandled exception has occurred while executing the request
+Microsoft.AspNetCore.Mvc.Internal.AmbiguousActionException: Multiple actions matched. The following actions matched route data and had all constraints satisfied:
+
+MyBudgetDB.Controllers.BudgetController.ViewBudgets (MyBudgetDB)
+MyBudgetDB.Controllers.BudgetController.ViewBudgets (MyBudgetDB)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionSelector.SelectBestCandidate(RouteContext context, IReadOnlyList`1 candidates)
+   at Microsoft.AspNetCore.Mvc.Internal.MvcRouteHandler.RouteAsync(RouteContext context)
+   at Microsoft.AspNetCore.Routing.RouteCollection.RouteAsync(RouteContext context)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-12-04 10:22:24.808 -06:00 [INF] Request finished in 132.5524ms 500 text/html; charset=utf-8
+2019-12-04 10:24:26.020 -06:00 [INF] User profile is available. Using 'C:\Users\Kyle\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-12-04 10:24:26.724 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/  
+2019-12-04 10:24:26.724 -06:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:5364/  0
+2019-12-04 10:24:26.798 -06:00 [INF] Request finished in 82.2523ms 200 
+2019-12-04 10:24:27.212 -06:00 [INF] Executing action method MyBudgetDB.Controllers.HomeController.Index (MyBudgetDB) with arguments (null) - ModelState is "Valid"
+2019-12-04 10:24:30.533 -06:00 [INF] Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2019-12-04 10:24:31.094 -06:00 [INF] Executed action MyBudgetDB.Controllers.HomeController.Index (MyBudgetDB) in 4040.0974ms
+2019-12-04 10:24:31.099 -06:00 [INF] Request finished in 4387.3413ms 200 text/html; charset=utf-8
+2019-12-04 10:24:32.771 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/Account/Login  
+2019-12-04 10:24:32.844 -06:00 [INF] Executing action method MyBudgetDB.Controllers.AccountController.Login (MyBudgetDB) with arguments ([""]) - ModelState is "Valid"
+2019-12-04 10:24:32.873 -06:00 [INF] AuthenticationScheme: Identity.External signed out.
+2019-12-04 10:24:33.359 -06:00 [INF] Executing ViewResult, running view at path /Views/Account/Login.cshtml.
+2019-12-04 10:24:33.594 -06:00 [INF] Executed action MyBudgetDB.Controllers.AccountController.Login (MyBudgetDB) in 786.5742ms
+2019-12-04 10:24:33.595 -06:00 [INF] Request finished in 823.8319ms 200 text/html; charset=utf-8
+2019-12-04 10:24:45.287 -06:00 [INF] Request starting HTTP/1.1 POST http://localhost:44317/Account/Login application/x-www-form-urlencoded 233
+2019-12-04 10:24:45.376 -06:00 [INF] Executing action method MyBudgetDB.Controllers.AccountController.Login (MyBudgetDB) with arguments (["MyBudgetDB.Models.AccountViewModels.LoginViewModel",""]) - ModelState is "Valid"
+2019-12-04 10:24:45.820 -06:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data, this mode should only be enabled during development.
+2019-12-04 10:24:45.918 -06:00 [INF] Entity Framework Core 2.1.1-rtm-30846 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: SensitiveDataLoggingEnabled 
+2019-12-04 10:24:47.307 -06:00 [INF] Executed DbCommand (137ms) [Parameters=[@__normalizedUserName_0='A@A.COM' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[DateOfBirth], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0
+2019-12-04 10:24:47.639 -06:00 [INF] Executed DbCommand (82ms) [Parameters=[@__user_Id_0='a4ccea5f-c097-4c09-b27b-e6842294285a' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [AspNetUserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0
+2019-12-04 10:24:47.764 -06:00 [INF] Executed DbCommand (73ms) [Parameters=[@__userId_0='a4ccea5f-c097-4c09-b27b-e6842294285a' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [role].[Name]
+FROM [AspNetUserRoles] AS [userRole]
+INNER JOIN [AspNetRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0
+2019-12-04 10:24:47.782 -06:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2019-12-04 10:24:47.785 -06:00 [INF] User logged in.
+2019-12-04 10:24:47.793 -06:00 [INF] Executing RedirectResult, redirecting to /.
+2019-12-04 10:24:47.795 -06:00 [INF] Executed action MyBudgetDB.Controllers.AccountController.Login (MyBudgetDB) in 2498.1336ms
+2019-12-04 10:24:47.803 -06:00 [INF] Request finished in 2515.8713ms 302 
+2019-12-04 10:24:47.814 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/  
+2019-12-04 10:24:47.824 -06:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2019-12-04 10:24:47.825 -06:00 [INF] Executing action method MyBudgetDB.Controllers.HomeController.Index (MyBudgetDB) with arguments (null) - ModelState is "Valid"
+2019-12-04 10:24:47.827 -06:00 [INF] Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2019-12-04 10:24:47.835 -06:00 [INF] Executed action MyBudgetDB.Controllers.HomeController.Index (MyBudgetDB) in 10.064400000000001ms
+2019-12-04 10:24:47.835 -06:00 [INF] Request finished in 21.4073ms 200 text/html; charset=utf-8
+2019-12-04 10:24:49.751 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/Budget/ViewBudgets  
+2019-12-04 10:24:49.751 -06:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2019-12-04 10:24:49.768 -06:00 [INF] Authorization was successful.
+2019-12-04 10:24:49.774 -06:00 [INF] Executing action method MyBudgetDB.Controllers.BudgetController.ViewBudgets (MyBudgetDB) with arguments (null) - ModelState is "Valid"
+2019-12-04 10:24:49.777 -06:00 [INF] Entity Framework Core 2.1.1-rtm-30846 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: SensitiveDataLoggingEnabled 
+2019-12-04 10:24:49.862 -06:00 [INF] Executed DbCommand (69ms) [Parameters=[@__get_Item_0='a4ccea5f-c097-4c09-b27b-e6842294285a' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[ConcurrencyStamp], [e].[DateOfBirth], [e].[Email], [e].[EmailConfirmed], [e].[FirstName], [e].[LastName], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UserName]
+FROM [AspNetUsers] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+2019-12-04 10:24:50.049 -06:00 [INF] Executed DbCommand (67ms) [Parameters=[@__id_0='a4ccea5f-c097-4c09-b27b-e6842294285a' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[BudgetId] AS [Id], [r].[Name], [r].[CreationDate], [r].[Amount]
+FROM [Budgets] AS [r]
+WHERE ([r].[IsDeleted] = 0) AND ([r].[UserId] = @__id_0)
+ORDER BY [r].[BudgetId]
+2019-12-04 10:24:50.128 -06:00 [INF] Executed DbCommand (69ms) [Parameters=[@__id_0='a4ccea5f-c097-4c09-b27b-e6842294285a' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r.Expenses].[IdExpense], [r.Expenses].[Amount], [r.Expenses].[Category], [r.Expenses].[DateAdded], [r.Expenses].[Name], [r.Expenses].[Notes], [r.Expenses].[UserBudgetBudgetId], [r.Expenses].[UserId], [t].[BudgetId]
+FROM [Expenses] AS [r.Expenses]
+INNER JOIN (
+    SELECT [r0].[BudgetId]
+    FROM [Budgets] AS [r0]
+    WHERE ([r0].[IsDeleted] = 0) AND ([r0].[UserId] = @__id_0)
+) AS [t] ON [r.Expenses].[UserBudgetBudgetId] = [t].[BudgetId]
+ORDER BY [t].[BudgetId]
+2019-12-04 10:24:50.272 -06:00 [INF] Executing ViewResult, running view at path /Views/Budget/ViewBudgets.cshtml.
+2019-12-04 10:24:50.466 -06:00 [INF] accessLog:{"RequestId":"921ca246-46c4-40d7-b800-052283c7e839","Request":"/Budget/ViewBudgets","Response":"200"}
+2019-12-04 10:24:50.466 -06:00 [INF] Executed action MyBudgetDB.Controllers.BudgetController.ViewBudgets (MyBudgetDB) in 712.1527ms
+2019-12-04 10:24:50.466 -06:00 [INF] Request finished in 715.4339ms 200 text/html; charset=utf-8
+2019-12-04 10:24:56.197 -06:00 [INF] Request starting HTTP/1.1 POST http://localhost:44317/Account/Logout application/x-www-form-urlencoded 225
+2019-12-04 10:24:56.197 -06:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2019-12-04 10:24:56.200 -06:00 [INF] Authorization was successful.
+2019-12-04 10:24:56.200 -06:00 [INF] Executing action method MyBudgetDB.Controllers.AccountController.Logout (MyBudgetDB) with arguments (null) - ModelState is "Valid"
+2019-12-04 10:24:56.204 -06:00 [INF] AuthenticationScheme: Identity.Application signed out.
+2019-12-04 10:24:56.204 -06:00 [INF] AuthenticationScheme: Identity.External signed out.
+2019-12-04 10:24:56.205 -06:00 [INF] AuthenticationScheme: Identity.TwoFactorUserId signed out.
+2019-12-04 10:24:56.205 -06:00 [INF] User logged out.
+2019-12-04 10:24:56.205 -06:00 [INF] Executing RedirectResult, redirecting to /.
+2019-12-04 10:24:56.205 -06:00 [INF] Executed action MyBudgetDB.Controllers.AccountController.Logout (MyBudgetDB) in 5.2756ms
+2019-12-04 10:24:56.205 -06:00 [INF] Request finished in 8.2524ms 302 
+2019-12-04 10:24:56.211 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/  
+2019-12-04 10:24:56.211 -06:00 [INF] Executing action method MyBudgetDB.Controllers.HomeController.Index (MyBudgetDB) with arguments (null) - ModelState is "Valid"
+2019-12-04 10:24:56.211 -06:00 [INF] Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2019-12-04 10:24:56.212 -06:00 [INF] Executed action MyBudgetDB.Controllers.HomeController.Index (MyBudgetDB) in 0.64960000000000007ms
+2019-12-04 10:24:56.212 -06:00 [INF] Request finished in 0.9734ms 200 text/html; charset=utf-8
+2019-12-04 10:24:57.627 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/Account/Login  
+2019-12-04 10:24:57.628 -06:00 [INF] Executing action method MyBudgetDB.Controllers.AccountController.Login (MyBudgetDB) with arguments ([""]) - ModelState is "Valid"
+2019-12-04 10:24:57.628 -06:00 [INF] AuthenticationScheme: Identity.External signed out.
+2019-12-04 10:24:57.628 -06:00 [INF] Executing ViewResult, running view at path /Views/Account/Login.cshtml.
+2019-12-04 10:24:57.630 -06:00 [INF] Executed action MyBudgetDB.Controllers.AccountController.Login (MyBudgetDB) in 2.4239ms
+2019-12-04 10:24:57.630 -06:00 [INF] Request finished in 2.8308ms 200 text/html; charset=utf-8
+2019-12-04 10:25:15.755 -06:00 [INF] Request starting HTTP/1.1 POST http://localhost:44317/Account/Login application/x-www-form-urlencoded 246
+2019-12-04 10:25:15.756 -06:00 [INF] Executing action method MyBudgetDB.Controllers.AccountController.Login (MyBudgetDB) with arguments (["MyBudgetDB.Models.AccountViewModels.LoginViewModel",""]) - ModelState is "Valid"
+2019-12-04 10:25:15.757 -06:00 [INF] Entity Framework Core 2.1.1-rtm-30846 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: SensitiveDataLoggingEnabled 
+2019-12-04 10:25:15.833 -06:00 [INF] Executed DbCommand (73ms) [Parameters=[@__normalizedUserName_0='KMNICHOLAS@DMACC.EDU' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[DateOfBirth], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0
+2019-12-04 10:25:15.907 -06:00 [INF] Executed DbCommand (68ms) [Parameters=[@__user_Id_0='cfd2f09e-7eac-481f-8c35-552b75374c15' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [AspNetUserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0
+2019-12-04 10:25:15.979 -06:00 [INF] Executed DbCommand (71ms) [Parameters=[@__userId_0='cfd2f09e-7eac-481f-8c35-552b75374c15' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [role].[Name]
+FROM [AspNetUserRoles] AS [userRole]
+INNER JOIN [AspNetRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0
+2019-12-04 10:25:15.980 -06:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2019-12-04 10:25:15.980 -06:00 [INF] User logged in.
+2019-12-04 10:25:15.980 -06:00 [INF] Executing RedirectResult, redirecting to /.
+2019-12-04 10:25:15.980 -06:00 [INF] Executed action MyBudgetDB.Controllers.AccountController.Login (MyBudgetDB) in 225.1209ms
+2019-12-04 10:25:15.980 -06:00 [INF] Request finished in 225.5395ms 302 
+2019-12-04 10:25:15.995 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/  
+2019-12-04 10:25:15.996 -06:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2019-12-04 10:25:15.996 -06:00 [INF] Executing action method MyBudgetDB.Controllers.HomeController.Index (MyBudgetDB) with arguments (null) - ModelState is "Valid"
+2019-12-04 10:25:15.996 -06:00 [INF] Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2019-12-04 10:25:15.997 -06:00 [INF] Executed action MyBudgetDB.Controllers.HomeController.Index (MyBudgetDB) in 1.1879ms
+2019-12-04 10:25:15.997 -06:00 [INF] Request finished in 1.7165ms 200 text/html; charset=utf-8
+2019-12-04 10:25:19.628 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/Budget/ViewBudgets  
+2019-12-04 10:25:19.629 -06:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2019-12-04 10:25:19.629 -06:00 [INF] Authorization was successful.
+2019-12-04 10:25:19.629 -06:00 [INF] Executing action method MyBudgetDB.Controllers.BudgetController.ViewBudgets (MyBudgetDB) with arguments (null) - ModelState is "Valid"
+2019-12-04 10:25:19.629 -06:00 [INF] Entity Framework Core 2.1.1-rtm-30846 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: SensitiveDataLoggingEnabled 
+2019-12-04 10:25:19.699 -06:00 [INF] Executed DbCommand (69ms) [Parameters=[@__get_Item_0='cfd2f09e-7eac-481f-8c35-552b75374c15' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[ConcurrencyStamp], [e].[DateOfBirth], [e].[Email], [e].[EmailConfirmed], [e].[FirstName], [e].[LastName], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UserName]
+FROM [AspNetUsers] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+2019-12-04 10:25:19.770 -06:00 [INF] Executed DbCommand (69ms) [Parameters=[@__id_0='cfd2f09e-7eac-481f-8c35-552b75374c15' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[BudgetId] AS [Id], [r].[Name], [r].[CreationDate], [r].[Amount]
+FROM [Budgets] AS [r]
+WHERE ([r].[IsDeleted] = 0) AND ([r].[UserId] = @__id_0)
+ORDER BY [r].[BudgetId]
+2019-12-04 10:25:19.770 -06:00 [INF] Executing ViewResult, running view at path /Views/Budget/ViewBudgets.cshtml.
+2019-12-04 10:25:19.772 -06:00 [INF] accessLog:{"RequestId":"dc75a54c-a97d-4ff4-9562-30b663ad5a5b","Request":"/Budget/ViewBudgets","Response":"200"}
+2019-12-04 10:25:19.772 -06:00 [INF] Executed action MyBudgetDB.Controllers.BudgetController.ViewBudgets (MyBudgetDB) in 142.9678ms
+2019-12-04 10:25:19.772 -06:00 [INF] Request finished in 143.5673ms 200 text/html; charset=utf-8
+2019-12-04 10:25:21.433 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/Budget/ViewBudgetsAdmin  
+2019-12-04 10:25:21.433 -06:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2019-12-04 10:25:21.436 -06:00 [INF] Authorization was successful.
+2019-12-04 10:25:21.436 -06:00 [INF] Executing action method MyBudgetDB.Controllers.BudgetController.ViewBudgetsAdmin (MyBudgetDB) with arguments (null) - ModelState is "Valid"
+2019-12-04 10:25:21.437 -06:00 [INF] Entity Framework Core 2.1.1-rtm-30846 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: SensitiveDataLoggingEnabled 
+2019-12-04 10:25:21.505 -06:00 [INF] Executed DbCommand (68ms) [Parameters=[@__get_Item_0='cfd2f09e-7eac-481f-8c35-552b75374c15' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[ConcurrencyStamp], [e].[DateOfBirth], [e].[Email], [e].[EmailConfirmed], [e].[FirstName], [e].[LastName], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UserName]
+FROM [AspNetUsers] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+2019-12-04 10:25:21.584 -06:00 [INF] Executed DbCommand (71ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[BudgetId] AS [Id], [r].[Name], [r].[CreationDate], [r].[Amount]
+FROM [Budgets] AS [r]
+WHERE [r].[IsDeleted] = 0
+ORDER BY [r].[BudgetId]
+2019-12-04 10:25:21.658 -06:00 [INF] Executed DbCommand (73ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r.Expenses].[IdExpense], [r.Expenses].[Amount], [r.Expenses].[Category], [r.Expenses].[DateAdded], [r.Expenses].[Name], [r.Expenses].[Notes], [r.Expenses].[UserBudgetBudgetId], [r.Expenses].[UserId], [t].[BudgetId]
+FROM [Expenses] AS [r.Expenses]
+INNER JOIN (
+    SELECT [r0].[BudgetId]
+    FROM [Budgets] AS [r0]
+    WHERE [r0].[IsDeleted] = 0
+) AS [t] ON [r.Expenses].[UserBudgetBudgetId] = [t].[BudgetId]
+ORDER BY [t].[BudgetId]
+2019-12-04 10:25:21.660 -06:00 [ERR] The view 'ViewBudgetsAdmin' was not found. Searched locations: ["/Views/Budget/ViewBudgetsAdmin.cshtml","/Views/Shared/ViewBudgetsAdmin.cshtml"]
+2019-12-04 10:25:21.661 -06:00 [INF] accessLog:{"RequestId":"460079e2-37b2-42d9-9018-8318f527800f","Request":"/Budget/ViewBudgetsAdmin","Response":"200"}
+2019-12-04 10:25:21.662 -06:00 [INF] Executed action MyBudgetDB.Controllers.BudgetController.ViewBudgetsAdmin (MyBudgetDB) in 226.0087ms
+2019-12-04 10:25:21.664 -06:00 [ERR] An unhandled exception has occurred while executing the request
+System.InvalidOperationException: The view 'ViewBudgetsAdmin' was not found. The following locations were searched:
+/Views/Budget/ViewBudgetsAdmin.cshtml
+/Views/Shared/ViewBudgetsAdmin.cshtml
+   at Microsoft.AspNetCore.Mvc.ViewEngines.ViewEngineResult.EnsureSuccessful(IEnumerable`1 originalLocations)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeResultAsync(IActionResult result)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResultFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResultExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-12-04 10:25:21.772 -06:00 [INF] Request finished in 338.9814ms 500 text/html; charset=utf-8
+2019-12-04 10:27:29.454 -06:00 [INF] User profile is available. Using 'C:\Users\Kyle\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-12-04 10:27:30.319 -06:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:5364/  0
+2019-12-04 10:27:30.319 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/  
+2019-12-04 10:27:30.396 -06:00 [INF] Request finished in 84.4191ms 200 
+2019-12-04 10:27:30.806 -06:00 [INF] Executing action method MyBudgetDB.Controllers.HomeController.Index (MyBudgetDB) with arguments (null) - ModelState is "Valid"
+2019-12-04 10:27:34.137 -06:00 [INF] Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2019-12-04 10:27:34.639 -06:00 [INF] Executed action MyBudgetDB.Controllers.HomeController.Index (MyBudgetDB) in 3989.8722000000002ms
+2019-12-04 10:27:34.653 -06:00 [INF] Request finished in 4345.9681ms 200 text/html; charset=utf-8
+2019-12-04 10:27:36.398 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/Account/Login  
+2019-12-04 10:27:36.473 -06:00 [INF] Executing action method MyBudgetDB.Controllers.AccountController.Login (MyBudgetDB) with arguments ([""]) - ModelState is "Valid"
+2019-12-04 10:27:36.502 -06:00 [INF] AuthenticationScheme: Identity.External signed out.
+2019-12-04 10:27:36.991 -06:00 [INF] Executing ViewResult, running view at path /Views/Account/Login.cshtml.
+2019-12-04 10:27:37.238 -06:00 [INF] Executed action MyBudgetDB.Controllers.AccountController.Login (MyBudgetDB) in 802.2545ms
+2019-12-04 10:27:37.238 -06:00 [INF] Request finished in 839.9178ms 200 text/html; charset=utf-8
+2019-12-04 10:27:47.095 -06:00 [INF] Request starting HTTP/1.1 POST http://localhost:44317/Account/Login application/x-www-form-urlencoded 246
+2019-12-04 10:27:47.185 -06:00 [INF] Executing action method MyBudgetDB.Controllers.AccountController.Login (MyBudgetDB) with arguments (["MyBudgetDB.Models.AccountViewModels.LoginViewModel",""]) - ModelState is "Valid"
+2019-12-04 10:27:47.636 -06:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data, this mode should only be enabled during development.
+2019-12-04 10:27:47.738 -06:00 [INF] Entity Framework Core 2.1.1-rtm-30846 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: SensitiveDataLoggingEnabled 
+2019-12-04 10:27:48.948 -06:00 [INF] Executed DbCommand (137ms) [Parameters=[@__normalizedUserName_0='KMNICHOLAS@DMACC.EDU' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[DateOfBirth], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0
+2019-12-04 10:27:49.263 -06:00 [INF] Executed DbCommand (66ms) [Parameters=[@__user_Id_0='cfd2f09e-7eac-481f-8c35-552b75374c15' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [AspNetUserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0
+2019-12-04 10:27:49.388 -06:00 [INF] Executed DbCommand (67ms) [Parameters=[@__userId_0='cfd2f09e-7eac-481f-8c35-552b75374c15' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [role].[Name]
+FROM [AspNetUserRoles] AS [userRole]
+INNER JOIN [AspNetRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0
+2019-12-04 10:27:49.407 -06:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2019-12-04 10:27:49.410 -06:00 [INF] User logged in.
+2019-12-04 10:27:49.419 -06:00 [INF] Executing RedirectResult, redirecting to /.
+2019-12-04 10:27:49.421 -06:00 [INF] Executed action MyBudgetDB.Controllers.AccountController.Login (MyBudgetDB) in 2316.2581ms
+2019-12-04 10:27:49.429 -06:00 [INF] Request finished in 2334.765ms 302 
+2019-12-04 10:27:49.441 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/  
+2019-12-04 10:27:49.451 -06:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2019-12-04 10:27:49.453 -06:00 [INF] Executing action method MyBudgetDB.Controllers.HomeController.Index (MyBudgetDB) with arguments (null) - ModelState is "Valid"
+2019-12-04 10:27:49.454 -06:00 [INF] Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2019-12-04 10:27:49.463 -06:00 [INF] Executed action MyBudgetDB.Controllers.HomeController.Index (MyBudgetDB) in 10.4321ms
+2019-12-04 10:27:49.464 -06:00 [INF] Request finished in 22.7978ms 200 text/html; charset=utf-8
+2019-12-04 10:27:51.893 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/Budget/ViewBudgets  
+2019-12-04 10:27:51.893 -06:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2019-12-04 10:27:51.910 -06:00 [INF] Authorization was successful.
+2019-12-04 10:27:51.916 -06:00 [INF] Executing action method MyBudgetDB.Controllers.BudgetController.ViewBudgets (MyBudgetDB) with arguments (null) - ModelState is "Valid"
+2019-12-04 10:27:51.921 -06:00 [INF] Entity Framework Core 2.1.1-rtm-30846 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: SensitiveDataLoggingEnabled 
+2019-12-04 10:27:52.008 -06:00 [INF] Executed DbCommand (74ms) [Parameters=[@__get_Item_0='cfd2f09e-7eac-481f-8c35-552b75374c15' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[ConcurrencyStamp], [e].[DateOfBirth], [e].[Email], [e].[EmailConfirmed], [e].[FirstName], [e].[LastName], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UserName]
+FROM [AspNetUsers] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+2019-12-04 10:27:52.195 -06:00 [INF] Executed DbCommand (67ms) [Parameters=[@__id_0='cfd2f09e-7eac-481f-8c35-552b75374c15' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[BudgetId] AS [Id], [r].[Name], [r].[CreationDate], [r].[Amount]
+FROM [Budgets] AS [r]
+WHERE ([r].[IsDeleted] = 0) AND ([r].[UserId] = @__id_0)
+ORDER BY [r].[BudgetId]
+2019-12-04 10:27:52.319 -06:00 [INF] Executing ViewResult, running view at path /Views/Budget/ViewBudgets.cshtml.
+2019-12-04 10:27:52.493 -06:00 [INF] accessLog:{"RequestId":"f650fcb0-6477-4c89-b8e6-8af2c5747500","Request":"/Budget/ViewBudgets","Response":"200"}
+2019-12-04 10:27:52.494 -06:00 [INF] Executed action MyBudgetDB.Controllers.BudgetController.ViewBudgets (MyBudgetDB) in 597.9702ms
+2019-12-04 10:27:52.494 -06:00 [INF] Request finished in 601.3078ms 200 text/html; charset=utf-8
+2019-12-04 10:27:54.109 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/Budget/ViewBudgetsAdmin  
+2019-12-04 10:27:54.109 -06:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2019-12-04 10:27:54.112 -06:00 [INF] Authorization was successful.
+2019-12-04 10:27:54.112 -06:00 [INF] Executing action method MyBudgetDB.Controllers.BudgetController.ViewBudgetsAdmin (MyBudgetDB) with arguments (null) - ModelState is "Valid"
+2019-12-04 10:27:54.113 -06:00 [INF] Entity Framework Core 2.1.1-rtm-30846 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: SensitiveDataLoggingEnabled 
+2019-12-04 10:27:54.192 -06:00 [INF] Executed DbCommand (76ms) [Parameters=[@__get_Item_0='cfd2f09e-7eac-481f-8c35-552b75374c15' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[ConcurrencyStamp], [e].[DateOfBirth], [e].[Email], [e].[EmailConfirmed], [e].[FirstName], [e].[LastName], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UserName]
+FROM [AspNetUsers] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+2019-12-04 10:27:54.285 -06:00 [INF] Executed DbCommand (85ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[BudgetId] AS [Id], [r].[Name], [r].[CreationDate], [r].[Amount]
+FROM [Budgets] AS [r]
+WHERE [r].[IsDeleted] = 0
+ORDER BY [r].[BudgetId]
+2019-12-04 10:27:54.365 -06:00 [INF] Executed DbCommand (71ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r.Expenses].[IdExpense], [r.Expenses].[Amount], [r.Expenses].[Category], [r.Expenses].[DateAdded], [r.Expenses].[Name], [r.Expenses].[Notes], [r.Expenses].[UserBudgetBudgetId], [r.Expenses].[UserId], [t].[BudgetId]
+FROM [Expenses] AS [r.Expenses]
+INNER JOIN (
+    SELECT [r0].[BudgetId]
+    FROM [Budgets] AS [r0]
+    WHERE [r0].[IsDeleted] = 0
+) AS [t] ON [r.Expenses].[UserBudgetBudgetId] = [t].[BudgetId]
+ORDER BY [t].[BudgetId]
+2019-12-04 10:27:54.497 -06:00 [INF] Executing ViewResult, running view at path /Views/Budget/ViewBudgetsAdmin.cshtml.
+2019-12-04 10:27:54.530 -06:00 [INF] accessLog:{"RequestId":"153dc15f-3f95-4390-af2d-91ebf101300e","Request":"/Budget/ViewBudgetsAdmin","Response":"200"}
+2019-12-04 10:27:54.530 -06:00 [INF] Executed action MyBudgetDB.Controllers.BudgetController.ViewBudgetsAdmin (MyBudgetDB) in 418.2735ms
+2019-12-04 10:27:54.530 -06:00 [INF] Request finished in 421.4329ms 200 text/html; charset=utf-8
+2019-12-04 10:28:00.276 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/Home/Admin  
+2019-12-04 10:28:00.276 -06:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2019-12-04 10:28:00.278 -06:00 [INF] Authorization was successful.
+2019-12-04 10:28:00.278 -06:00 [INF] Executing action method MyBudgetDB.Controllers.HomeController.Admin (MyBudgetDB) with arguments (null) - ModelState is "Valid"
+2019-12-04 10:28:00.380 -06:00 [INF] Executing ViewResult, running view at path /Views/Home/Admin.cshtml.
+2019-12-04 10:28:00.384 -06:00 [INF] Executed action MyBudgetDB.Controllers.HomeController.Admin (MyBudgetDB) in 107.2291ms
+2019-12-04 10:28:00.384 -06:00 [INF] Request finished in 108.8587ms 200 text/html; charset=utf-8
+2019-12-04 10:28:02.324 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/Home/ViewBudgetsAdmin  
+2019-12-04 10:28:02.325 -06:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2019-12-04 10:28:02.326 -06:00 [INF] Request finished in 1.7887ms 404 
+2019-12-04 10:28:37.031 -06:00 [INF] User profile is available. Using 'C:\Users\Kyle\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-12-04 10:28:37.689 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/  
+2019-12-04 10:28:37.689 -06:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:5364/  0
+2019-12-04 10:28:37.764 -06:00 [INF] Request finished in 81.6921ms 200 
+2019-12-04 10:28:38.184 -06:00 [INF] Executing action method MyBudgetDB.Controllers.HomeController.Index (MyBudgetDB) with arguments (null) - ModelState is "Valid"
+2019-12-04 10:28:41.483 -06:00 [INF] Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2019-12-04 10:28:41.980 -06:00 [INF] Executed action MyBudgetDB.Controllers.HomeController.Index (MyBudgetDB) in 3957.4143000000004ms
+2019-12-04 10:28:41.991 -06:00 [INF] Request finished in 4313.2082ms 200 text/html; charset=utf-8
+2019-12-04 10:28:44.230 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/Account/Login  
+2019-12-04 10:28:44.302 -06:00 [INF] Executing action method MyBudgetDB.Controllers.AccountController.Login (MyBudgetDB) with arguments ([""]) - ModelState is "Valid"
+2019-12-04 10:28:44.331 -06:00 [INF] AuthenticationScheme: Identity.External signed out.
+2019-12-04 10:28:44.838 -06:00 [INF] Executing ViewResult, running view at path /Views/Account/Login.cshtml.
+2019-12-04 10:28:45.069 -06:00 [INF] Executed action MyBudgetDB.Controllers.AccountController.Login (MyBudgetDB) in 801.7413ms
+2019-12-04 10:28:45.069 -06:00 [INF] Request finished in 839.6716ms 200 text/html; charset=utf-8
+2019-12-04 10:28:55.196 -06:00 [INF] Request starting HTTP/1.1 POST http://localhost:44317/Account/Login application/x-www-form-urlencoded 246
+2019-12-04 10:28:55.289 -06:00 [INF] Executing action method MyBudgetDB.Controllers.AccountController.Login (MyBudgetDB) with arguments (["MyBudgetDB.Models.AccountViewModels.LoginViewModel",""]) - ModelState is "Valid"
+2019-12-04 10:28:55.746 -06:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data, this mode should only be enabled during development.
+2019-12-04 10:28:55.848 -06:00 [INF] Entity Framework Core 2.1.1-rtm-30846 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: SensitiveDataLoggingEnabled 
+2019-12-04 10:28:57.047 -06:00 [INF] Executed DbCommand (141ms) [Parameters=[@__normalizedUserName_0='KMNICHOLAS@DMACC.EDU' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[DateOfBirth], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0
+2019-12-04 10:28:57.380 -06:00 [INF] Executed DbCommand (71ms) [Parameters=[@__user_Id_0='cfd2f09e-7eac-481f-8c35-552b75374c15' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [AspNetUserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0
+2019-12-04 10:28:57.504 -06:00 [INF] Executed DbCommand (68ms) [Parameters=[@__userId_0='cfd2f09e-7eac-481f-8c35-552b75374c15' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [role].[Name]
+FROM [AspNetUserRoles] AS [userRole]
+INNER JOIN [AspNetRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0
+2019-12-04 10:28:57.522 -06:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2019-12-04 10:28:57.525 -06:00 [INF] User logged in.
+2019-12-04 10:28:57.533 -06:00 [INF] Executing RedirectResult, redirecting to /.
+2019-12-04 10:28:57.535 -06:00 [INF] Executed action MyBudgetDB.Controllers.AccountController.Login (MyBudgetDB) in 2328.8412000000003ms
+2019-12-04 10:28:57.543 -06:00 [INF] Request finished in 2347.0863ms 302 
+2019-12-04 10:28:57.557 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/  
+2019-12-04 10:28:57.566 -06:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2019-12-04 10:28:57.568 -06:00 [INF] Executing action method MyBudgetDB.Controllers.HomeController.Index (MyBudgetDB) with arguments (null) - ModelState is "Valid"
+2019-12-04 10:28:57.569 -06:00 [INF] Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2019-12-04 10:28:57.578 -06:00 [INF] Executed action MyBudgetDB.Controllers.HomeController.Index (MyBudgetDB) in 10.175500000000001ms
+2019-12-04 10:28:57.578 -06:00 [INF] Request finished in 21.0886ms 200 text/html; charset=utf-8
+2019-12-04 10:29:01.205 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/Home/Admin  
+2019-12-04 10:29:01.206 -06:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2019-12-04 10:29:01.221 -06:00 [INF] Authorization was successful.
+2019-12-04 10:29:01.222 -06:00 [INF] Executing action method MyBudgetDB.Controllers.HomeController.Admin (MyBudgetDB) with arguments (null) - ModelState is "Valid"
+2019-12-04 10:29:01.306 -06:00 [INF] Executing ViewResult, running view at path /Views/Home/Admin.cshtml.
+2019-12-04 10:29:01.311 -06:00 [INF] Executed action MyBudgetDB.Controllers.HomeController.Admin (MyBudgetDB) in 103.8148ms
+2019-12-04 10:29:01.311 -06:00 [INF] Request finished in 106.2219ms 200 text/html; charset=utf-8
+2019-12-04 10:29:02.279 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/Budget/ViewBudgetsAdmin  
+2019-12-04 10:29:02.279 -06:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2019-12-04 10:29:02.284 -06:00 [INF] Authorization was successful.
+2019-12-04 10:29:02.291 -06:00 [INF] Executing action method MyBudgetDB.Controllers.BudgetController.ViewBudgetsAdmin (MyBudgetDB) with arguments (null) - ModelState is "Valid"
+2019-12-04 10:29:02.294 -06:00 [INF] Entity Framework Core 2.1.1-rtm-30846 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: SensitiveDataLoggingEnabled 
+2019-12-04 10:29:02.378 -06:00 [INF] Executed DbCommand (68ms) [Parameters=[@__get_Item_0='cfd2f09e-7eac-481f-8c35-552b75374c15' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[ConcurrencyStamp], [e].[DateOfBirth], [e].[Email], [e].[EmailConfirmed], [e].[FirstName], [e].[LastName], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UserName]
+FROM [AspNetUsers] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+2019-12-04 10:29:02.577 -06:00 [INF] Executed DbCommand (74ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[BudgetId] AS [Id], [r].[Name], [r].[CreationDate], [r].[Amount]
+FROM [Budgets] AS [r]
+WHERE [r].[IsDeleted] = 0
+ORDER BY [r].[BudgetId]
+2019-12-04 10:29:02.658 -06:00 [INF] Executed DbCommand (71ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r.Expenses].[IdExpense], [r.Expenses].[Amount], [r.Expenses].[Category], [r.Expenses].[DateAdded], [r.Expenses].[Name], [r.Expenses].[Notes], [r.Expenses].[UserBudgetBudgetId], [r.Expenses].[UserId], [t].[BudgetId]
+FROM [Expenses] AS [r.Expenses]
+INNER JOIN (
+    SELECT [r0].[BudgetId]
+    FROM [Budgets] AS [r0]
+    WHERE [r0].[IsDeleted] = 0
+) AS [t] ON [r.Expenses].[UserBudgetBudgetId] = [t].[BudgetId]
+ORDER BY [t].[BudgetId]
+2019-12-04 10:29:02.801 -06:00 [INF] Executing ViewResult, running view at path /Views/Budget/ViewBudgetsAdmin.cshtml.
+2019-12-04 10:29:02.974 -06:00 [INF] accessLog:{"RequestId":"e39fc259-b3d5-4ed2-b856-c7bef9a3a926","Request":"/Budget/ViewBudgetsAdmin","Response":"200"}
+2019-12-04 10:29:02.974 -06:00 [INF] Executed action MyBudgetDB.Controllers.BudgetController.ViewBudgetsAdmin (MyBudgetDB) in 692.30810000000008ms
+2019-12-04 10:29:02.975 -06:00 [INF] Request finished in 695.4717ms 200 text/html; charset=utf-8
+2019-12-04 10:29:13.155 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/Budget/CreateBudget  
+2019-12-04 10:29:13.155 -06:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2019-12-04 10:29:13.156 -06:00 [INF] Authorization was successful.
+2019-12-04 10:29:13.156 -06:00 [INF] Executing action method MyBudgetDB.Controllers.BudgetController.CreateBudget (MyBudgetDB) with arguments (null) - ModelState is "Valid"
+2019-12-04 10:29:13.303 -06:00 [INF] Executing ViewResult, running view at path /Views/Budget/CreateBudget.cshtml.
+2019-12-04 10:29:13.425 -06:00 [INF] accessLog:{"RequestId":"9ec591fd-4c14-4a20-88ba-6e2f83038841","Request":"/Budget/CreateBudget","Response":"200"}
+2019-12-04 10:29:13.425 -06:00 [INF] Executed action MyBudgetDB.Controllers.BudgetController.CreateBudget (MyBudgetDB) in 269.2242ms
+2019-12-04 10:29:13.425 -06:00 [INF] Request finished in 270.8512ms 200 text/html; charset=utf-8
+2019-12-04 10:29:21.905 -06:00 [INF] Request starting HTTP/1.1 POST http://localhost:44317/Budget/CreateBudget application/x-www-form-urlencoded 248
+2019-12-04 10:29:21.906 -06:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2019-12-04 10:29:21.910 -06:00 [INF] Authorization was successful.
+2019-12-04 10:29:21.921 -06:00 [INF] Executing action method MyBudgetDB.Controllers.BudgetController.CreateBudget (MyBudgetDB) with arguments (["MyBudgetDB.Models.BudgetCommands.CreateBudgetCommand"]) - ModelState is "Valid"
+2019-12-04 10:29:21.923 -06:00 [INF] Entity Framework Core 2.1.1-rtm-30846 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: SensitiveDataLoggingEnabled 
+2019-12-04 10:29:21.994 -06:00 [INF] Executed DbCommand (68ms) [Parameters=[@__get_Item_0='cfd2f09e-7eac-481f-8c35-552b75374c15' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[ConcurrencyStamp], [e].[DateOfBirth], [e].[Email], [e].[EmailConfirmed], [e].[FirstName], [e].[LastName], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UserName]
+FROM [AspNetUsers] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+2019-12-04 10:29:22.291 -06:00 [INF] Executed DbCommand (83ms) [Parameters=[@p0='10', @p1='10', @p2='2019-12-04T10:29:21', @p3='False', @p4='0001-01-01T00:00:00', @p5='testing' (Size = 4000), @p6='kmnicholas@dmacc.edu' (Size = 4000), @p7='cfd2f09e-7eac-481f-8c35-552b75374c15' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Budgets] ([Amount], [Balance], [CreationDate], [IsDeleted], [LastModified], [Name], [Owner], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+SELECT [BudgetId]
+FROM [Budgets]
+WHERE @@ROWCOUNT = 1 AND [BudgetId] = scope_identity();
+2019-12-04 10:29:22.405 -06:00 [INF] Executing RedirectResult, redirecting to /Budget/ViewBudgets.
+2019-12-04 10:29:22.405 -06:00 [INF] accessLog:{"RequestId":"b4534538-f1f4-4f53-9d32-685c2f1df071","Request":"/Budget/CreateBudget","Response":"302"}
+2019-12-04 10:29:22.405 -06:00 [INF] Executed action MyBudgetDB.Controllers.BudgetController.CreateBudget (MyBudgetDB) in 494.65610000000004ms
+2019-12-04 10:29:22.405 -06:00 [INF] Request finished in 499.994ms 302 
+2019-12-04 10:29:22.412 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/Budget/ViewBudgets  
+2019-12-04 10:29:22.412 -06:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2019-12-04 10:29:22.415 -06:00 [INF] Authorization was successful.
+2019-12-04 10:29:22.415 -06:00 [INF] Executing action method MyBudgetDB.Controllers.BudgetController.ViewBudgets (MyBudgetDB) with arguments (null) - ModelState is "Valid"
+2019-12-04 10:29:22.416 -06:00 [INF] Entity Framework Core 2.1.1-rtm-30846 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: SensitiveDataLoggingEnabled 
+2019-12-04 10:29:22.491 -06:00 [INF] Executed DbCommand (74ms) [Parameters=[@__get_Item_0='cfd2f09e-7eac-481f-8c35-552b75374c15' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[AccessFailedCount], [e].[ConcurrencyStamp], [e].[DateOfBirth], [e].[Email], [e].[EmailConfirmed], [e].[FirstName], [e].[LastName], [e].[LockoutEnabled], [e].[LockoutEnd], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[PasswordHash], [e].[PhoneNumber], [e].[PhoneNumberConfirmed], [e].[SecurityStamp], [e].[TwoFactorEnabled], [e].[UserName]
+FROM [AspNetUsers] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+2019-12-04 10:29:22.582 -06:00 [INF] Executed DbCommand (81ms) [Parameters=[@__id_0='cfd2f09e-7eac-481f-8c35-552b75374c15' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[BudgetId] AS [Id], [r].[Name], [r].[CreationDate], [r].[Amount]
+FROM [Budgets] AS [r]
+WHERE ([r].[IsDeleted] = 0) AND ([r].[UserId] = @__id_0)
+ORDER BY [r].[BudgetId]
+2019-12-04 10:29:22.663 -06:00 [INF] Executed DbCommand (79ms) [Parameters=[@__id_0='cfd2f09e-7eac-481f-8c35-552b75374c15' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r.Expenses].[IdExpense], [r.Expenses].[Amount], [r.Expenses].[Category], [r.Expenses].[DateAdded], [r.Expenses].[Name], [r.Expenses].[Notes], [r.Expenses].[UserBudgetBudgetId], [r.Expenses].[UserId], [t].[BudgetId]
+FROM [Expenses] AS [r.Expenses]
+INNER JOIN (
+    SELECT [r0].[BudgetId]
+    FROM [Budgets] AS [r0]
+    WHERE ([r0].[IsDeleted] = 0) AND ([r0].[UserId] = @__id_0)
+) AS [t] ON [r.Expenses].[UserBudgetBudgetId] = [t].[BudgetId]
+ORDER BY [t].[BudgetId]
+2019-12-04 10:29:22.759 -06:00 [INF] Executing ViewResult, running view at path /Views/Budget/ViewBudgets.cshtml.
+2019-12-04 10:29:22.768 -06:00 [INF] accessLog:{"RequestId":"1078596f-1183-415a-a035-aab2739ec192","Request":"/Budget/ViewBudgets","Response":"200"}
+2019-12-04 10:29:22.768 -06:00 [INF] Executed action MyBudgetDB.Controllers.BudgetController.ViewBudgets (MyBudgetDB) in 353.4202ms
+2019-12-04 10:29:22.768 -06:00 [INF] Request finished in 356.8297ms 200 text/html; charset=utf-8
+2019-12-04 10:29:39.702 -06:00 [INF] Request starting HTTP/1.1 POST http://localhost:44317/Account/Logout application/x-www-form-urlencoded 225
+2019-12-04 10:29:39.703 -06:00 [INF] AuthenticationScheme: Identity.Application was successfully authenticated.
+2019-12-04 10:29:39.705 -06:00 [INF] Authorization was successful.
+2019-12-04 10:29:39.706 -06:00 [INF] Executing action method MyBudgetDB.Controllers.AccountController.Logout (MyBudgetDB) with arguments (null) - ModelState is "Valid"
+2019-12-04 10:29:39.709 -06:00 [INF] AuthenticationScheme: Identity.Application signed out.
+2019-12-04 10:29:39.710 -06:00 [INF] AuthenticationScheme: Identity.External signed out.
+2019-12-04 10:29:39.710 -06:00 [INF] AuthenticationScheme: Identity.TwoFactorUserId signed out.
+2019-12-04 10:29:39.710 -06:00 [INF] User logged out.
+2019-12-04 10:29:39.710 -06:00 [INF] Executing RedirectResult, redirecting to /.
+2019-12-04 10:29:39.710 -06:00 [INF] Executed action MyBudgetDB.Controllers.AccountController.Logout (MyBudgetDB) in 4.7499ms
+2019-12-04 10:29:39.710 -06:00 [INF] Request finished in 7.7009ms 302 
+2019-12-04 10:29:39.718 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:44317/  
+2019-12-04 10:29:39.718 -06:00 [INF] Executing action method MyBudgetDB.Controllers.HomeController.Index (MyBudgetDB) with arguments (null) - ModelState is "Valid"
+2019-12-04 10:29:39.719 -06:00 [INF] Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+2019-12-04 10:29:39.719 -06:00 [INF] Executed action MyBudgetDB.Controllers.HomeController.Index (MyBudgetDB) in 0.885ms
+2019-12-04 10:29:39.719 -06:00 [INF] Request finished in 1.1915ms 200 text/html; charset=utf-8

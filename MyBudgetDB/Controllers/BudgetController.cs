@@ -72,6 +72,19 @@ namespace MyBudgetDB.Controllers
             return View(budgets);
         }
 
+        public async Task<IActionResult> ViewBudgetsAdmin()
+        {
+            var user = await _userService.GetUserAsync(User);
+            if (user == null)
+            {
+                _log.LogInformation($"Unable to load user with ID '{_userService.GetUserId(User)}'.");
+                return Forbid();
+            }
+
+            var budgets = _service.GetBudgetsBriefAdmin(user.Id);
+            return View(budgets);
+        }
+
         public async Task<IActionResult> ViewBudget(int id)
         {
             var user = await _userService.GetUserAsync(User);

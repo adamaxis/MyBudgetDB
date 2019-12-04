@@ -101,6 +101,24 @@ namespace MyBudgetDB.Services
 
         public ICollection<UserBudgetBrief> GetBudgetsBrief(string id)
         {
+            
+            
+            return _context.Budgets
+                .Where(r => !r.IsDeleted)
+                .Where(r => r.UserId == id)
+                .Select(x => new UserBudgetBrief
+                {
+                    Id = x.BudgetId,
+                    Name = x.Name,
+                    CreationDate = x.CreationDate,
+                    Amount = x.Amount,
+                    Expenses = x.Expenses
+                })
+                .ToList();
+        }
+
+        public ICollection<UserBudgetBrief> GetBudgetsBriefAdmin(string id)
+        {
             return _context.Budgets
                 .Where(r => !r.IsDeleted)
                 .Select(x => new UserBudgetBrief
@@ -112,6 +130,7 @@ namespace MyBudgetDB.Services
                     Expenses = x.Expenses
                 })
                 .ToList();
+
         }
 
         public UpdateBudgetCommand GetBudgetForUpdate(int id)

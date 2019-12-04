@@ -56,8 +56,4 @@
         </tbody>
     </table>
 </div>
-@if (User.HasClaim("isAdmin", "true"))
-{
-    <a asp-action="ViewBudgetsAdmin" class="btn btn-success">View All Budgets</a>
-}
 <a asp-action="CreateBudget" class="btn btn-success">Create New Budget</a>

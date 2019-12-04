@@ -178,5 +178,13 @@ namespace MyBudgetDB.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+        [Authorize("IsAdmin")]
+        public IActionResult Admin()
+        {
+            ViewData["Message"] = "Welcome, Admin!";
+
+            return View();
+        }
     }
 }

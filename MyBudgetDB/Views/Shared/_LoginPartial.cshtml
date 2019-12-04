@@ -26,6 +26,12 @@
             <li>
                 <a asp-area="" asp-controller="Manage" asp-action="Index" title="Manage">Hello @UserManager.GetUserName(User)!</a>
             </li>
+            @if (User.HasClaim("isAdmin", "true"))
+            {
+                <li>
+                    <a asp-area="" asp-controller="Home" asp-action="Admin" title="Admin">Admin Page</a>
+                </li>
+            }
             <li>
                 <button type="submit" class="btn btn-link navbar-btn navbar-link">Log out</button>
             </li>

@@ -10,8 +10,6 @@ using Microsoft.Net.Http.Headers;
 using MyBudgetDB.Authorization;
 using MyBudgetDB.Data;
 using MyBudgetDB.Services;
-using Microsoft.AspNetCore.Authorization;
-using MyBudgetDB.Authorization;
 
 namespace MyBudgetDB
 {
@@ -56,6 +54,14 @@ namespace MyBudgetDB
                 options.AddPolicy("CanViewBudget",
                     policyBuilder => policyBuilder
                         .AddRequirements(new IsBudgetOwnerRequirement()));
+            });
+
+            services.AddAuthorization(options =>
+            {
+                options.AddPolicy(
+                    "IsAdmin",
+                        policyBuilder => policyBuilder
+                            .RequireClaim("IsAdmin"));
             });
 
             services.AddScoped<IAuthorizationHandler, IsBudgetOwnerHandler>();
