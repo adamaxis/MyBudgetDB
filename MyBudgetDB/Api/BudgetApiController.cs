@@ -19,7 +19,6 @@ namespace MyBudgetDB.Api
     {
         private readonly BudgetService _budgetService;
         private readonly UserManager<ApplicationUser> _userManager;
-        private readonly IAuthorizationService _authService;
         private readonly ILogger _log;
         
         public BudgetApiController(
@@ -74,21 +73,12 @@ namespace MyBudgetDB.Api
         [HttpPost("edit/{id}")] //need the id parameter to check EnsureBudgetExistAttribute
         public IActionResult Edit(int id, [FromBody] UpdateBudgetCommand cmd)
         {
-            // this fires an error onExecuted in EnsureBudget Exist Object reference not set to an instance of an object."
-            //var budget = _budgetService.GetBudget(id);
-            //var authResult = await _authService.AuthorizeAsync(User, budget, "CanEditPerson");
-
-            //if (!authResult.Succeeded)
-            //{
-            //    return new ForbidResult();
-            //}
-
             _budgetService.UpdateBudget(cmd);
             var newBudget = _budgetService.GetBudget(cmd.BudgetId);
             return Ok(newBudget);
         }
 
-        [HttpDelete("delete /{id}"), EnsureBudgetExist, AddLastModifiedHeader]
+        [HttpDelete("delete/{id}"), EnsureBudgetExist, AddLastModifiedHeader]
         public IActionResult Delete(int id)
         {
             _budgetService.DeleteBudget(id);
