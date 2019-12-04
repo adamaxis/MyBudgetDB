@@ -1,13 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc.ViewFeatures.Internal;
-using Microsoft.AspNetCore.Server.Kestrel.Internal.System.Collections.Sequences;
 using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
 using MyBudgetDB.Data;
-using MyBudgetDB.Migrations;
 using MyBudgetDB.Models.BudgetCommands;
 using MyBudgetDB.Services;
 using Xunit;
@@ -308,44 +304,36 @@ namespace XUnitTestMyBudgetDB
             }
         }
 
-        //[Fact]
-        //public void UpdateBudget_CanUpdate()
-        //{
-        //    var connection = new SqliteConnection("DataSource=:memory:");
-        //    connection.Open();
-        //    var options = new DbContextOptionsBuilder<ApplicationDbContext>()
-        //        .UseSqlite(connection)
-        //        .Options;
+        [Fact]
+        public void GetBudgetForUpdate_Returns_UpdateBudgetCommand_Type()
+        {
+            var connection = new SqliteConnection("DataSource=:memory:");
+            connection.Open();
+            var options = new DbContextOptionsBuilder<ApplicationDbContext>()
+                .UseSqlite(connection)
+                .Options;
 
-        //    // Insert seed data into the database using one instance of the context
-        //    using (var context = new ApplicationDbContext(options))
-        //    {
-        //        context.Database.EnsureCreated();
-        //        context.Budgets.AddRange(
-        //            new UserBudget { BudgetId = 1, Owner = "Sofia" },
-        //            new UserBudget { BudgetId = 2, Name = "Camilla" });
-        //        context.SaveChanges();
-        //    }
+            // Insert seed data into the database using one instance of the context
+            using (var context = new ApplicationDbContext(options))
+            {
+                context.Database.EnsureCreated();
+                context.Budgets.AddRange(
+                    new UserBudget { BudgetId = 1, Owner = "Sofia", UserId = "123"}
+                     );
+                context.SaveChanges();
+            }
 
-        //    // Use a separate instance edit some data
-        //    using (var context = new ApplicationDbContext(options))
-        //    {
-        //        var service = new BudgetService(context);
+            // Use a separate instance edit some data
+            using (var context = new ApplicationDbContext(options))
+            {
+                var service = new BudgetService(context);
 
-        //        UpdateBudgetCommand toUpdate = service.GetBudgetForUpdate(1);
-        //        toUpdate.BudgetId = 1;
-        //        toUpdate.Owner = "Bob";
-        //        toUpdate.Amount = 500;
-        //        service.UpdateBudget(toUpdate);
+                UpdateBudgetCommand obj = service.GetBudgetForUpdate(1);
 
-        //        var budget = service.GetBudget(1);
-
-        //        Assert.NotNull(budget);
-        //        Assert.Equal(500, budget.Amount);
-        //        Assert.NotEqual("Sofia", budget.Owner);
-        //        Assert.Equal("Bob", budget.Owner);
-        //    }
-        //}
+                Assert.NotNull(obj);
+                Assert.Equal("Sofia", obj.Owner);
+            }
+        }
 
         [Fact]
         public void InserUpdate_CanUpdate()
@@ -379,9 +367,6 @@ namespace XUnitTestMyBudgetDB
                 Expense exp1 = new Expense();
                 exp1.Amount = 2;
                 exp1.Name = "milk";
-                //Expense exp2 = new Expense();
-                //exp1.Amount = 400;
-                //exp1.Name = "Hotel";
                 List<Expense> explist = new List<Expense>();
                 explist.Add(exp1);
                 //explist.Add(exp2);

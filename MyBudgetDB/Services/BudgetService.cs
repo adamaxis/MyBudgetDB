@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using MyBudgetDB.Data;
 using MyBudgetDB.Models.BudgetCommands;
+using MyBudgetDB.Models.FilterModels;
 using Newtonsoft.Json;
 
 namespace MyBudgetDB.Services
@@ -12,18 +13,29 @@ namespace MyBudgetDB.Services
     public class BudgetService
     {
         readonly ApplicationDbContext _context;
-        readonly ILogger _logger;
+        readonly ILogger _log;
 
         public BudgetService(ApplicationDbContext context, ILoggerFactory factory)
         {
             _context = context;
-            _logger = factory.CreateLogger<BudgetService>();
+            _log = factory.CreateLogger<BudgetService>();
         }
 
         public BudgetService(ApplicationDbContext context)
         {
             _context = context;
         }
+
+        public void CreateAccessLog(LogRequestModel log)
+        {
+            _log.LogInformation($"accessLog:{JsonConvert.SerializeObject(log)}");
+        }
+
+        public void CreateErrorLog(LogErrorModel log)
+        {
+            _log.LogError($"errorLog:{JsonConvert.SerializeObject(log)}");
+        }
+
 
         public bool DoesBudgetExist(int id)
         {
@@ -72,20 +84,20 @@ namespace MyBudgetDB.Services
                 .ToList();
         }
 
-        public double GetBalance(int id)
-        {
-            var budget = _context.Budgets
-                .SingleOrDefault(x => x.BudgetId == id);
-            var initAmt = (double)(budget.Amount);
-            var fnBalance = 0.0;
+        //public double GetBalance(int id)
+        //{
+        //    var budget = _context.Budgets
+        //        .SingleOrDefault(x => x.BudgetId == id);
+        //    var initAmt = (double)(budget.Amount);
+        //    var fnBalance = 0.0;
 
-            foreach (var expense in budget.Expenses)
-            {
-                fnBalance += expense.Amount;
-            }
+        //    foreach (var expense in budget.Expenses)
+        //    {
+        //        fnBalance += expense.Amount;
+        //    }
 
-            return initAmt - fnBalance;
-        }
+        //    return initAmt - fnBalance;
+        //}
 
         public ICollection<UserBudgetBrief> GetBudgetsBrief(string id)
         {
@@ -116,15 +128,6 @@ namespace MyBudgetDB.Services
                     BudgetId = x.BudgetId,
                     UserId = x.UserId,
                     Expenses = x.Expenses.ToList(),
-                    /*Expenses = x.Expenses
-                        .Select(item => new Expense
-                        {
-                            UserId = item.UserId,
-                            IdExpense = item.IdExpense,
-                            Name = item.Name,
-                            Amount = item.Amount,
-                            DateAdded = item.DateAdded
-                        }).DefaultIfEmpty(new Expense()).ToList(),*/
                     Balance = (x.Expenses.Any() ? x.Amount - x.Expenses.Sum(y => y.Amount) : 0)
                 }).SingleOrDefault();
         }

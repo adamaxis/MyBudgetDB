@@ -1,19 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 using MyBudgetDB.Authorization;
 using MyBudgetDB.Data;
 using MyBudgetDB.Extensions;
-using MyBudgetDB.Models;
 using MyBudgetDB.Models.AccountViewModels;
 using MyBudgetDB.Services;
 

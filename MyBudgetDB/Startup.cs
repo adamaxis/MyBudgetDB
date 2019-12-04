@@ -1,9 +1,13 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc.Formatters;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Net.Http.Headers;
+using MyBudgetDB.Authorization;
 using MyBudgetDB.Data;
 using MyBudgetDB.Services;
 using Microsoft.AspNetCore.Authorization;
@@ -23,6 +27,8 @@ namespace MyBudgetDB
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors();
+
             var config = new AppSecrets();
             Configuration.Bind("MyBudgetDB", config);
             services.AddSingleton(config);
@@ -38,19 +44,22 @@ namespace MyBudgetDB
             // Add application services.
             services.AddTransient<IEmailSender, EmailSender>();
             services.AddScoped<BudgetService>();
-            services.AddScoped<IAuthorizationHandler, CanManageBudgetHandler>();
+
+            //services.AddScoped<IAuthorizationService>();
 
             services.AddAuthorization(options => {
                 options.AddPolicy("CanManageBudget", policyBuilder => policyBuilder
                     .AddRequirements(new CanManageBudgetRequirement()));
             });
 
-            /*services.AddAuthorization(options => {
-                options.AddPolicy("CanEditPerson",
+            services.AddAuthorization(options => {
+                options.AddPolicy("CanViewBudget",
                     policyBuilder => policyBuilder
-                        .AddRequirements(new CanViewBudgetRequirement()));
-            });*/
-            //services.AddCors();
+                        .AddRequirements(new IsBudgetOwnerRequirement()));
+            });
+
+            services.AddScoped<IAuthorizationHandler, IsBudgetOwnerHandler>();
+
             services.AddHsts(options =>
             {
                 options.Preload = true;
@@ -62,8 +71,20 @@ namespace MyBudgetDB
                 options.RespectBrowserAcceptHeader = true; // false by default
             });
 
-            services.AddMvc()
+            services.AddMvc(options =>
+                {
+                    options.OutputFormatters.Add(new XmlDataContractSerializerOutputFormatter());
+                    options.FormatterMappings.SetMediaTypeMappingForFormat
+                        ("xml", MediaTypeHeaderValue.Parse("application/xml"));
+                    options.FormatterMappings.SetMediaTypeMappingForFormat
+                        ("config", MediaTypeHeaderValue.Parse("application/xml"));
+                    options.FormatterMappings.SetMediaTypeMappingForFormat
+                        ("js", MediaTypeHeaderValue.Parse("application/json"));
+                })
                 .AddXmlSerializerFormatters();
+
+            services.AddMvcCore()
+                .AddFormatterMappings();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -80,13 +101,18 @@ namespace MyBudgetDB
             {
                 app.UseExceptionHandler("/Budget/Error");
                 app.UseHsts();
-                app.UseCors(builder =>
-                {
-                    builder.WithOrigins("https://dmacc.edu",
-                        "http://dmacc.edu",
-                        "https://localhost:44375",
-                        "https://localhost:5001");
-                });
+                app.UseCors(x => x
+                    .AllowAnyOrigin()
+                    .AllowAnyMethod()
+                    .AllowAnyHeader());
+
+                //app.UseCors(builder =>
+                //{
+                //    builder.WithOrigins("https://dmacc.edu",
+                //        "http://dmacc.edu",
+                //        "https://localhost:44375",
+                //        "https://localhost:5001");
+                //});
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
@@ -94,6 +120,41 @@ namespace MyBudgetDB
             app.UseCookiePolicy();
             app.UseMvc(routes =>
             {
+                routes.MapRoute(
+                    name: "budget_id",
+                    template: "{id}/",
+                    defaults: new { controller = "Budget", action = "ViewBudget" }
+                );
+                routes.MapRoute(
+                    name: "delete",
+                    template: "delete/{id}",
+                    defaults: new { controller = "Budget", action = "DeleteBudget" }
+                );
+                routes.MapRoute(
+                    name: "delete_remove",
+                    template: "remove/{id}",
+                    defaults: new { controller = "Budget", action = "DeleteBudget" }
+                );
+                routes.MapRoute(
+                    name: "edit",
+                    template: "edit/{id}",
+                    defaults: new { controller = "Budget", action = "EditBudget" }
+                );
+                routes.MapRoute(
+                    name: "edit_modify",
+                    template: "modify/{id}",
+                    defaults: new { controller = "Budget", action = "EditBudget" }
+                );
+                routes.MapRoute(
+                    name: "edit_change",
+                    template: "change/{id}",
+                    defaults: new { controller = "Budget", action = "EditBudget" }
+                );
+                routes.MapRoute(
+                    name: "edit_add",
+                    template: "add/{id}",
+                    defaults: new { controller = "Budget", action = "EditBudget" }
+                );
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");

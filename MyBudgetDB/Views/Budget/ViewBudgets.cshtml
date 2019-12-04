@@ -20,7 +20,7 @@
                     @Html.DisplayNameFor(model => model.ElementAt(0).Amount)
                 </th>
                 <th>
-                    Balance
+                        Balance
                 </th>
                 <th>
                     @Html.DisplayNameFor(model => model.ElementAt(0).CreationDate)
@@ -40,11 +40,11 @@
                     @Html.DisplayFor(modelItem => item.Name)
                 </td>
                 <th>
-                    @Html.DisplayNameFor(model => item.Amount)
+                    $@Html.DisplayFor(model => item.Amount)
                 </th>
                 <th>
                     $@item.GetBalance()
-                <th>
+                </th>
                 <td>
                     @Html.DisplayFor(modelItem => item.CreationDate)
                 </td>
