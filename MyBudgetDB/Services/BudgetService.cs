@@ -72,6 +72,7 @@ namespace MyBudgetDB.Services
                         .Select(item => new UserBudgetDetails.Item
                         {
                             Name = item.Name,
+                            Notes = item.Notes,
                             Amount = item.Amount,
                             DateAdded = item.DateAdded
                         })
