@@ -1,0 +1,45 @@
+﻿@model MyBudgetDB.Models.ManageViewModels.FriendsViewModel
+@{
+    ViewData["Title"] = "Friends";
+    ViewData.AddActivePage(ManageNavPages.Friends);
+}
+
+<h4>@ViewData["Title"]</h4>
+
+<div class="row">
+    <div class="col-md-6">
+        <h4>
+            <form asp-action="Friends" method="post" class="form-horizontal">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                @if (Model.Friends == null || Model.Friends.Count() == 0)
+                {
+                    <b>You have no friends.</b>
+                }
+                else
+                {
+                    @for (int i = 0; i < (Model.Friends.Count() != 0 ? Model.Friends.Count() : 0); i++)
+                    {
+                        <hr />
+                        @if (@Model.FriendsConfirmed[i] == true)
+                        {
+                            <span>Friend: @Model.Friends.ElementAt(i).Value</span>
+                        }
+                        else
+                        {
+                            <span>Unconfirmed friend: @Model.Friends.ElementAt(i).Value</span>
+                        }
+                    }
+                }
+                <input asp-for="NewFriend" />
+                <button type="submit" class="btn btn-primary">Add Friend</button>
+                <br />
+                <span asp-validation-for="NewFriend" class="text-danger"></span>
+            </form>
+        </h4>
+        <hr />
+    </div>
+</div>
+
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}

@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
@@ -8,6 +10,7 @@ using MyBudgetDB.Authorization;
 using MyBudgetDB.Data;
 using MyBudgetDB.Models.BudgetCommands;
 using MyBudgetDB.Models.FilterModels;
+using MyBudgetDB.Models.ManageViewModels;
 using Newtonsoft.Json;
 
 namespace MyBudgetDB.Services
@@ -214,5 +217,39 @@ namespace MyBudgetDB.Services
             _context.Budgets.Remove(budget);
             _context.SaveChanges();
         }
+
+        public async Task<FriendsViewModel> GetFriends(ClaimsPrincipal User)
+        {
+            var user = await userService.GetUserAsync(User);
+            if (user == null)
+            {
+                throw new ApplicationException($"Unable to load user with ID '{userService.GetUserId(User)}'.");
+            }
+            var model = new FriendsViewModel { };
+            model.Friends = User.Claims.Where(x => x.Type == Claims.Friend);
+            model.FriendsConfirmed = new bool[model.Friends.Count()];
+            var claim = new Claim(Claims.Friend, user.UserName);
+            var users = await userService.GetUsersForClaimAsync(claim);
+            if (users != null)
+            {
+                for (int i = 0; i < model.Friends.Count(); i++)
+                {
+                    bool status;
+                    if (users.Where(x => x.UserName == model.Friends.ElementAt(i).Value).Count() > 0) status = true;
+                    else status = false;
+                    model.FriendsConfirmed[i] = status;
+                }
+            }
+            return model;
+        }
+
+        /*public async Task<bool> AreUsersFriends(ClaimsPrincipal User, string userName)
+        {
+            var friend = await userService.FindByNameAsync(userName);
+            var userModel = await GetFriends(User);
+            if((userModel.Friends.Where(x => x.Value == friend.UserName).Count() > 0) &&
+               )
+            return model;
+        }*/
     }
 }
