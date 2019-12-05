@@ -42,26 +42,7 @@ namespace MyBudgetDB.Api
             if (!result.Succeeded)
             {
                 return BadRequest(new { message = "Username or password is incorrect" });
-                //return Unauthorized();
             }
-
-            //var tokenHandler = new JwtSecurityTokenHandler(); //A SecurityTokenHandler designed for creating and validating Json Web Tokens
-            //var pass = Encoding.ASCII.GetBytes(_appSettings.Password); //Encodes a set of characters into a sequence of bytes.
-            //var secretUser = Encoding.ASCII.GetBytes(_appSettings.User);
-            //var tokenDescriptor = new SecurityTokenDescriptor
-            //{
-            //    Subject = new ClaimsIdentity(new Claim[]
-            //    {
-            //        new Claim(ClaimTypes.Name, user.Id.ToString())
-            //    }),
-            //    Expires = DateTime.UtcNow.AddDays(7),
-            //    SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
-            //};
-
-            //}
-
-            // If we got this far, something failed, redisplay form
-            //var user = await _userService.GetUserAsync(User);
             return Ok(new { message = "you are logged" });
         }
 

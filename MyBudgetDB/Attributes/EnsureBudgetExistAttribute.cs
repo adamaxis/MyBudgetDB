@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
-using MyBudgetDB.Data;
 using MyBudgetDB.Services;
 
 namespace MyBudgetDB.Attributes
