@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
 using System.Text;
@@ -14,6 +15,7 @@ using MyBudgetDB.Data;
 using MyBudgetDB.Extensions;
 using MyBudgetDB.Models.ManageViewModels;
 using MyBudgetDB.Services;
+using Newtonsoft.Json;
 
 namespace MyBudgetDB.Controllers
 {
@@ -26,6 +28,7 @@ namespace MyBudgetDB.Controllers
         private readonly IEmailSender _emailSender;
         private readonly ILogger _logger;
         private readonly UrlEncoder _urlEncoder;
+        private readonly BudgetService _service;
 
         private const string AuthenticatorUriFormat = "otpauth://totp/{0}:{1}?secret={2}&issuer={0}&digits=6";
         private const string RecoveryCodesKey = nameof(RecoveryCodesKey);
@@ -34,7 +37,9 @@ namespace MyBudgetDB.Controllers
           UserManager<ApplicationUser> userManager,
           SignInManager<ApplicationUser> signInManager,
           IEmailSender emailSender,
+          BudgetService service,
           ILogger<ManageController> logger,
+
           UrlEncoder urlEncoder)
         {
             _userManager = userManager;
@@ -42,6 +47,7 @@ namespace MyBudgetDB.Controllers
             _emailSender = emailSender;
             _logger = logger;
             _urlEncoder = urlEncoder;
+            _service = service;
         }
 
         [TempData]
@@ -155,6 +161,48 @@ namespace MyBudgetDB.Controllers
             StatusMessage = "Your profile has been updated";
             return RedirectToAction(nameof(Index));
         }
+
+        [HttpGet]
+        public async Task<IActionResult> Friends()
+        {
+            var user = await _userManager.GetUserAsync(User);
+            if (user == null)
+            {
+                throw new ApplicationException($"Unable to load user with ID '{_userManager.GetUserId(User)}'.");
+            }
+            var model = await _service.GetFriends(User);
+            return View(model);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Friends(FriendsViewModel command)
+        {
+            var user = await _userManager.GetUserAsync(User);
+            if (user == null)
+            {
+                throw new ApplicationException($"Unable to load user with ID '{_userManager.GetUserId(User)}'.");
+            }
+
+            // add friend
+            var friend = await _userManager.FindByNameAsync(command.NewFriend);
+            if (friend == null)
+            {
+                var newModel = await _service.GetFriends(User);
+                ModelState.AddModelError("NewFriend", "Error: user does not exist in database");
+                return View(newModel);
+            }
+
+            var newFriend = new Claim(Claims.Friend, command.NewFriend);
+            await _userManager.RemoveClaimAsync(user, newFriend);
+            await _userManager.AddClaimAsync(user, newFriend);
+            // refresh claims
+            await _signInManager.RefreshSignInAsync(user);
+
+            var model = await _service.GetFriends(User);
+            return View(model);
+        }
+
 
         [HttpPost]
         [ValidateAntiForgeryToken]
